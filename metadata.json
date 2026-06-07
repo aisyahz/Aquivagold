@@ -1,0 +1,6 @@
+{
+  "name": "Aquvia Gold",
+  "description": "A premium luxury wellness brand website for Aquvia Gold featuring the Black Millenia Collection.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
