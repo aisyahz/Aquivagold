@@ -32,7 +32,7 @@ export default function Hero({ onOpenConsultation }: HeroProps) {
   // Three products to feature visually in the Hero base
   const heroProducts = [
     { name: "Spray", label: "Penyegar Kulit", img: "https://raw.githubusercontent.com/aisyahz/Aquivagold/main/src/assets/images/spray.jpeg" },
-    { name: "Essence", label: "Terapi Mandian", img: "https://raw.githubusercontent.com/aisyahz/Aquivagold/main/src/assets/images/Essence.jpegg" },
+    { name: "Essence", label: "Terapi Mandian", img: "https://raw.githubusercontent.com/aisyahz/Aquivagold/main/src/assets/images/Essence.jpeg" },
     { name: "Drop", label: "Suplemen Premium", img: "https://raw.githubusercontent.com/aisyahz/Aquivagold/main/src/assets/images/Drop.jpeg" },
   ];
 
