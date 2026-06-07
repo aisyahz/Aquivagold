@@ -11,8 +11,8 @@ export default function AgentPage({ onBackToHome }: AgentPageProps) {
 
   // WhatsApp helper for specific program
   const handleRegisterWhatsApp = (program: string) => {
-    const greeting = "Hi Aquvia Gold,\n\n";
-    const body = `Saya berminat untuk menyertai Program *${program}* Aquvia Gold.\n\nBoleh saya tahu cara pendaftaran dan maklumat lanjut?\n\n`;
+    const greeting = "Hi AquivaGold,\n\n";
+    const body = `Saya berminat untuk menyertai Program *${program}* AquivaGold.\n\nBoleh saya tahu cara pendaftaran dan maklumat lanjut?\n\n`;
     const footer = "Terima kasih.";
     const fullMessage = greeting + body + footer;
     const encodedMessage = encodeURIComponent(fullMessage);
@@ -84,7 +84,7 @@ export default function AgentPage({ onBackToHome }: AgentPageProps) {
         "Margin Keuntungan Tertinggi — Akses harga kilang terus dengan pulangan ROI maksimum.",
         "Rujukan Pelanggan — Kami sedia menyalurkan senarai ejen dan pelanggan berdekatan wilayah anda terus kepada anda.",
         "Bahan Iklan Eksklusif — Bahan kreatif tersuai dengan penstrukturan nama anda sebagai stokis utama wilayah.",
-        "Rundingan Strategik — Akses bimbingan 1-on-1 terus daripada pihak pengurusan Aquvia Gold."
+        "Rundingan Strategik — Akses bimbingan 1-on-1 terus daripada pihak pengurusan AquivaGold."
       ],
       requirements: [
         "Bersedia membuat pembelian stok secara bulk (borong skala besar) mengikut kuota wilayah.",
@@ -127,7 +127,7 @@ export default function AgentPage({ onBackToHome }: AgentPageProps) {
           </span>
           <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight text-charcoal mb-4">
             Sertai Keluarga Niaga <br className="hidden sm:inline" />
-            <span className="italic font-light text-gold text-2xl sm:text-3xl md:text-4xl block mt-1">Aquvia Gold Malaysia</span>
+            <span className="italic font-light text-gold text-2xl sm:text-3xl md:text-4xl block mt-1">AquivaGold Malaysia</span>
           </h1>
           <div className="w-16 h-[1.5px] bg-gold mx-auto mb-4" />
           <p className="text-xs md:text-sm text-charcoal-light font-light max-w-xl mx-auto leading-relaxed">

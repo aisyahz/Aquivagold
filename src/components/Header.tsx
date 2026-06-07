@@ -78,7 +78,7 @@ export default function Header({ onOpenConsultation, currentView, onNavigate }: 
           id="header-logo"
         >
           <span className="font-serif text-lg md:text-xl font-medium tracking-[0.25em] text-charcoal group-hover:text-gold transition-colors duration-300">
-            AQUVIA GOLD
+            AQUIVAGOLD
           </span>
           <span className="text-[9px] uppercase tracking-[0.4em] text-gold font-light mt-0.5 leading-none">
             Black Millenia

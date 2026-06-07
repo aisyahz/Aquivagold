@@ -69,7 +69,7 @@ export default function ProductDetailModal({ product, onClose, onOpenConsultatio
             <div className="flex-1 flex flex-col items-center justify-center">
               {/* Subtle visual branding text header */}
               <span className="font-display text-[9px] uppercase tracking-[0.3em] text-gold font-semibold mb-4 text-center">
-                AQUVIA LABS / BLACK MILLENIA
+                AQUIVAGOLD LABS / BLACK MILLENIA
               </span>
 
               {/* Large Product Image Preview Container with Zoom effect */}
@@ -267,7 +267,7 @@ export default function ProductDetailModal({ product, onClose, onOpenConsultatio
                 <ShieldCheck size={16} className="text-gold mt-0.5 shrink-0" />
                 <div className="text-left">
                   <span className="text-[10px] uppercase tracking-widest text-charcoal font-semibold block">
-                    Jaminan Premium Aquvia
+                    Jaminan Premium AquivaGold
                   </span>
                   <span className="text-[11px] text-charcoal-light font-light block leading-tight">
                     Setiap tempahan didatangkan dalam kotak baldu sutera eksklusif kami bersama penjejakan selamat diinsuranskan oleh rakan logistik kurier.

@@ -15,7 +15,7 @@ export default function Footer({ onOpenConsultation }: FooterProps) {
         <div className="md:col-span-2 space-y-4">
           <div className="flex flex-col select-none text-left">
             <span className="font-serif text-xl tracking-[0.2em] text-[#2B2B2B] font-semibold">
-              AQUVIA GOLD
+              AQUIVAGOLD
             </span>
             <span className="text-[10px] uppercase tracking-[0.4em] text-gold font-light mt-0.5 leading-none">
               Black Millenia
@@ -79,7 +79,7 @@ export default function Footer({ onOpenConsultation }: FooterProps) {
       {/* Bottom copyright bars */}
       <div className="max-w-7xl mx-auto px-6 md:px-12 mt-12 md:mt-16 pt-6 border-t border-stone/30 flex flex-col sm:flex-row sm:items-center sm:justify-between text-[11px] text-charcoal-light/60 font-light space-y-4 sm:space-y-0">
         <p>
-          &copy; {currentYear} Aquvia Gold. Hak cipta terpelihara. Kemewahan yang murni.
+          &copy; {currentYear} AquivaGold. Hak cipta terpelihara. Kemewahan yang murni.
         </p>
         <div className="flex flex-wrap gap-4 sm:gap-6">
           <span className="hover:text-gold cursor-pointer transition-colors">Dasar Privasi</span>

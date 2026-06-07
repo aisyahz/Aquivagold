@@ -126,7 +126,7 @@ export default function LeadPopup({
 
     if (activeFlow === "buy") {
       // Flow 1 Buy Product WhatsApp message
-      const greetingHeader = "Hi Aquvia Gold,\n\n";
+      const greetingHeader = "Hi AquivaGold,\n\n";
       const nameLine = `Nama: ${buyForm.fullName}\n\n`;
       const interestLine = `Saya berminat dengan:\n${buyForm.productInterested}\n\n`;
       const noteLine = buyForm.additionalNotes.trim()
@@ -142,7 +142,7 @@ export default function LeadPopup({
         .map(([topic]) => `- ${topic}`)
         .join("\n");
 
-      const greetingHeader = "Hi Aquvia Gold,\n\n";
+      const greetingHeader = "Hi AquivaGold,\n\n";
       const nameLine = `Nama: ${consultForm.fullName}\n\n`;
       const introLine = "Saya ingin mendapatkan konsultasi.\n\n";
       const topicsLine = selectedTopics
@@ -205,7 +205,7 @@ export default function LeadPopup({
             {/* Brand Header */}
             <div className="text-center mb-6 mt-1">
               <span className="font-display text-xs uppercase tracking-widest text-[#C9A227] font-semibold block mb-1">
-                AQUVIA GOLD
+                AQUIVAGOLD
               </span>
               
               {activeFlow === "buy" ? (

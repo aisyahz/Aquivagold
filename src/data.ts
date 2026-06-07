@@ -159,7 +159,7 @@ export const WHY_CHOOSE_US: WhyChoose[] = [
 export const REVIEWS: Review[] = [
   {
     rating: 5,
-    text: "Pembungkusan premium dan layanan yang sangat memuaskan. Dari pertanyaan awal hinggalah penghantaran kotak beriben yang elegan, Aquvia Gold memahami erti kemewahan sebenar.",
+    text: "Pembungkusan premium dan layanan yang sangat memuaskan. Dari pertanyaan awal hinggalah penghantaran kotak beriben yang elegan, AquivaGold memahami erti kemewahan sebenar.",
     author: "Zarina Abdullah",
     location: "Kuala Lumpur",
     date: "01 Jun 2026"
