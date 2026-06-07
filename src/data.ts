@@ -16,7 +16,7 @@ export const PRODUCTS: Product[] = [
     ],
     price: "RM 280",
     images: [
-      "/src/assets/images/millenia_spray_1780832166570.png",
+      "/src/assets/images/spray.jpeg",
       "/src/assets/images/aquvia_spa_hero_1780832150912.png"
     ],
     directions: "Semburkan botol eksklusif ini pada jarak kira-kira 15-20cm dari wajah atau badan. Pejamkan mata dan sembur secara perlahan dengan gerakan bulat. Gunakan pada bila-bila masa—pagi, petang, atau malam—untuk mengembalikan kesegaran, atau sapukan sejurus selepas pembersihan bagi mengunci kelembapan harian.",
@@ -59,7 +59,7 @@ export const PRODUCTS: Product[] = [
     ],
     price: "RM 390",
     images: [
-      "/src/assets/images/millenia_essence_1780832181196.png",
+      "/src/assets/images/Essence.jpeg",
       "/src/assets/images/aquvia_spa_hero_1780832150912.png"
     ],
     directions: "Titiskan 8 hingga 12 titis essence eksklusif ini ke dalam air mandian suam. Kacau perlahan agar formulanya tersebar sekata. Berbaring bertenang, tarik nafas dalam-dalam, dan nikmati wap terapi spa yang menenangkan selama 15 hingga 20 minit.",
@@ -101,7 +101,7 @@ export const PRODUCTS: Product[] = [
     ],
     price: "RM 480",
     images: [
-      "/src/assets/images/millenia_drop_1780832196488.png",
+      "/src/assets/images/Drop.jpeg",
       "/src/assets/images/aquvia_spa_hero_1780832150912.png"
     ],
     directions: "Dengan menggunakan pipet emas yang elegan, titiskan 3 hingga 5 titis ke dalam segelas air mineral suam atau teh organik kegemaran anda. Kacau perlahan dan amalkan setiap pagi untuk menyokong kesejahteraan jangka panjang dan kecergasan menyeluruh.",
