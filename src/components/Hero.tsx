@@ -31,9 +31,9 @@ export default function Hero({ onOpenConsultation }: HeroProps) {
 
   // Three products to feature visually in the Hero base
   const heroProducts = [
-    { name: "Spray", label: "Penyegar Kulit", img: "/src/assets/images/spray.jpeg" },
-    { name: "Essence", label: "Terapi Mandian", img: "/src/assets/images/Essence.jpeg" },
-    { name: "Drop", label: "Suplemen Premium", img: "/src/assets/images/Drop.jpeg" },
+    { name: "Spray", label: "Penyegar Kulit", img: "https://raw.githubusercontent.com/aisyahz/Aquivagold/main/src/assets/images/spray.jpeg" },
+    { name: "Essence", label: "Terapi Mandian", img: "https://raw.githubusercontent.com/aisyahz/Aquivagold/main/src/assets/images/Essence.jpegg" },
+    { name: "Drop", label: "Suplemen Premium", img: "https://raw.githubusercontent.com/aisyahz/Aquivagold/main/src/assets/images/Drop.jpeg" },
   ];
 
   return (
@@ -138,7 +138,7 @@ export default function Hero({ onOpenConsultation }: HeroProps) {
             {/* Center Product Showcase (Alternating Preview Bottles) */}
             <div className="relative w-48 h-48 flex items-center justify-center z-10 transition-transform duration-700 hover:scale-105">
               <img
-                src="/src/assets/images/spray.jpeg"
+                src="https://raw.githubusercontent.com/aisyahz/Aquivagold/main/src/assets/images/spray.jpeg"
                 alt="Highlighting Black Millenia line bottle"
                 referrerPolicy="no-referrer"
                 className="w-full h-full object-contain filter drop-shadow-[0_15px_30px_rgba(43,43,43,0.15)]"
