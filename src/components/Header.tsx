@@ -1,12 +1,14 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Menu, X, ArrowRight } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 
 interface HeaderProps {
   onOpenConsultation: () => void;
+  currentView: "home" | "agent";
+  onNavigate: (view: "home" | "agent") => void;
 }
 
-export default function Header({ onOpenConsultation }: HeaderProps) {
+export default function Header({ onOpenConsultation, currentView, onNavigate }: HeaderProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -23,12 +25,38 @@ export default function Header({ onOpenConsultation }: HeaderProps) {
   }, []);
 
   const navLinks = [
-    { label: "Koleksi", href: "#collection" },
-    { label: "Tentang Kami", href: "#about" },
-    { label: "Kelebihan", href: "#why-choose" },
-    { label: "Testimoni Pelanggan", href: "#reviews" },
-    { label: "Soalan Lazim", href: "#faq" },
+    { label: "Utama", action: () => onNavigate("home"), href: "#" },
+    { label: "Koleksi", action: () => onNavigate("home"), href: "#collection" },
+    { label: "Sertai Usahawan", action: () => onNavigate("agent"), href: "/agent" },
+    { label: "Tentang Kami", action: () => onNavigate("home"), href: "#about" },
+    { label: "Kelebihan", action: () => onNavigate("home"), href: "#why-choose" },
+    { label: "Testimoni", action: () => onNavigate("home"), href: "#reviews" },
+    { label: "Soalan Lazim", action: () => onNavigate("home"), href: "#faq" },
   ];
+
+  const handleLinkClick = (link: typeof navLinks[0], e: React.MouseEvent) => {
+    setIsMobileMenuOpen(false);
+    if (link.href.startsWith("#")) {
+      e.preventDefault();
+      // Navigate to home first if on agent page
+      if (currentView !== "home") {
+        onNavigate("home");
+        // Delay scroll to let DOM mount home page
+        setTimeout(() => {
+          const targetId = link.href.slice(1);
+          const el = document.getElementById(targetId || "main-layout-container");
+          if (el) el.scrollIntoView({ behavior: "smooth" });
+        }, 100);
+      } else {
+        const targetId = link.href.slice(1);
+        const el = document.getElementById(targetId || "main-layout-container");
+        if (el) el.scrollIntoView({ behavior: "smooth" });
+      }
+    } else {
+      e.preventDefault();
+      link.action();
+    }
+  };
 
   return (
     <header
@@ -41,14 +69,21 @@ export default function Header({ onOpenConsultation }: HeaderProps) {
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
         {/* Logo Section */}
-        <a href="#" className="flex flex-col select-none group text-left" id="header-logo">
+        <button
+          onClick={() => {
+            onNavigate("home");
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }}
+          className="flex flex-col select-none group text-left cursor-pointer focus:outline-none"
+          id="header-logo"
+        >
           <span className="font-serif text-lg md:text-xl font-medium tracking-[0.25em] text-charcoal group-hover:text-gold transition-colors duration-300">
             AQUVIA GOLD
           </span>
           <span className="text-[9px] uppercase tracking-[0.4em] text-gold font-light mt-0.5 leading-none">
             Black Millenia
           </span>
-        </a>
+        </button>
 
         {/* Desktop Links */}
         <nav className="hidden lg:flex items-center space-x-8" aria-label="Main Navigation">
@@ -56,6 +91,7 @@ export default function Header({ onOpenConsultation }: HeaderProps) {
             <a
               key={link.label}
               href={link.href}
+              onClick={(e) => handleLinkClick(link, e)}
               className="text-xs uppercase tracking-widest font-medium text-charcoal hover:text-gold transition-colors duration-300 relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[1px] after:bg-gold hover:after:w-full after:transition-all after:duration-300"
             >
               {link.label}
@@ -112,7 +148,7 @@ export default function Header({ onOpenConsultation }: HeaderProps) {
                 <a
                   key={link.label}
                   href={link.href}
-                  onClick={() => setIsMobileMenuOpen(false)}
+                  onClick={(e) => handleLinkClick(link, e)}
                   className="text-sm uppercase tracking-widest font-medium text-charcoal hover:text-gold py-1 block"
                 >
                   {link.label}

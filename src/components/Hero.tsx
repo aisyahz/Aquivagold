@@ -71,10 +71,10 @@ export default function Hero({ onOpenConsultation }: HeroProps) {
           {/* Headline */}
           <motion.h1
             variants={itemVariants}
-            className="font-serif text-4xl sm:text-5xl md:text-6xl font-medium tracking-tight text-charcoal leading-[1.1]"
+            className="font-serif text-4xl sm:text-5xl md:text-6xl font-medium tracking-tight text-charcoal leading-[1.15]"
           >
-            Tingkatkan Ritual <br />
-            <span className="italic font-light text-gold">Penjagaan Diri Anda</span>
+            Tingkatkan Kesejahteraan Anda <br />
+            <span className="italic font-light text-gold">Secara Semula Jadi</span>
           </motion.h1>
 
           {/* Subheadline */}
@@ -82,7 +82,7 @@ export default function Hero({ onOpenConsultation }: HeroProps) {
             variants={itemVariants}
             className="text-sm md:text-base font-light text-charcoal-light max-w-lg leading-relaxed"
           >
-            Temui koleksi Aquvia Gold Black Millenia yang direka khas untuk melengkapkan perjalanan penjagaan diri anda dengan sentuhan premium dan elegan.
+            Koleksi premium Aquvia Gold untuk melengkapkan rutin penjagaan diri dan kesejahteraan harian.
           </motion.p>
 
           {/* Action CTAs */}
@@ -92,7 +92,7 @@ export default function Hero({ onOpenConsultation }: HeroProps) {
               className="py-4 px-8 bg-charcoal hover:bg-charcoal-light text-white text-xs uppercase tracking-widest font-semibold text-center transition-all duration-300 shadow-md hover:shadow-lg flex items-center justify-center space-x-2 border border-transparent"
               id="hero-primary-cta"
             >
-              <span>Terokai Koleksi</span>
+              <span>Lihat Produk</span>
               <ArrowRight size={14} className="text-gold" />
             </a>
 
@@ -102,7 +102,7 @@ export default function Hero({ onOpenConsultation }: HeroProps) {
               id="hero-secondary-cta"
             >
               <MessageCircle size={14} className="text-gold" />
-              <span>Perlukan Konsultasi?</span>
+              <span>Konsultasi Percuma</span>
             </button>
           </motion.div>
 

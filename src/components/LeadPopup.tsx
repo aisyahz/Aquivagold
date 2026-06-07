@@ -33,12 +33,12 @@ export default function LeadPopup({
   });
 
   const [consultTopics, setConsultTopics] = useState<Record<string, boolean>>({
-    "Sukar tidur": false,
-    "Mudah letih": false,
-    "Penjagaan kulit": false,
-    "Tekanan / Stress": false,
-    "Keselesaan badan": false,
-    "Lain-lain": false,
+    "Penjagaan Kulit": false,
+    "Keselesaan Wanita": false,
+    "Keselesaan Lelaki": false,
+    "Kesejahteraan Harian": false,
+    "Kesihatan Dalaman": false,
+    "Tidak Pasti": false,
   });
 
   const [errors, setErrors] = useState<Record<string, string>>({});
