@@ -23,6 +23,10 @@ import essenceImage from "../../assets/images/Essence.jpeg";
 import sprayImage from "../../assets/images/spray.jpeg";
 import dropImage from "../../assets/images/Drop.jpeg";
 
+import halalMestiImage from "../../assets/images/halal mesti.jpeg";
+import kkmImage from "../../assets/images/kkm.jpeg";
+import labReportImage from "../../assets/images/lab test report.jpeg";
+
 interface HomeViewProps {
   onNavigate: (view: string) => void;
   onOpenConsultation: (flow?: "buy" | "consult", productTitle?: string) => void;
@@ -436,7 +440,7 @@ export default function HomeView({ onNavigate, onOpenConsultation }: HomeViewPro
         </div>
       </section>
 
-      {/* 5. CERTIFICATION PREVIEW (SSM, HALAL, MESTI, Lab Test Report, Company Address) */}
+      {/* 5. CERTIFICATION PREVIEW (HALAL & MESTI, KKM, Lab Report - Show 3 authentic preview cards) */}
       <section className="bg-[#FAF8F1] py-24 border-y border-[#C8A75B]/20 max-w-full" id="certifications-preview">
         <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-12 lg:px-16">
           <div className="text-center max-w-3xl mx-auto space-y-5 mb-20">
@@ -445,37 +449,68 @@ export default function HomeView({ onNavigate, onOpenConsultation }: HomeViewPro
               Komitmen Terhadap Kualiti
             </h2>
             <p className="text-[16px] sm:text-[18px] md:text-[17px] lg:text-[18px] xl:text-[20px] text-[#1F1F1F]/70 max-w-xl mx-auto leading-[1.8]">
-              Dokumentasi, pendaftaran rasmi dan kelulusan makmal yang memupuk ketenangan minda pelanggan kami.
+              Dokumentasi, pendaftaran rasmi dan kelulusan analisis saintifik bebas yang memupuk ketenangan jiwa dan ketelusan mutlak.
             </p>
             <div className="w-20 h-[1.5px] bg-[#C8A75B] mx-auto mt-4" />
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10">
             {[
-              { title: "Sijil SSM Syarikat", icon: FileText, label: "Pendaftaran SSM Teratur", desc: "Berdaftar secara sah dan telus di bawah Suruhanjaya Syarikat Malaysia." },
-              { title: "Standard HALAL Syarikat", icon: Award, label: "Pematuhan Sijil Gred", desc: "Menjamin keselamatan bahan mentah suci mengikut syarak sepenuhnya." },
-              { title: "MESTI Pengilangan", icon: ShieldCheck, label: "Jaminan Pemprosesan Bersih", desc: "Standard kualiti terkawal di bawah rantaian sanitari premium bertaraf tinggi." },
-              { title: "Ujian Analisis Makmal", icon: FlaskConical, label: "Lab Test Report Bebas Kimia", desc: "Siri ujian membuktikan sifar kandungan plumbum, raksa atau bahan sintetik tegar." },
-              { title: "Alamat Korporat HQ", icon: MapPin, label: "Syarikat Berpusat Fizikal", desc: "Kemudahan butik sokongan berpusat bertempat di Bukit Damansara, Kuala Lumpur." }
+              { 
+                title: "HALAL & MESTI", 
+                img: halalMestiImage, 
+                label: "Piawaian Kebersihan & Syarak", 
+                desc: "Pensijilan berkaitan yang menunjukkan komitmen terhadap standard pengeluaran dan pematuhan yang ditetapkan." 
+              },
+              { 
+                title: "KKM Related Documentation", 
+                img: kkmImage, 
+                label: "Dokumentasi & Kelulusan KKM", 
+                desc: "Dokumentasi berkaitan yang boleh dirujuk untuk tujuan maklumat dan keyakinan pelanggan." 
+              },
+              { 
+                title: "Laporan Makmal", 
+                img: labReportImage, 
+                label: "Analisis & COA Saintifik", 
+                desc: "Laporan analisis makmal yang berkaitan dengan produk Aquiva Gold Black Millenia." 
+              }
             ].map((doc, idx) => (
               <div 
                 key={idx}
-                className="bg-white border border-[#C8A75B]/20 rounded-2xl p-6 sm:p-8 text-left flex flex-col justify-between hover:border-[#C8A75B] hover:shadow-md transition-all duration-300 group min-h-[340px]"
+                className="bg-white border-2 border-[#C8A75B]/15 rounded-[2rem] p-8 flex flex-col justify-between hover:border-[#C8A75B] hover:shadow-xl transition-all duration-300 group min-h-[480px]"
               >
-                <div>
-                  <div className="text-[#C8A75B] mb-5 p-3.5 bg-[#FBF8F1] inline-block rounded-xl border border-[#C8A75B]/15">
-                    <doc.icon size={26} />
+                <div className="space-y-6">
+                  {/* Premium Document Mini-Frame */}
+                  <div className="relative w-full aspect-[4/3] rounded-[1.25rem] border border-[#C8A75B]/20 overflow-hidden bg-slate-50 group-hover:border-[#C8A75B]/60 transition-all duration-500 shadow-sm p-1">
+                    <img 
+                      src={doc.img} 
+                      alt={doc.title} 
+                      referrerPolicy="no-referrer"
+                      className="w-full h-full object-cover rounded-[1rem] transition-transform duration-700 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-60" />
+                    <div className="absolute inset-2.5 rounded-[0.8rem] border border-dashed border-white/25 pointer-events-none" />
                   </div>
-                  <h3 className="font-serif text-[20px] sm:text-[22px] font-bold text-[#1F1F1F] leading-snug">{doc.title}</h3>
-                  <span className="text-[12px] text-[#C8A75B] uppercase tracking-wider block font-bold mt-2">{doc.label}</span>
-                  <p className="text-[15px] sm:text-[16px] md:text-[16px] lg:text-[17px] text-[#1F1F1F]/70 mt-3.5 leading-[1.7]">{doc.desc}</p>
+
+                  <div className="space-y-3.5 text-left">
+                    <span className="text-[10px] bg-[#FAF8F1] border border-[#C8A75B]/20 text-[#C8A75B] uppercase tracking-widest font-extrabold px-3 py-1.5 rounded-lg inline-block">
+                      {doc.label}
+                    </span>
+                    <h3 className="font-serif text-[22px] font-bold text-[#1F1F1F] leading-tight group-hover:text-[#C8A75B] transition-colors">
+                      {doc.title}
+                    </h3>
+                    <p className="text-[15px] text-[#1F1F1F]/70 leading-[1.7] font-light">
+                      {doc.desc}
+                    </p>
+                  </div>
                 </div>
                 
                 <button
                   onClick={() => onNavigate("pensijilan")}
-                  className="cursor-pointer text-[13px] sm:text-[14px] uppercase tracking-wider font-bold text-[#C8A75B] group-hover:text-[#1F1F1F] transition-colors mt-8 pt-4 border-t border-dashed border-[#C8A75B]/20 text-left block w-full"
+                  className="cursor-pointer text-[13px] sm:text-[14px] uppercase tracking-widest font-extrabold text-[#C8A75B] group-hover:text-[#1F1F1F] transition-colors mt-8 pt-5 border-t border-dashed border-[#C8A75B]/20 text-left flex items-center justify-between w-full"
                 >
-                  Lihat Dokumen &rarr;
+                  <span>LIHAT DOKUMEN</span>
+                  <span>&rarr;</span>
                 </button>
               </div>
             ))}
@@ -484,7 +519,7 @@ export default function HomeView({ onNavigate, onOpenConsultation }: HomeViewPro
           <div className="text-center mt-16">
             <button
               onClick={() => onNavigate("pensijilan")}
-              className="cursor-pointer h-[54px] sm:h-[58px] px-10 bg-[#1F1F1F] hover:bg-[#333333] text-white text-[15px] sm:text-[16px] uppercase tracking-wider font-bold transition-all duration-300 rounded-md shadow-md inline-flex items-center justify-center animate-none"
+              className="cursor-pointer h-[54px] sm:h-[58px] px-10 bg-[#1F1F1F] hover:bg-[#C8A75B] hover:text-black text-white text-[15px] sm:text-[16px] uppercase tracking-wider font-bold transition-all duration-300 rounded-md shadow-md inline-flex items-center justify-center animate-none"
             >
               Lihat Pensijilan &amp; Bukti
             </button>
