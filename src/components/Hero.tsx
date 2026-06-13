@@ -41,7 +41,7 @@ export default function Hero({ onOpenConsultation }: HeroProps) {
       {/* Background with Ambient Overlay */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://raw.githubusercontent.com/aisyahz/Aquivagold/main/src/assets/images/aquvia_spa_hero_1780832150912.pngg"
+          src="https://raw.githubusercontent.com/aisyahz/Aquivagold/main/src/assets/images/aquvia_spa_hero_1780832150912.png"
           alt="Luxury soft beige sunlit spa surroundings"
           referrerPolicy="no-referrer"
           className="w-full h-full object-cover object-center scale-105 filter brightness-[0.96] contrast-[0.98]"
