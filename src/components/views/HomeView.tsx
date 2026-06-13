@@ -17,6 +17,12 @@ import {
 } from "lucide-react";
 import PlaceholderImage from "../PlaceholderImage";
 
+import heroBanner from "../../assets/images/hero-banner.png";
+import agentBanner from "../../assets/images/agent-banner.png";
+import essenceImage from "../../assets/images/Essence.jpeg";
+import sprayImage from "../../assets/images/spray.jpeg";
+import dropImage from "../../assets/images/Drop.jpeg";
+
 interface HomeViewProps {
   onNavigate: (view: string) => void;
   onOpenConsultation: (flow?: "buy" | "consult", productTitle?: string) => void;
@@ -95,7 +101,7 @@ export default function HomeView({ onNavigate, onOpenConsultation }: HomeViewPro
             </span>
             <div className="relative w-full aspect-[4/3] rounded-[1.5rem] border-2 border-[#C8A75B]/20 overflow-hidden shadow-md">
               <img 
-                src="/src/assets/images/hero-banner.png" 
+                src={heroBanner} 
                 alt="Aquiva Gold Black Millenia Collection" 
                 className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"
@@ -112,7 +118,7 @@ export default function HomeView({ onNavigate, onOpenConsultation }: HomeViewPro
         className="hidden md:flex relative min-h-[660px] lg:min-h-[740px] w-full items-center justify-center overflow-hidden border-b border-[#C8A75B]/20 py-16 lg:py-20 bg-[#131311]" 
         id="hero-desktop"
         style={{
-          backgroundImage: `linear-gradient(90deg, rgba(8,8,7,0.96) 0%, rgba(8,8,7,0.90) 45%, rgba(8,8,7,0.50) 80%, rgba(8,8,7,0.85) 100%), url('/src/assets/images/hero-banner.png')`,
+          backgroundImage: `linear-gradient(90deg, rgba(8,8,7,0.96) 0%, rgba(8,8,7,0.90) 45%, rgba(8,8,7,0.50) 80%, rgba(8,8,7,0.85) 100%), url('${heroBanner}')`,
           backgroundSize: "cover",
           backgroundPosition: "center right",
           backgroundRepeat: "no-repeat"
@@ -216,7 +222,7 @@ export default function HomeView({ onNavigate, onOpenConsultation }: HomeViewPro
             >
               <div className="relative w-full max-w-[420px] aspect-[4/3] rounded-[2rem] border-2 border-[#C8A75B]/30 overflow-hidden shadow-2xl bg-[#1A1A17] p-1.5 group/hero-img">
                 <img 
-                  src="/src/assets/images/hero-banner.png" 
+                  src={heroBanner} 
                   alt="Aquiva Gold Premium Spa Experience" 
                   className="w-full h-full object-cover rounded-[1.75rem] transition-transform duration-700 group-hover/hero-img:scale-105"
                   referrerPolicy="no-referrer"
@@ -340,26 +346,26 @@ export default function HomeView({ onNavigate, onOpenConsultation }: HomeViewPro
           <div className="w-20 h-[1.5px] bg-[#C8A75B] mx-auto mt-4" />
         </div>
 
-        {/* 3 Key Products Showcase with Premium Placeholders */}
+        {/* 3 Key Products Showcase with Actual Images */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10">
           {[
             {
               id: "essence",
               title: "BMW Essence",
               desc: "Terapi terapi mandian bertahap tinggi untuk pengalaman ketenangan spa maksimum di bilik tidur anda.",
-              placeholderLabel: "BMW ESSENCE",
+              img: essenceImage,
             },
             {
               id: "spray",
               title: "BMW Spray",
               desc: "Semburan mikro penyegar kulit wajah & badan yang melindungi perlindungan kelembapan semula jadi anda.",
-              placeholderLabel: "BMW SPRAY",
+              img: sprayImage,
             },
             {
               id: "drop",
               title: "BMW Drop",
               desc: "Formula titisan kesejahteraan premium yang menyahut bertenaga bersih sepanjang hari secara holistik.",
-              placeholderLabel: "BMW DROP",
+              img: dropImage,
             }
           ].map((prod) => (
             <div 
@@ -367,12 +373,33 @@ export default function HomeView({ onNavigate, onOpenConsultation }: HomeViewPro
               className="bg-[#FBF8F1] border border-[#C8A75B]/20 rounded-[2rem] p-8 sm:p-10 flex flex-col justify-between hover:shadow-lg transition-all duration-300 group"
             >
               <div className="space-y-8">
-                {/* Premium Golden Gradient/Icon box Placeholder strictly matching standard guidelines */}
-                <PlaceholderImage 
-                  label={prod.placeholderLabel} 
-                  type="product" 
-                  aspect="aspect-square w-full" 
-                />
+                {/* Premium Golden Frame with Actual Image */}
+                <div className="relative w-full aspect-square rounded-[1.25rem] border border-[#C8A75B]/20 overflow-hidden shadow-xs group/img hover:border-[#C8A75B]/60 transition-all duration-500 bg-white">
+                  <img 
+                    src={prod.img} 
+                    alt={prod.title} 
+                    referrerPolicy="no-referrer"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover/img:scale-110" 
+                  />
+                  {/* Subtle elegant gradient overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-60 group-hover/img:opacity-40 transition-opacity duration-500" />
+                  
+                  {/* Golden frame outline inside the image borders */}
+                  <div className="absolute inset-3 rounded-[0.9rem] border border-dashed border-white/20 pointer-events-none group-hover/img:border-[#C8A75B]/30 transition-colors duration-500" />
+                  
+                  {/* Floating micro label for prestige */}
+                  <div className="absolute bottom-4 left-4 right-4 z-10 flex justify-between items-center bg-[#1F1F1F]/80 backdrop-blur-md border border-[#C8A75B]/30 px-3.5 py-2 rounded-xl text-left">
+                    <div>
+                      <span className="font-serif text-white text-[12px] tracking-wide block font-bold leading-none">
+                        {prod.title}
+                      </span>
+                      <span className="font-sans text-[8px] text-[#C8A75B] uppercase tracking-[0.2em] block font-semibold mt-1 leading-none">
+                        Black Millenia Series
+                      </span>
+                    </div>
+                    <Sparkles size={12} className="text-[#C8A75B] shrink-0" />
+                  </div>
+                </div>
 
                 <div className="space-y-3 text-left">
                   <h3 className="font-serif text-[24px] sm:text-[28px] font-bold text-[#1F1F1F]">{prod.title}</h3>
@@ -532,7 +559,7 @@ export default function HomeView({ onNavigate, onOpenConsultation }: HomeViewPro
         className="relative text-white py-24 border-y border-[#C8A75B]/20 max-w-full overflow-hidden bg-cover bg-center bg-no-repeat" 
         id="entrepreneur-preview"
         style={{
-          backgroundImage: `linear-gradient(rgba(19, 19, 17, 0.88), rgba(27, 27, 24, 0.94)), url('/src/assets/images/agent-banner.png')`
+          backgroundImage: `linear-gradient(rgba(19, 19, 17, 0.88), rgba(27, 27, 24, 0.94)), url('${agentBanner}')`
         }}
       >
         <div className="absolute top-0 right-0 w-64 h-64 bg-[#C8A75B]/5 rounded-full filter blur-3xl pointer-events-none" />

@@ -13,7 +13,10 @@ import {
   Wind,
   Plus
 } from "lucide-react";
-import PlaceholderImage from "../PlaceholderImage";
+
+import essenceImage from "../../assets/images/Essence.jpeg";
+import sprayImage from "../../assets/images/spray.jpeg";
+import dropImage from "../../assets/images/Drop.jpeg";
 
 interface ProductsViewProps {
   onOpenConsultation: (flow?: "buy" | "consult", productTitle?: string) => void;
@@ -70,7 +73,19 @@ export default function ProductsView({ onOpenConsultation }: ProductsViewProps) 
           <div className="lg:col-span-5 relative group">
             <div className="absolute inset-0 bg-gradient-to-tr from-[#C8A75B]/10 to-transparent rounded-3xl filter blur-xl pointer-events-none" />
             <div className="w-full">
-              <PlaceholderImage label="BMW ESSENCE" type="product" aspect="aspect-square w-full" />
+              <div className="relative w-full aspect-square rounded-[2rem] border-2 border-[#C8A75B]/30 overflow-hidden shadow-2xl bg-white p-1.5 group/img-view">
+                <img 
+                  src={essenceImage} 
+                  alt="BMW Essence" 
+                  className="w-full h-full object-cover rounded-[1.75rem] transition-transform duration-700 group-hover/img-view:scale-105"
+                  referrerPolicy="no-referrer"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none rounded-[1.75rem]" />
+                <div className="absolute bottom-6 left-8 text-left z-10">
+                  <span className="text-[11px] uppercase tracking-widest text-[#C8A75B] font-bold block mb-1">EKSKLUSIF & HALAL</span>
+                  <h4 className="font-serif text-white text-[18px] font-semibold leading-tight">BMW Essence Terapi Mandian</h4>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -213,7 +228,19 @@ export default function ProductsView({ onOpenConsultation }: ProductsViewProps) 
           <div className="lg:col-span-5 relative group order-1 lg:order-2">
             <div className="absolute inset-0 bg-gradient-to-tr from-[#C8A75B]/10 to-transparent rounded-3xl filter blur-xl pointer-events-none" />
             <div className="w-full">
-              <PlaceholderImage label="BMW SPRAY" type="product" aspect="aspect-square w-full" />
+              <div className="relative w-full aspect-square rounded-[2rem] border-2 border-[#C8A75B]/30 overflow-hidden shadow-2xl bg-white p-1.5 group/img-view">
+                <img 
+                  src={sprayImage} 
+                  alt="BMW Spray" 
+                  className="w-full h-full object-cover rounded-[1.75rem] transition-transform duration-700 group-hover/img-view:scale-105"
+                  referrerPolicy="no-referrer"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none rounded-[1.75rem]" />
+                <div className="absolute bottom-6 left-8 text-left z-10">
+                  <span className="text-[11px] uppercase tracking-widest text-[#C8A75B] font-bold block mb-1">PENGALAMAN PREMIUM</span>
+                  <h4 className="font-serif text-white text-[18px] font-semibold leading-tight">BMW Spray Penyegar Wajah</h4>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -224,7 +251,19 @@ export default function ProductsView({ onOpenConsultation }: ProductsViewProps) 
           <div className="lg:col-span-5 relative group">
             <div className="absolute inset-0 bg-gradient-to-tr from-[#C8A75B]/10 to-transparent rounded-3xl filter blur-xl pointer-events-none" />
             <div className="w-full">
-              <PlaceholderImage label="BMW DROP" type="product" aspect="aspect-square w-full" />
+              <div className="relative w-full aspect-square rounded-[2rem] border-2 border-[#C8A75B]/30 overflow-hidden shadow-2xl bg-white p-1.5 group/img-view">
+                <img 
+                  src={dropImage} 
+                  alt="BMW Drop" 
+                  className="w-full h-full object-cover rounded-[1.75rem] transition-transform duration-700 group-hover/img-view:scale-105"
+                  referrerPolicy="no-referrer"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none rounded-[1.75rem]" />
+                <div className="absolute bottom-6 left-8 text-left z-10">
+                  <span className="text-[11px] uppercase tracking-widest text-[#C8A75B] font-bold block mb-1">FORMULA BOTANI</span>
+                  <h4 className="font-serif text-white text-[18px] font-semibold leading-tight">BMW Drop Titisan Kesejahteraan</h4>
+                </div>
+              </div>
             </div>
           </div>
 

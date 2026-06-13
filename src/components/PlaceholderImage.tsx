@@ -13,6 +13,10 @@ import {
   Building
 } from "lucide-react";
 
+import essenceImage from "../assets/images/Essence.jpeg";
+import sprayImage from "../assets/images/spray.jpeg";
+import dropImage from "../assets/images/Drop.jpeg";
+
 interface PlaceholderImageProps {
   label: string;
   type?: "product" | "building" | "people" | "document" | "certificate" | "logo";
@@ -27,20 +31,20 @@ export default function PlaceholderImage({
   className = "", 
   aspect = "aspect-[4/3]",
   imageUrl
-}: PlaceholderImageProps) {
-
-  // Auto-resolve product labels to their corresponding image assets
-  let finalImageUrl = imageUrl;
-  if (!finalImageUrl) {
-    const cleanLabel = label.toUpperCase().trim();
-    if (cleanLabel === "BMW ESSENCE") {
-      finalImageUrl = "/src/assets/images/Essence.jpeg";
-    } else if (cleanLabel === "BMW SPRAY") {
-      finalImageUrl = "/src/assets/images/spray.jpeg";
-    } else if (cleanLabel === "BMW DROP") {
-      finalImageUrl = "/src/assets/images/Drop.jpeg";
-    }
-  }
+ }: PlaceholderImageProps) {
+ 
+   // Auto-resolve product labels to their corresponding image assets
+   let finalImageUrl = imageUrl;
+   if (!finalImageUrl) {
+     const cleanLabel = label.toUpperCase().trim();
+     if (cleanLabel === "BMW ESSENCE") {
+       finalImageUrl = essenceImage;
+     } else if (cleanLabel === "BMW SPRAY") {
+       finalImageUrl = sprayImage;
+     } else if (cleanLabel === "BMW DROP") {
+       finalImageUrl = dropImage;
+     }
+   }
 
   // If there's an image URL, render it beautifully with custom luxury styling
   if (finalImageUrl) {
