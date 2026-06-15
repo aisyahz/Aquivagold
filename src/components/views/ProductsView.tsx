@@ -44,7 +44,7 @@ export default function ProductsView({ onOpenConsultation }: ProductsViewProps) 
           <h1 className="font-serif text-[32px] sm:text-[38px] md:text-[44px] lg:text-[48px] xl:text-[54px] text-[#1F1F1F] font-medium tracking-tight leading-tight">
             Koleksi Produk Black Millenia
           </h1>
-          <p className="font-sans text-[16px] sm:text-[18px] md:text-[17px] lg:text-[18px] xl:text-[20px] text-[#1F1F1F]/70 max-w-2xl mx-auto leading-[1.8]">
+          <p className="font-sans text-[14px] sm:text-[15px] text-[#1F1F1F]/70 max-w-2xl mx-auto leading-[1.8]">
             Terokai rangkaian produk premium Aquiva Gold Black Millenia yang direka untuk melengkapkan keperluan penjagaan diri secara optimum dan melahirkan ketenangan harian anda.
           </p>
           <div className="w-20 h-[1.5px] bg-[#C8A75B] mx-auto mt-4" />
@@ -97,14 +97,14 @@ export default function ProductsView({ onOpenConsultation }: ProductsViewProps) 
               <p className="font-sans text-[15px] sm:text-[17px] uppercase tracking-wider text-[#1F1F1F]/60 font-semibold">Terapi Mandian Premium &bull; RM 390</p>
             </div>
 
-            <p className="font-sans text-[16px] sm:text-[18px] md:text-[17px] lg:text-[18px] xl:text-[19px] text-[#1F1F1F]/80 leading-[1.8] font-light">
+            <p className="font-sans text-[14px] sm:text-[15px] text-[#1F1F1F]/80 leading-[1.8] font-light">
               BMW Essence merangkumi pati pati botani gred terkawal yang ditala khusus untuk ritual spa harian bertaraf tinggi. Ia membangkitkan aromaterapi tulen yang menenangkan ketegangan fizikal murni anda.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-2">
               <div className="space-y-4 bg-[#FBF8F1] border border-[#C8A75B]/15 p-6 sm:p-8 rounded-2xl shadow-xs">
                 <span className="text-[12px] sm:text-[13px] uppercase tracking-wider text-[#C8A75B] font-bold block">Manfaat Utama</span>
-                <ul className="space-y-3 text-[15px] sm:text-[16px] text-[#1F1F1F]/75">
+                <ul className="space-y-3 text-[13px] sm:text-[14px] text-[#1F1F1F]/75">
                   <li className="flex items-start gap-2.5">
                     <CheckCircle size={18} className="text-[#C8A75B] shrink-0 mt-0.5" />
                     <span>Mempromosikan tidur mendalam</span>
@@ -122,7 +122,7 @@ export default function ProductsView({ onOpenConsultation }: ProductsViewProps) 
 
               <div className="space-y-4 bg-[#FBF8F1] border border-[#C8A75B]/15 p-6 sm:p-8 rounded-2xl shadow-xs">
                 <span className="text-[12px] sm:text-[13px] uppercase tracking-wider text-[#C8A75B] font-bold block">Cara Penggunaan</span>
-                <p className="text-[15px] sm:text-[16px] text-[#1F1F1F]/75 leading-[1.8] font-light">
+                <p className="text-[13px] sm:text-[14px] text-[#1F1F1F]/75 leading-[1.8] font-light">
                   Titiskan 8-12 titis ke air mandian suam. Rendam bertenang dan hirup wap herba berkesan selama 15-20 minit rukun relaksasi.
                 </p>
               </div>
@@ -131,11 +131,11 @@ export default function ProductsView({ onOpenConsultation }: ProductsViewProps) 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-2">
               <div className="space-y-2">
                 <span className="text-[12px] uppercase tracking-wider text-[#1F1F1F]/50 font-bold block">Siapa Sesuai Guna</span>
-                <p className="text-[15px] sm:text-[16px] text-[#1F1F1F]/70 leading-relaxed">Individu yang mahu ritual mandian tenang &amp; melegakan keletihan harian.</p>
+                <p className="text-[13px] sm:text-[14px] text-[#1F1F1F]/70 leading-relaxed">Individu yang mahu ritual mandian tenang &amp; melegakan keletihan harian.</p>
               </div>
               <div className="space-y-2">
                 <span className="text-[12px] uppercase tracking-wider text-[#1F1F1F]/50 font-bold block">Penyimpanan</span>
-                <p className="text-[15px] sm:text-[16px] text-[#1F1F1F]/70 leading-relaxed">Simpan di tempat kering suhu bilik, hindari panahan matahari terus.</p>
+                <p className="text-[13px] sm:text-[14px] text-[#1F1F1F]/70 leading-relaxed">Simpan di tempat kering suhu bilik, hindari panahan matahari terus.</p>
               </div>
             </div>
 
@@ -166,14 +166,14 @@ export default function ProductsView({ onOpenConsultation }: ProductsViewProps) 
               <p className="font-sans text-[15px] sm:text-[17px] uppercase tracking-wider text-[#1F1F1F]/60 font-semibold">Penyegar Kulit Premium &bull; RM 280</p>
             </div>
 
-            <p className="font-sans text-[16px] sm:text-[18px] md:text-[17px] lg:text-[18px] xl:text-[19px] text-[#1F1F1F]/80 leading-[1.8] font-light">
+            <p className="font-sans text-[14px] sm:text-[15px] text-[#1F1F1F]/80 leading-[1.8] font-light">
               Formula ultra-ringan BMW Spray memberikan semburan partikel halus menembusi lapisan kulit luar untuk memulihkan sensasi penghidratan berterusan. Sesuai digunakan sepanjang hari.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-2">
               <div className="space-y-4 bg-[#FBF8F1] border border-[#C8A75B]/15 p-6 sm:p-8 rounded-2xl shadow-xs">
                 <span className="text-[12px] sm:text-[13px] uppercase tracking-wider text-[#C8A75B] font-bold block">Manfaat Utama</span>
-                <ul className="space-y-3 text-[15px] sm:text-[16px] text-[#1F1F1F]/75">
+                <ul className="space-y-3 text-[13px] sm:text-[14px] text-[#1F1F1F]/75">
                   <li className="flex items-start gap-2.5">
                     <CheckCircle size={18} className="text-[#C8A75B] shrink-0 mt-0.5" />
                     <span>Penghidratan pantas zon kering</span>
@@ -191,7 +191,7 @@ export default function ProductsView({ onOpenConsultation }: ProductsViewProps) 
 
               <div className="space-y-4 bg-[#FBF8F1] border border-[#C8A75B]/15 p-6 sm:p-8 rounded-2xl shadow-xs">
                 <span className="text-[12px] sm:text-[13px] uppercase tracking-wider text-[#C8A75B] font-bold block">Cara Penggunaan</span>
-                <p className="text-[15px] sm:text-[16px] text-[#1F1F1F]/75 leading-[1.8] font-light">
+                <p className="text-[13px] sm:text-[14px] text-[#1F1F1F]/75 leading-[1.8] font-light">
                   Semburkan jarak 15-20cm secara bulatan lembut dari wajah. Boleh digunakan setiap beberapa jam untuk perlindungan tambahan.
                 </p>
               </div>
@@ -200,11 +200,11 @@ export default function ProductsView({ onOpenConsultation }: ProductsViewProps) 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-2">
               <div className="space-y-2">
                 <span className="text-[12px] uppercase tracking-wider text-[#1F1F1F]/50 font-bold block">Siapa Sesuai Guna</span>
-                <p className="text-[15px] sm:text-[16px] text-[#1F1F1F]/70 leading-relaxed">Semua jenis kulit, terutamanya yang kerap berada di bilik berhawa dingin.</p>
+                <p className="text-[13px] sm:text-[14px] text-[#1F1F1F]/70 leading-relaxed">Semua jenis kulit, terutamanya yang kerap berada di bilik berhawa dingin.</p>
               </div>
               <div className="space-y-2">
                 <span className="text-[12px] uppercase tracking-wider text-[#1F1F1F]/50 font-bold block">Penyimpanan</span>
-                <p className="text-[15px] sm:text-[16px] text-[#1F1F1F]/70 leading-relaxed">Simpan dalam suhu terkawal. Jauhkan daripada jangkauan haba langsung.</p>
+                <p className="text-[13px] sm:text-[14px] text-[#1F1F1F]/70 leading-relaxed">Simpan dalam suhu terkawal. Jauhkan daripada jangkauan haba langsung.</p>
               </div>
             </div>
 
@@ -275,14 +275,14 @@ export default function ProductsView({ onOpenConsultation }: ProductsViewProps) 
               <p className="font-sans text-[15px] sm:text-[17px] uppercase tracking-wider text-[#1F1F1F]/60 font-semibold">Suplemen Kesejahteraan Premium &bull; RM 480</p>
             </div>
 
-            <p className="font-sans text-[16px] sm:text-[18px] md:text-[17px] lg:text-[18px] xl:text-[19px] text-[#1F1F1F]/80 leading-[1.8] font-light">
+            <p className="font-sans text-[14px] sm:text-[15px] text-[#1F1F1F]/80 leading-[1.8] font-light">
               Titisan premium BMW Drop dirumus untuk menyokong metabolisme harian dan kesejahteraan organik seluruh tubuh anda bagi gaya hidup sihat aktif yang cemerlang.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-2">
               <div className="space-y-4 bg-[#FBF8F1] border border-[#C8A75B]/15 p-6 sm:p-8 rounded-2xl shadow-xs">
                 <span className="text-[12px] sm:text-[13px] uppercase tracking-wider text-[#C8A75B] font-bold block">Manfaat Utama</span>
-                <ul className="space-y-3 text-[15px] sm:text-[16px] text-[#1F1F1F]/75">
+                <ul className="space-y-3 text-[13px] sm:text-[14px] text-[#1F1F1F]/75">
                   <li className="flex items-start gap-2.5">
                     <CheckCircle size={18} className="text-[#C8A75B] shrink-0 mt-0.5" />
                     <span>Mengekalkan stamina bersih tubuh</span>
@@ -300,7 +300,7 @@ export default function ProductsView({ onOpenConsultation }: ProductsViewProps) 
 
               <div className="space-y-4 bg-[#FBF8F1] border border-[#C8A75B]/15 p-6 sm:p-8 rounded-2xl shadow-xs">
                 <span className="text-[12px] sm:text-[13px] uppercase tracking-wider text-[#C8A75B] font-bold block">Cara Penggunaan</span>
-                <p className="text-[15px] sm:text-[16px] text-[#1F1F1F]/75 leading-[1.8] font-light">
+                <p className="text-[13px] sm:text-[14px] text-[#1F1F1F]/75 leading-[1.8] font-light">
                   Titiskan 3 hingga 5 titis menggunakan pipet emas ke dalam segelas air mineral atau minuman kegemaran anda setiap pagi.
                 </p>
               </div>
@@ -309,11 +309,11 @@ export default function ProductsView({ onOpenConsultation }: ProductsViewProps) 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-2">
               <div className="space-y-2">
                 <span className="text-[12px] uppercase tracking-wider text-[#1F1F1F]/50 font-bold block">Siapa Sesuai Guna</span>
-                <p className="text-[15px] sm:text-[16px] text-[#1F1F1F]/70 leading-relaxed">Individu aktif yang mengutamakan kelengkapan nutrien organik terpelihara.</p>
+                <p className="text-[13px] sm:text-[14px] text-[#1F1F1F]/70 leading-relaxed">Individu aktif yang mengutamakan kelengkapan nutrien organik terpelihara.</p>
               </div>
               <div className="space-y-2">
                 <span className="text-[12px] uppercase tracking-wider text-[#1F1F1F]/50 font-bold block">Penyimpanan</span>
-                <p className="text-[15px] sm:text-[16px] text-[#1F1F1F]/70 leading-relaxed">Letakkan di tempat terlindung sejuk. Tutup rapat penutup botol setiap kali pemakaian.</p>
+                <p className="text-[13px] sm:text-[14px] text-[#1F1F1F]/70 leading-relaxed">Letakkan di tempat terlindung sejuk. Tutup rapat penutup botol setiap kali pemakaian.</p>
               </div>
             </div>
 
@@ -348,7 +348,7 @@ export default function ProductsView({ onOpenConsultation }: ProductsViewProps) 
           </div>
 
           <div className="overflow-x-auto rounded-[1.5rem] border border-[#C8A75B]/25">
-            <table className="w-full text-left font-sans text-[15px] sm:text-[16px] border-collapse min-w-[850px] bg-white">
+            <table className="w-full text-left font-sans text-[13px] sm:text-[14px] border-collapse min-w-[850px] bg-white">
                <thead>
                  <tr className="bg-[#FAF8F1] border-b border-[#C8A75B]/20">
                    <th className="p-6 uppercase tracking-wider font-bold text-[#1F1F1F]/70 w-1/4">Ciri Utama</th>
@@ -394,7 +394,7 @@ export default function ProductsView({ onOpenConsultation }: ProductsViewProps) 
           <h3 className="font-serif text-[26px] sm:text-[30px] md:text-[34px] font-semibold text-[#1F1F1F]">
             Masih Ragu Tentang Pilihan Terbaik?
           </h3>
-          <p className="font-sans text-[16px] sm:text-[18px] text-[#1F1F1F]/70 leading-[1.8] max-w-2xl mx-auto font-light">
+          <p className="font-sans text-[13px] sm:text-[14px] text-[#1F1F1F]/70 leading-[1.8] max-w-2xl mx-auto font-light">
             Tidak pasti produk mana yang sesuai dengan rutin dan gaya hidup anda? Usah bimbang. Pasukan perunding kesihatan AquivaGold sedia membimbing anda secara peribadi percuma di talian sekarang.
           </p>
 

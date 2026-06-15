@@ -27,7 +27,7 @@ export default function TestimonialsView() {
           <h1 className="font-serif text-[32px] sm:text-[38px] md:text-[44px] lg:text-[48px] xl:text-[54px] text-[#1F1F1F] font-medium tracking-tight leading-tight">
             Testimoni &amp; Maklum Balas Pelanggan
           </h1>
-          <p className="font-sans text-[16px] sm:text-[18px] md:text-[17px] lg:text-[18px] xl:text-[20px] text-[#1F1F1F]/60 max-w-2xl mx-auto leading-[1.8]">
+          <p className="font-sans text-[14px] sm:text-[15px] text-[#1F1F1F]/60 max-w-2xl mx-auto leading-[1.8]">
             Membina kepercayaan tulen melalui ulasan ikhlas dan kisah perjalanan harian yang dikongsikan bersesuaian dengan keselesaan emosi serta tubuh fizikal masing-masing.
           </p>
           <div className="w-20 h-[1.5px] bg-[#C8A75B] mx-auto mt-4" />
@@ -39,7 +39,7 @@ export default function TestimonialsView() {
         
         <div className="text-center max-w-2xl mx-auto space-y-4 mb-8">
           <h2 className="font-serif text-[30px] sm:text-[34px] md:text-[38px] lg:text-[44px] xl:text-[50px] text-[#1F1F1F] font-medium tracking-tight leading-tight">Perjalanan Konsultasi Menyeluruh</h2>
-          <p className="text-[15px] sm:text-[17px] text-[#1F1F1F]/60 select-none">Bagaimana bimbingan peribadi tuntas kami melengkapkan rutin harian pelanggan secara terperinci.</p>
+          <p className="text-[13px] sm:text-[14px] text-[#1F1F1F]/60 select-none">Bagaimana bimbingan peribadi tuntas kami melengkapkan rutin harian pelanggan secara terperinci.</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
@@ -96,7 +96,7 @@ export default function TestimonialsView() {
                   </div>
                   <div className="space-y-2 bg-[#FAF8F1] p-5 rounded-2xl border-l-4 border-[#C8A75B]">
                     <span className="text-[11px] sm:text-[12px] text-[#C8A75B] uppercase tracking-widest font-bold block">Pengalaman Selepas Pemakaian</span>
-                    <p className="text-[15px] sm:text-[16px] text-[#1F1F1F]/90 leading-[1.8] font-medium">
+                    <p className="text-[13px] sm:text-[14px] text-[#1F1F1F]/90 leading-[1.8] font-medium">
                       &ldquo;{journey.after}&rdquo;
                     </p>
                   </div>
@@ -122,7 +122,7 @@ export default function TestimonialsView() {
             <div className="space-y-6 text-left">
               <span className="text-[12px] sm:text-[13px] uppercase tracking-[0.25em] text-[#C8A75B] font-bold block">BUKTI VIDEO EKSKLUSIF</span>
               <h3 className="font-serif text-[24px] sm:text-[28px] md:text-[30px] text-[#1F1F1F] font-semibold tracking-tight leading-tight">Klip Video Temu Bual Santai</h3>
-              <p className="text-[15px] sm:text-[17px] text-[#1F1F1F]/75 leading-[1.8] font-light">
+              <p className="text-[13px] sm:text-[14px] text-[#1F1F1F]/75 leading-[1.8] font-light">
                 Perbualan terbuka secara santai bersama pengasas dan pengamal gaya hidup berpengaruh berkongsi bagaimana integriti produk kami menjadi teras penjagaan diri mereka.
               </p>
 
@@ -147,7 +147,7 @@ export default function TestimonialsView() {
             <div className="space-y-6 text-left">
               <span className="text-[12px] sm:text-[13px] uppercase tracking-[0.25em] text-[#C8A75B] font-bold block">TANGKAPAN SKRIN KOMUNITI</span>
               <h3 className="font-serif text-[24px] sm:text-[28px] md:text-[30px] text-[#1F1F1F] font-semibold tracking-tight leading-tight">Ulasan WhatsApp &amp; Facebook</h3>
-              <p className="text-[15px] sm:text-[17px] text-[#1F1F1F]/75 leading-[1.8] font-light">
+              <p className="text-[13px] sm:text-[14px] text-[#1F1F1F]/75 leading-[1.8] font-light">
                 Kebahagiaan dan kejutan gembira yang diterima terus ke telefon pejabat rasmi kami daripada ribuan pelanggan yang diredai ketenangan.
               </p>
 
@@ -186,7 +186,7 @@ export default function TestimonialsView() {
       <section className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-12 lg:px-16">
         <div className="bg-white border border-[#C8A75B]/25 rounded-[2.5rem] p-10 sm:p-16 text-center max-w-3xl mx-auto space-y-8 shadow-xl">
           <h3 className="font-serif text-[26px] sm:text-[30px] text-[#1F1F1F] font-semibold leading-tight">Ingin Pengalaman Istimewa Seperti Mereka?</h3>
-          <p className="font-sans text-[15px] sm:text-[17px] text-[#1F1F1F]/70 leading-[1.8] font-light max-w-xl mx-auto">
+          <p className="font-sans text-[13px] sm:text-[14px] text-[#1F1F1F]/70 leading-[1.8] font-light max-w-xl mx-auto">
             Mulakan konsultasi percubaan peribadi percuma bersama pakar teraputik bertaraf lima bintang kami melalui WhatsApp untuk melengkapkan pelan penjagaan diri tersuai anda.
           </p>
 

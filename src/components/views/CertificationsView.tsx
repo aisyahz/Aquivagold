@@ -66,25 +66,25 @@ export default function CertificationsView() {
       badge: "Dokumentasi Analisis",
       desc: "Laporan analisis makmal yang berkaitan dengan produk Aquiva Gold Black Millenia.",
       importance: "Laporan kualiti yang merekodkan pemantauan kandungan secara objektif berdasarkan analisis sampel sampel yang dinilai.",
-      refNo: "COA No: Lab Test / Ref-1 (COA)",
+      refNo: "No: Lab Test / Ref-1 (Sijil Analisis)",
       img: labReportImage
     },
     {
       id: "lab_report_1",
       title: "Laporan Makmal Tambahan",
-      badge: "Maklumat Sokongan COA",
+      badge: "Sijil Analisis Sokongan",
       desc: "Maklumat tambahan berkaitan analisis dan dokumentasi sokongan sebagai rujukan telus.",
       importance: "Membantu mengekalkan pematuhan kualiti yang selari dengan komitmen tinggi pengeluaran kami.",
-      refNo: "COA No: Lab Test / Ref-2 (COA)",
+      refNo: "No: Lab Test / Ref-2 (Sijil Analisis)",
       img: labReport1Image
     },
     {
       id: "lab_report_2",
       title: "Laporan Makmal Tambahan",
-      badge: "Maklumat Sokongan COA",
+      badge: "Sijil Analisis Sokongan",
       desc: "Dokumentasi tambahan untuk rujukan pelanggan demi ketelusan bermaklumat.",
       importance: "Rujukan laporan pengesahan kualiti bahan herba terpilih di bawah rujukan manual kilang berlesen.",
-      refNo: "COA No: Lab Test / Ref-3 (COA)",
+      refNo: "No: Lab Test / Ref-3 (Sijil Analisis)",
       img: labReport2Image
     }
   ];
@@ -107,7 +107,7 @@ export default function CertificationsView() {
           <h1 className="font-serif text-[32px] sm:text-[38px] md:text-[44px] lg:text-[48px] xl:text-[54px] text-[#1F1F1F] font-bold tracking-tight leading-tight">
             Pensijilan &amp; Bukti
           </h1>
-          <p className="font-sans text-[16px] sm:text-[18px] md:text-[18px] lg:text-[19px] xl:text-[21px] text-[#222222] max-w-2xl mx-auto leading-[1.8] font-normal">
+          <p className="font-sans text-[14px] sm:text-[15px] md:text-[15px] lg:text-[16px] text-[#222222] max-w-2xl mx-auto leading-[1.8] font-normal">
             Komitmen Aquiva Gold terhadap kualiti, keselarasan dokumen dan rujukan telus yang boleh diakses oleh semua pihak bertauliah. Kami menggalakkan pembacaan fakta rasmi demi membina keterbukaan maklumat.
           </p>
           <div className="w-20 h-[1.5px] bg-[#C8A75B] mx-auto mt-4" />
@@ -161,7 +161,7 @@ export default function CertificationsView() {
                       {doc.title}
                     </h3>
                     
-                    <p className="text-[16px] text-[#222222] leading-[1.8] font-normal min-h-[54px] line-clamp-3">
+                    <p className="text-[14px] sm:text-[15px] text-[#222222] leading-[1.8] font-normal min-h-[54px] line-clamp-3">
                       {doc.desc}
                     </p>
                   </div>
@@ -201,8 +201,8 @@ export default function CertificationsView() {
                 01
               </div>
               <h4 className="font-serif text-[19px] sm:text-[20px] font-bold text-[#1F1F1F]">Membina Kepercayaan</h4>
-              <p className="text-[16px] text-[#222222] leading-[1.8] font-normal">
-                Membuktikan kejujuran dan ketelusan syarikat dalam penyediaan rujukan terbaik tanpa manipulasi maklumat pemasaran.
+              <p className="text-[14px] sm:text-[15px] text-[#222222] leading-[1.8] font-normal">
+                Mencerminkan kejujuran dan ketelusan syarikat dalam penyediaan rujukan terbaik tanpa manipulasi maklumat pemasaran.
               </p>
             </div>
 
@@ -211,8 +211,8 @@ export default function CertificationsView() {
                 02
               </div>
               <h4 className="font-serif text-[19px] sm:text-[20px] font-bold text-[#1F1F1F]">Komitmen Kualiti</h4>
-              <p className="text-[16px] text-[#222222] leading-[1.8] font-normal">
-                Pemenuhan keselarasan kertas kerja rujukan membuktikan kami mengutamakan pengurusan dokumentasi terbaik.
+              <p className="text-[14px] sm:text-[15px] text-[#222222] leading-[1.8] font-normal">
+                Pemenuhan keselarasan kertas kerja rujukan menunjukkan komitmen kami mengutamakan pengurusan dokumentasi terbaik.
               </p>
             </div>
 
@@ -221,7 +221,7 @@ export default function CertificationsView() {
                 03
               </div>
               <h4 className="font-serif text-[19px] sm:text-[20px] font-bold text-[#1F1F1F]">Sokongan Keputusan</h4>
-              <p className="text-[16px] text-[#222222] leading-[1.8] font-normal">
+              <p className="text-[14px] sm:text-[15px] text-[#222222] leading-[1.8] font-normal">
                 Rakan konsultasi dan pelanggan boleh membuat pilihan bijak bersandarkan hujah dokumentasi teknikal yang disediakan.
               </p>
             </div>
@@ -235,7 +235,7 @@ export default function CertificationsView() {
         <div className="bg-[#1F1F1F] text-white rounded-[3rem] border border-[#C8A75B]/25 p-10 sm:p-16 text-center max-w-3xl mx-auto space-y-8 shadow-2xl relative overflow-hidden">
           <div className="absolute top-0 right-0 w-32 h-32 bg-[#C8A75B]/5 rounded-full blur-2xl pointer-events-none" />
           <h3 className="font-serif text-[26px] sm:text-[30px] text-white font-medium leading-tight">Ada Pertanyaan Berkenaan Dokumen?</h3>
-          <p className="font-sans text-[16px] sm:text-[18px] text-white/90 max-w-xl mx-auto font-normal leading-[1.8]">
+          <p className="font-sans text-[14px] sm:text-[15px] text-white/90 max-w-xl mx-auto font-normal leading-[1.8]">
             Jika anda usahawan korporat, ahli profesional atau perunding bertauliah yang mahu mengakses salinan siri fail kualiti rasmi kami, sila hubungi pentadbiran perhubungan awam.
           </p>
 
@@ -338,11 +338,11 @@ export default function CertificationsView() {
                 <div className="space-y-4 pt-2">
                   <div className="space-y-1">
                     <span className="text-[11px] uppercase tracking-widest font-bold text-[#1F1F1F]/50 block">Maklumat &amp; Butiran Kualiti</span>
-                    <p className="text-[16px] text-[#222222] leading-[1.8] font-normal">{selectedDoc.desc}</p>
+                    <p className="text-[14px] sm:text-[15px] text-[#222222] leading-[1.8] font-normal">{selectedDoc.desc}</p>
                   </div>
                   <div className="space-y-1 pt-3.5 border-t border-[#EFEAE2]">
                     <span className="text-[11px] uppercase tracking-widest font-bold text-[#C8A75B] block">Kepentingan Bagi Penilaian Pengguna</span>
-                    <p className="text-[16px] text-[#222222] font-normal leading-[1.8]">{selectedDoc.importance}</p>
+                    <p className="text-[14px] sm:text-[15px] text-[#222222] font-normal leading-[1.8]">{selectedDoc.importance}</p>
                   </div>
                 </div>
 

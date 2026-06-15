@@ -29,7 +29,7 @@ export default function EntrepreneursView() {
           <h1 className="font-serif text-[32px] sm:text-[38px] md:text-[44px] lg:text-[48px] xl:text-[54px] text-neutral-900 font-bold tracking-tight leading-tight">
             Sertai Ekosistem Usahawan AquivaGold
           </h1>
-          <p className="font-sans text-[16px] sm:text-[18px] md:text-[18px] text-neutral-800 max-w-2xl mx-auto leading-[1.8] font-normal">
+          <p className="font-sans text-[14px] sm:text-[15px] text-neutral-800 max-w-2xl mx-auto leading-[1.8] font-normal">
             Bina kemahiran pemasaran digital dan kembangkan perniagaan runcit secara selamat tanpa tekanan. Dapatkan bimbingan telus langkah demi langkah untuk menyebarkan kebaikan produk botani premium di kawasan anda.
           </p>
           <div className="w-20 h-[2px] bg-[#C8A75B] mx-auto mt-4" />
@@ -50,7 +50,7 @@ export default function EntrepreneursView() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-left text-[16px] text-neutral-800 font-normal leading-relaxed">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-left text-[14px] sm:text-[15px] text-neutral-800 font-normal leading-relaxed">
             <div className="space-y-4">
               <h3 className="font-serif text-lg font-bold text-neutral-900">Bagaimana Cara Kami Berbeza?</h3>
               <p>
@@ -92,7 +92,7 @@ export default function EntrepreneursView() {
                   <item.icon size={24} />
                 </div>
                 <h3 className="font-serif text-[17px] sm:text-[18px] font-black text-neutral-900">{item.title}</h3>
-                <p className="font-sans text-[15px] text-neutral-800 leading-[1.8] font-normal">{item.desc}</p>
+                <p className="font-sans text-[13px] sm:text-[14px] text-neutral-800 leading-[1.8] font-normal">{item.desc}</p>
               </div>
             </div>
           ))}
@@ -117,10 +117,10 @@ export default function EntrepreneursView() {
                 <div className="border-b border-[#EFEAE2] pb-4">
                   <span className="text-[11px] uppercase tracking-widest text-[#C8A75B] font-bold block mb-1">PROGRAM CONTENT</span>
                   <h3 className="font-serif text-[20px] sm:text-[22px] font-black text-[#1F1F1F]">Affiliate</h3>
-                  <p className="text-[15px] text-neutral-800 mt-2 font-normal leading-relaxed">Sesuai untuk pencipta kandungan media sosial yang ingin berkongsi pautan rujukan digital secara pasif.</p>
+                  <p className="text-[13px] sm:text-[14px] text-neutral-800 mt-2 font-normal leading-relaxed">Sesuai untuk pencipta kandungan media sosial yang ingin berkongsi pautan rujukan digital secara pasif.</p>
                 </div>
 
-                <ul className="space-y-3 font-sans text-[15px] text-neutral-800 font-normal">
+                <ul className="space-y-3 font-sans text-[13px] sm:text-[14px] text-neutral-800 font-normal">
                   <li className="flex items-start gap-2">
                     <CheckCircle size={16} className="text-[#C8A75B] shrink-0 mt-1" />
                     <span>Hanya kongsikan pautan rujukan anda.</span>
@@ -150,10 +150,10 @@ export default function EntrepreneursView() {
                 <div className="border-b border-[#EFEAE2] pb-4">
                   <span className="text-[11px] uppercase tracking-widest text-[#C8A75B] font-bold block mb-1">PROGRAM PEMULA</span>
                   <h3 className="font-serif text-[20px] sm:text-[22px] font-black text-[#1F1F1F]">Dropship</h3>
-                  <p className="text-[15px] text-neutral-800 mt-2 font-normal leading-relaxed">Sesuai untuk memulakan jualan runcit santai tanpa mengambil risiko modal pegangan stok fizikal.</p>
+                  <p className="text-[13px] sm:text-[14px] text-neutral-800 mt-2 font-normal leading-relaxed">Sesuai untuk memulakan jualan runcit santai tanpa mengambil risiko modal pegangan stok fizikal.</p>
                 </div>
 
-                <ul className="space-y-3 font-sans text-[15px] text-neutral-800 font-normal">
+                <ul className="space-y-3 font-sans text-[13px] sm:text-[14px] text-neutral-800 font-normal">
                   <li className="flex items-start gap-2">
                     <CheckCircle size={16} className="text-[#C8A75B] shrink-0 mt-1" />
                     <span><strong>Sifar Pegangan Stok:</strong> Kami membungkus &amp; menghantar terus.</span>
@@ -187,10 +187,10 @@ export default function EntrepreneursView() {
                 <div className="border-b border-[#EFEAE2] pb-4">
                   <span className="text-[11px] uppercase tracking-widest text-[#C8A75B] font-bold block mb-1">PROGRAM PERTUMBUHAN</span>
                   <h3 className="font-serif text-[20px] sm:text-[22px] font-black text-[#1F1F1F]">Ejen Berdaftar</h3>
-                  <p className="text-[15px] text-neutral-800 mt-2 font-normal leading-relaxed">Sesuai untuk individu atau usahawan kecantikan yang bersedia memasarkan rujukan fizikal tempatan.</p>
+                  <p className="text-[13px] sm:text-[14px] text-neutral-800 mt-2 font-normal leading-relaxed">Sesuai untuk individu atau usahawan kecantikan yang bersedia memasarkan rujukan fizikal tempatan.</p>
                 </div>
 
-                <ul className="space-y-3 font-sans text-[15px] text-neutral-800 font-normal">
+                <ul className="space-y-3 font-sans text-[13px] sm:text-[14px] text-neutral-800 font-normal">
                   <li className="flex items-start gap-2">
                     <CheckCircle size={16} className="text-[#C8A75B] shrink-0 mt-1" />
                     <span><strong>Harga Borong Rendah:</strong> Struktur potongan harga borong langsung yang kompetitif.</span>
@@ -220,10 +220,10 @@ export default function EntrepreneursView() {
                 <div className="border-b border-[#EFEAE2] pb-4">
                   <span className="text-[11px] uppercase tracking-widest text-[#C8A75B] font-bold block mb-1">PROGRAM WILAYAH</span>
                   <h3 className="font-serif text-[20px] sm:text-[22px] font-black text-[#1F1F1F]">Stokis Eksklusif</h3>
-                  <p className="text-[15px] text-neutral-800 mt-2 font-normal leading-relaxed">Seterusnya bagi pengedar runcit besar atau pemilik rangkaian kedai yang memegang hak penuh negeri.</p>
+                  <p className="text-[13px] sm:text-[14px] text-neutral-800 mt-2 font-normal leading-relaxed">Seterusnya bagi pengedar runcit besar atau pemilik rangkaian kedai yang memegang hak penuh negeri.</p>
                 </div>
 
-                <ul className="space-y-3 font-sans text-[15px] text-neutral-800 font-normal">
+                <ul className="space-y-3 font-sans text-[13px] sm:text-[14px] text-neutral-800 font-normal">
                   <li className="flex items-start gap-2">
                     <CheckCircle size={16} className="text-[#C8A75B] shrink-0 mt-1" />
                     <span><strong>Diskaun Borong Maksimum:</strong> Margin keuntungan pengedaran terbesar.</span>
@@ -270,7 +270,7 @@ export default function EntrepreneursView() {
              <div key={idx} className="bg-white border border-[#C8A75B]/20 rounded-[2rem] p-8 text-left space-y-4 relative shadow-sm hover:border-[#C8A75B] transition-all duration-300">
                <div className="font-serif text-[36px] sm:text-[42px] font-black text-[#C8A75B]/35">{item.step}</div>
                <h3 className="font-serif text-[18px] sm:text-[20px] font-black text-neutral-900">{item.title}</h3>
-               <p className="text-[15px] text-neutral-800 leading-[1.8] font-normal">{item.p}</p>
+               <p className="text-[13px] sm:text-[14px] text-neutral-800 leading-[1.8] font-normal">{item.p}</p>
              </div>
           ))}
         </div>
@@ -297,7 +297,7 @@ export default function EntrepreneursView() {
                   <CheckCircle size={18} className="text-[#C8A75B] shrink-0 mt-0.5" />
                   <span>{faq.q}</span>
                 </h4>
-                <p className="text-[16px] text-neutral-800 font-normal pl-7 leading-[1.8]">{faq.a}</p>
+                <p className="text-[14px] sm:text-[15px] text-neutral-800 font-normal pl-7 leading-[1.8]">{faq.a}</p>
               </div>
             ))}
           </div>
@@ -309,7 +309,7 @@ export default function EntrepreneursView() {
       <section className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-12 lg:px-16">
         <div className="bg-[#1F1F1F] text-white border border-[#C8A75B]/25 rounded-[3rem] p-10 sm:p-16 text-center max-w-3xl mx-auto space-y-8 shadow-2xl">
           <h3 className="font-serif text-[28px] sm:text-[32px] text-white font-bold leading-tight">Ulang Langkah Usahawan Secara Selamat</h3>
-          <p className="font-sans text-[16px] sm:text-[18px] text-neutral-300 max-w-xl mx-auto font-normal leading-[1.8]">
+          <p className="font-sans text-[14px] sm:text-[15px] text-neutral-300 max-w-xl mx-auto font-normal leading-[1.8]">
             Sertai perjalanan perdagangan telus bersama keluarga niaga AquivaGold hari ini. Kami komited membantu membina kemahiran niaga runcit anda.
           </p>
 

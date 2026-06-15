@@ -75,7 +75,7 @@ export default function HomeView({ onNavigate, onOpenConsultation }: HomeViewPro
           </h1>
 
           {/* Description */}
-          <p className="font-sans text-[17px] text-[#2D2D2D] md:text-[18px] leading-[1.8] font-normal">
+          <p className="font-sans text-[14px] sm:text-[15px] text-[#2D2D2D] md:text-[15px] leading-[1.8] font-normal">
             Koleksi premium Aquiva Gold Black Millenia direka khas untuk memudahkan rutin harian anda mendapatkan khasiat botani terpelihara, memupuk ketenangan jiwa dan kesihatan murni fizikal harian.
           </p>
 
@@ -190,7 +190,7 @@ export default function HomeView({ onNavigate, onOpenConsultation }: HomeViewPro
 
               <motion.p 
                 variants={itemVariants}
-                className="font-sans text-[16px] sm:text-[18px] md:text-[17px] lg:text-[18px] xl:text-[20px] font-light text-white/95 max-w-xl leading-[1.8]"
+                className="font-sans text-[14px] sm:text-[15px] font-light text-white/95 max-w-xl leading-[1.8]"
               >
                 Koleksi premium Aquiva Gold Black Millenia direka untuk individu yang menghargai penjagaan diri berkualiti, gaya hidup sihat dan kesejahteraan harian yang lebih bermakna.
               </motion.p>
@@ -344,7 +344,7 @@ export default function HomeView({ onNavigate, onOpenConsultation }: HomeViewPro
           <h2 className="font-serif text-[30px] sm:text-[34px] md:text-[38px] lg:text-[44px] xl:text-[52px] text-[#1F1F1F] font-medium tracking-tight leading-tight">
             Koleksi Black Millenia
           </h2>
-          <p className="text-[16px] sm:text-[18px] md:text-[17px] lg:text-[18px] xl:text-[20px] text-[#1F1F1F]/70 max-w-xl mx-auto leading-[1.8]">
+          <p className="text-[14px] sm:text-[15px] text-[#1F1F1F]/70 max-w-xl mx-auto leading-[1.8]">
             Terapi harian yang disesuaikan secara berasingan mengikut gaya penjagaan kesihatan pilihan anda.
           </p>
           <div className="w-20 h-[1.5px] bg-[#C8A75B] mx-auto mt-4" />
@@ -407,7 +407,7 @@ export default function HomeView({ onNavigate, onOpenConsultation }: HomeViewPro
 
                 <div className="space-y-3 text-left">
                   <h3 className="font-serif text-[24px] sm:text-[28px] font-bold text-[#1F1F1F]">{prod.title}</h3>
-                  <p className="font-sans text-[15.5px] sm:text-[17px] md:text-[17px] lg:text-[18px] text-[#1F1F1F]/75 leading-[1.8] min-h-[54px]">{prod.desc}</p>
+                  <p className="font-sans text-[13px] sm:text-[14px] text-[#1F1F1F]/75 leading-[1.8] min-h-[54px]">{prod.desc}</p>
                 </div>
               </div>
 
@@ -448,7 +448,7 @@ export default function HomeView({ onNavigate, onOpenConsultation }: HomeViewPro
             <h2 className="font-serif text-[30px] sm:text-[34px] md:text-[38px] lg:text-[44px] xl:text-[52px] text-[#1F1F1F] font-medium tracking-tight leading-tight">
               Komitmen Terhadap Kualiti
             </h2>
-            <p className="text-[16px] sm:text-[18px] md:text-[17px] lg:text-[18px] xl:text-[20px] text-[#1F1F1F]/70 max-w-xl mx-auto leading-[1.8]">
+            <p className="text-[14px] sm:text-[15px] text-[#1F1F1F]/70 max-w-xl mx-auto leading-[1.8]">
               Dokumentasi, pendaftaran rasmi dan kelulusan analisis saintifik bebas yang memupuk ketenangan jiwa dan ketelusan mutlak.
             </p>
             <div className="w-20 h-[1.5px] bg-[#C8A75B] mx-auto mt-4" />
@@ -499,7 +499,7 @@ export default function HomeView({ onNavigate, onOpenConsultation }: HomeViewPro
                     <h3 className="font-serif text-[22px] font-bold text-[#1F1F1F] leading-tight group-hover:text-[#C8A75B] transition-colors">
                       {doc.title}
                     </h3>
-                    <p className="text-[15px] text-[#1F1F1F]/70 leading-[1.7] font-light">
+                    <p className="text-[13px] sm:text-[14px] text-[#1F1F1F]/70 leading-[1.7] font-light">
                       {doc.desc}
                     </p>
                   </div>
@@ -562,7 +562,7 @@ export default function HomeView({ onNavigate, onOpenConsultation }: HomeViewPro
               key={idx}
               className="bg-[#FBF8F1] border border-[#C8A75B]/20 rounded-[2rem] p-8 sm:p-10 text-left flex flex-col justify-between hover:border-[#C8A75B]/40 hover:shadow-lg transition-all duration-300 min-h-[300px]"
             >
-              <p className="font-sans text-[16px] sm:text-[18px] md:text-[17px] lg:text-[18px] xl:text-[19px] italic text-[#1F1F1F]/85 leading-[1.8]">
+              <p className="font-sans text-[14px] sm:text-[15px] italic text-[#1F1F1F]/85 leading-[1.8]">
                 {item.text}
               </p>
               
@@ -608,7 +608,7 @@ export default function HomeView({ onNavigate, onOpenConsultation }: HomeViewPro
               <h2 className="font-serif text-[30px] sm:text-[34px] md:text-[38px] lg:text-[44px] xl:text-[52px] text-white font-medium tracking-tight leading-tight">
                 Jana Pendapatan Bersama Aquiva Gold
               </h2>
-              <p className="font-sans text-[16px] sm:text-[18px] md:text-[17px] lg:text-[18px] xl:text-[20px] text-white/85 max-w-3xl leading-[1.8]">
+              <p className="font-sans text-[14px] sm:text-[15px] text-white/85 max-w-3xl leading-[1.8]">
                 Sertai rangkaian usahawan kami ke tahap seterusnya. Sama ada secara Dropship yang fleksibel (tanpa simpan stok) atau sebagai Stokis Wilayah berpotensi ganjaran tinggi, kami menyediakan bimbingan visual penuh, bahan pengiklanan tersuai, dan rundingan berterusan.
               </p>
             </div>
@@ -637,7 +637,7 @@ export default function HomeView({ onNavigate, onOpenConsultation }: HomeViewPro
               Perlukan Konsultasi?
             </h2>
             <div className="w-20 h-[1.5px] bg-[#C8A75B] mx-auto mt-4" />
-            <p className="font-sans text-[16px] sm:text-[18px] md:text-[17px] lg:text-[18px] xl:text-[20px] text-[#1F1F1F]/80 leading-[1.8] font-light max-w-2xl mx-auto">
+            <p className="font-sans text-[14px] sm:text-[15px] text-[#1F1F1F]/80 leading-[1.8] font-light max-w-2xl mx-auto">
               Pasukan terapeutik kami sedia membimbing anda mendapatkan maklumat lengkap mengenai khasiat botani, cara integrasi ke rutin sedia ada serta penyertaan ejen perniagaan.
             </p>
           </div>

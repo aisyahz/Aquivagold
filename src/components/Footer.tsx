@@ -33,7 +33,7 @@ export default function Footer({ onOpenConsultation, onNavigate }: FooterProps) 
             </span>
           </button>
           
-          <p className="text-[16px] sm:text-[17px] text-neutral-800 font-normal max-w-sm leading-relaxed">
+          <p className="text-[14px] sm:text-[15px] text-neutral-800 font-normal max-w-sm leading-relaxed">
             &ldquo;Tingkatkan Ritual Penjagaan Diri Anda&rdquo; &mdash; Rangkaian formulasi penjagaan kulit premium dan keperluan botani mewah yang dirumus rapi untuk memenuhi gaya hidup sihat yang terkemuka.
           </p>
 
@@ -52,7 +52,7 @@ export default function Footer({ onOpenConsultation, onNavigate }: FooterProps) 
           <span className="text-[12px] uppercase tracking-widest text-[#1F1F1F] font-black block border-b border-[#C8A75B]/25 pb-2">
             Halaman Utama
           </span>
-          <div className="flex flex-col space-y-2.5 text-[16px] text-neutral-800 font-normal">
+          <div className="flex flex-col space-y-2.5 text-[14px] sm:text-[15px] text-neutral-800 font-normal">
             <button onClick={(e) => handleLinkClick("home", e)} className="cursor-pointer text-left hover:text-[#C8A75B] transition-colors font-medium">Utama</button>
             <button onClick={(e) => handleLinkClick("koleksi", e)} className="cursor-pointer text-left hover:text-[#C8A75B] transition-colors font-medium">Koleksi Produk</button>
             <button onClick={(e) => handleLinkClick("kelebihan", e)} className="cursor-pointer text-left hover:text-[#C8A75B] transition-colors font-medium">Kelebihan Produk</button>
@@ -69,7 +69,7 @@ export default function Footer({ onOpenConsultation, onNavigate }: FooterProps) 
           <span className="text-[12px] uppercase tracking-widest text-[#1F1F1F] font-black block border-b border-[#C8A75B]/25 pb-2">
             Butik Concierge
           </span>
-          <div className="space-y-3.5 text-[16px] text-neutral-800 font-normal">
+          <div className="space-y-3.5 text-[14px] sm:text-[15px] text-neutral-800 font-normal">
             <div className="flex items-center space-x-2">
               <Phone size={14} className="text-[#C8A75B] shrink-0" />
               <span>WhatsApp: 011-39900920</span>
@@ -78,7 +78,7 @@ export default function Footer({ onOpenConsultation, onNavigate }: FooterProps) 
               <MapPin size={14} className="text-[#C8A75B] shrink-0" />
               <span>HQ: Bukit Damansara, KL</span>
             </div>
-            <div className="p-4 bg-white/70 border border-[#C8A75B]/20 text-[15px] leading-relaxed text-neutral-700 rounded-xl shadow-3xs text-left">
+            <div className="p-4 bg-white/70 border border-[#C8A75B]/20 text-[13px] leading-relaxed text-neutral-700 rounded-xl shadow-3xs text-left">
               Bimbingan rundingan peribadi dwi-bahasa disediakan dari jam 9 pagi hingga 9 malam setiap hari berhubung pengurusan kualiti hantaran.
             </div>
           </div>
@@ -87,7 +87,7 @@ export default function Footer({ onOpenConsultation, onNavigate }: FooterProps) 
       </div>
 
       {/* Bottom copyrights taglines */}
-      <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-12 mt-12 md:mt-16 pt-6 border-t border-[#C8A75B]/15 flex flex-col sm:flex-row sm:items-center sm:justify-between text-[15px] text-neutral-700 font-normal space-y-4 sm:space-y-0">
+      <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-12 mt-12 md:mt-16 pt-6 border-t border-[#C8A75B]/15 flex flex-col sm:flex-row sm:items-center sm:justify-between text-[13px] sm:text-[14px] text-neutral-700 font-normal space-y-4 sm:space-y-0">
         <p>
           &copy; {currentYear} AquivaGold. Hak cipta terpelihara. Warisan Kesejahteraan Premium.
         </p>

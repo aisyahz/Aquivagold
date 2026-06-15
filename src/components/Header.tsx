@@ -30,7 +30,7 @@ export default function Header({ onOpenConsultation, currentView, onNavigate }: 
     { label: "Kelebihan", view: "kelebihan" },
     { label: "Testimoni", view: "testimoni" },
     { label: "Pensijilan & Bukti", view: "pensijilan" },
-    { label: "Sertai Usahawan", view: "usahawan" },
+    { label: "Usahawan", view: "usahawan" },
     { label: "Tentang Kami", view: "tentang-kami" },
     { label: "FAQ", view: "faq" },
   ];
@@ -71,12 +71,12 @@ export default function Header({ onOpenConsultation, currentView, onNavigate }: 
         </button>
 
         {/* Desktop Links (8 view tabs arranged and responsive) */}
-        <nav className="hidden xl:flex items-center space-x-7 shrink" aria-label="Main Navigation">
+        <nav className="hidden xl:flex items-center space-x-5 shrink whitespace-nowrap" aria-label="Main Navigation">
           {navLinks.map((link) => (
             <button
               key={link.view}
               onClick={(e) => handleLinkClick(link.view, e)}
-              className={`cursor-pointer text-[14px] xl:text-[16px] uppercase tracking-wider font-bold transition-all duration-300 relative py-2.5 hover:text-[#C8A75B] ${
+              className={`cursor-pointer text-[13px] xl:text-[14px] uppercase tracking-[0.12em] font-medium transition-all duration-300 relative py-2.5 hover:text-[#C8A75B] whitespace-nowrap ${
                 currentView === link.view ? "text-[#C8A75B]" : "text-neutral-900"
               }`}
             >
@@ -136,7 +136,7 @@ export default function Header({ onOpenConsultation, currentView, onNavigate }: 
                 <button
                   key={link.view}
                   onClick={(e) => handleLinkClick(link.view, e)}
-                  className={`text-left text-[16px] sm:text-[18px] uppercase tracking-widest font-black py-4 px-2 block hover:text-[#C8A75B] border-b border-[#C8A75B]/15 transition-colors ${
+                  className={`text-left text-[14px] sm:text-[15px] uppercase tracking-widest font-black py-4 px-2 block hover:text-[#C8A75B] border-b border-[#C8A75B]/15 transition-colors ${
                     currentView === link.view ? "text-[#C8A75B] bg-white/50" : "text-neutral-900"
                   }`}
                 >
