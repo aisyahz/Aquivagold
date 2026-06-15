@@ -96,16 +96,16 @@ export default function FAQView() {
   };
 
   return (
-    <div className="space-y-20 pb-20">
+    <div className="space-y-12 pb-12">
       
       {/* HERO BANNER */}
-      <section className="bg-[#FAF8F1] py-20 border-b border-[#C8A75B]/15 text-center max-w-full">
-        <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-12 lg:px-16 space-y-4">
-          <span className="text-[10px] uppercase tracking-[0.3em] text-[#C8A75B] font-bold block">PUSAT BANTUAN LAYANAN</span>
-          <h1 className="font-serif text-4xl sm:text-5xl text-[#1F1F1F] font-medium tracking-tight">
+      <section className="bg-[#FAF8F1] py-16 border-b border-[#C8A75B]/15 text-center max-w-full">
+        <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-12 lg:px-16 space-y-3">
+          <span className="text-[11px] sm:text-[12px] uppercase tracking-[0.3em] text-[#C8A75B] font-bold block">PUSAT BANTUAN LAYANAN</span>
+          <h1 className="font-serif text-[26px] sm:text-[30px] md:text-[34px] lg:text-[40px] text-[#1F1F1F] font-bold tracking-tight leading-tight">
             Soalan Lazim (FAQ)
           </h1>
-          <p className="font-sans text-xs sm:text-sm text-[#1F1F1F]/60 max-w-2xl mx-auto leading-relaxed">
+          <p className="font-sans text-xs sm:text-xs text-[#1F1F1F]/60 max-w-2xl mx-auto leading-relaxed">
             Mencari maklum balas pantas? Kami telah mengumpulkan soalan ringkas yang sering dikongsikan oleh ejen dan pelanggan butik kami yang bernilai tinggi.
           </p>
           <div className="w-16 h-[1px] bg-[#C8A75B] mx-auto pt-0.5" />
@@ -114,7 +114,7 @@ export default function FAQView() {
 
       {/* FILTER SEARCH CRITERIA */}
       <section className="max-w-4xl mx-auto px-6 sm:px-8">
-        <div className="bg-white border-2 border-[#C8A75B]/15 p-6 rounded-[2rem] space-y-6">
+        <div className="bg-white border-2 border-[#C8A75B]/15 p-6 rounded-2xl space-y-6">
           
           {/* Real-time search filter bar */}
           <div className="relative">
@@ -212,9 +212,9 @@ export default function FAQView() {
 
       {/* FOOTER CALL FOR SUPPORT */}
       <section className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-12 lg:px-16">
-        <div className="bg-[#1F1F1F] text-white rounded-[2rem] border border-[#C8A75B]/25 p-8 sm:p-12 text-center max-w-2xl mx-auto space-y-6">
-          <h3 className="font-serif text-2xl text-white font-medium">Masih Mempunyai Sebarang Musykil?</h3>
-          <p className="font-sans text-xs sm:text-sm text-white/70 max-w-md mx-auto font-light leading-relaxed">
+        <div className="bg-[#1F1F1F] text-white rounded-2xl p-6 sm:p-10 text-center max-w-2xl mx-auto space-y-6">
+          <h3 className="font-serif text-lg sm:text-2xl text-white font-medium">Masih Mempunyai Sebarang Musykil?</h3>
+          <p className="font-sans text-xs sm:text-xs text-white/70 max-w-md mx-auto font-light leading-relaxed">
             Jika panduan ringkas di atas masih tidak menjawab pertanyaan tersendiri anda, hubungi perunding butik utama kami secara peribadi harian talian.
           </p>
 

@@ -35,27 +35,27 @@ export default function ProductsView({ onOpenConsultation }: ProductsViewProps) 
   };
 
   return (
-    <div className="space-y-32 pb-24">
+    <div className="space-y-16 pb-16">
       
       {/* HERO BANNER SECTION */}
-      <section className="relative bg-[#FAF8F1] py-24 border-b border-[#C8A75B]/15 text-center max-w-full">
-        <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-12 lg:px-16 space-y-6">
-          <span className="text-[12px] sm:text-[13px] uppercase tracking-[0.3em] text-[#C8A75B] font-bold block">KATALOG RAWATAN TERBAIK</span>
-          <h1 className="font-serif text-[32px] sm:text-[38px] md:text-[44px] lg:text-[48px] xl:text-[54px] text-[#1F1F1F] font-medium tracking-tight leading-tight">
+      <section className="relative bg-[#FAF8F1] py-16 border-b border-[#C8A75B]/15 text-center max-w-full">
+        <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-12 lg:px-16 space-y-4">
+          <span className="text-[11px] sm:text-[12px] uppercase tracking-[0.3em] text-[#C8A75B] font-bold block">KATALOG RAWATAN TERBAIK</span>
+          <h1 className="font-serif text-[26px] sm:text-[30px] md:text-[34px] lg:text-[38px] xl:text-[44px] text-[#1F1F1F] font-bold tracking-tight leading-tight">
             Koleksi Produk Black Millenia
           </h1>
-          <p className="font-sans text-[14px] sm:text-[15px] text-[#1F1F1F]/70 max-w-2xl mx-auto leading-[1.8]">
+          <p className="font-sans text-[13.5px] sm:text-[14.5px] text-[#1F1F1F]/70 max-w-2xl mx-auto leading-[1.7]">
             Terokai rangkaian produk premium Aquiva Gold Black Millenia yang direka untuk melengkapkan keperluan penjagaan diri secara optimum dan melahirkan ketenangan harian anda.
           </p>
-          <div className="w-20 h-[1.5px] bg-[#C8A75B] mx-auto mt-4" />
-
+          <div className="w-16 h-[1.5px] bg-[#C8A75B] mx-auto mt-3" />
+ 
           {/* Quick jump navigation tag pills */}
-          <div className="flex flex-wrap items-center justify-center gap-4 pt-6">
+          <div className="flex flex-wrap items-center justify-center gap-3 pt-4">
             {["BMW Essence", "BMW Spray", "BMW Drop"].map((name, i) => (
               <button
                 key={i}
                 onClick={() => scrollToProduct(name.toLowerCase().replace(" ", "-"))}
-                className="cursor-pointer px-6 py-3 bg-white hover:bg-[#F6F3EE] hover:border-[#C8A75B] border border-[#1F1F1F]/15 text-[#1F1F1F] text-[13px] sm:text-[14px] uppercase tracking-wider font-bold rounded-full transition-all duration-300 shadow-sm"
+                className="cursor-pointer px-5 py-2.5 bg-white hover:bg-[#F6F3EE] hover:border-[#C8A75B] border border-[#1F1F1F]/15 text-[#1F1F1F] text-[12px] sm:text-[13px] uppercase tracking-wider font-bold rounded-full transition-all duration-300 shadow-sm"
               >
                 {name}
               </button>
@@ -65,90 +65,90 @@ export default function ProductsView({ onOpenConsultation }: ProductsViewProps) 
       </section>
 
       {/* DETAILED PRODUCTS LISTING */}
-      <section className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-12 lg:px-16 space-y-36">
+      <section className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-12 lg:px-16 space-y-16">
         
         {/* 1. BMW ESSENCE */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center" id="bmw-essence">
           {/* Image visual left */}
           <div className="lg:col-span-5 relative group">
-            <div className="absolute inset-0 bg-gradient-to-tr from-[#C8A75B]/10 to-transparent rounded-3xl filter blur-xl pointer-events-none" />
+            <div className="absolute inset-0 bg-gradient-to-tr from-[#C8A75B]/10 to-transparent rounded-2xl filter blur-xl pointer-events-none" />
             <div className="w-full">
-              <div className="relative w-full aspect-square rounded-[2rem] border-2 border-[#C8A75B]/30 overflow-hidden shadow-2xl bg-white p-1.5 group/img-view">
+              <div className="relative w-full aspect-square rounded-2xl border-2 border-[#C8A75B]/30 overflow-hidden shadow-2xl bg-white p-1.5 group/img-view">
                 <img 
                   src={essenceImage} 
                   alt="BMW Essence" 
-                  className="w-full h-full object-cover rounded-[1.75rem] transition-transform duration-700 group-hover/img-view:scale-105"
+                  className="w-full h-full object-cover rounded-xl transition-transform duration-700 group-hover/img-view:scale-105"
                   referrerPolicy="no-referrer"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none rounded-[1.75rem]" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none rounded-xl" />
                 <div className="absolute bottom-6 left-8 text-left z-10">
-                  <span className="text-[11px] uppercase tracking-widest text-[#C8A75B] font-bold block mb-1">EKSKLUSIF & HALAL</span>
-                  <h4 className="font-serif text-white text-[18px] font-semibold leading-tight">BMW Essence Terapi Mandian</h4>
+                  <span className="text-[10px] uppercase tracking-widest text-[#C8A75B] font-bold block mb-1">EKSKLUSIF & HALAL</span>
+                  <h4 className="font-serif text-white text-[16px] font-semibold leading-tight">BMW Essence Terapi Mandian</h4>
                 </div>
               </div>
             </div>
           </div>
 
           {/* Content details right */}
-          <div className="lg:col-span-7 text-left space-y-8">
-            <div className="space-y-3">
-              <span className="text-[12px] sm:text-[13px] uppercase tracking-widest text-[#C8A75B] font-bold block">MEMULIHKAN KETENANGAN MINDA</span>
-              <h2 className="font-serif text-[30px] sm:text-[34px] md:text-[38px] lg:text-[42px] xl:text-[48px] text-[#1F1F1F] font-bold tracking-tight leading-tight">BMW Essence</h2>
-              <p className="font-sans text-[15px] sm:text-[17px] uppercase tracking-wider text-[#1F1F1F]/60 font-semibold">Terapi Mandian Premium &bull; RM 390</p>
+          <div className="lg:col-span-7 text-left space-y-6">
+            <div className="space-y-2">
+              <span className="text-[11px] sm:text-[12px] uppercase tracking-widest text-[#C8A75B] font-bold block">MEMULIHKAN KETENANGAN MINDA</span>
+              <h2 className="font-serif text-[24px] sm:text-[28px] md:text-[32px] lg:text-[36px] xl:text-[42px] text-[#1F1F1F] font-bold tracking-tight leading-tight">BMW Essence</h2>
+              <p className="font-sans text-[13.5px] sm:text-[15px] uppercase tracking-wider text-[#1F1F1F]/60 font-semibold">Terapi Mandian Premium &bull; RM 390</p>
             </div>
 
-            <p className="font-sans text-[14px] sm:text-[15px] text-[#1F1F1F]/80 leading-[1.8] font-light">
+            <p className="font-sans text-[13px] sm:text-[14px] text-[#1F1F1F]/80 leading-[1.7] font-light">
               BMW Essence merangkumi pati pati botani gred terkawal yang ditala khusus untuk ritual spa harian bertaraf tinggi. Ia membangkitkan aromaterapi tulen yang menenangkan ketegangan fizikal murni anda.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-2">
-              <div className="space-y-4 bg-[#FBF8F1] border border-[#C8A75B]/15 p-6 sm:p-8 rounded-2xl shadow-xs">
-                <span className="text-[12px] sm:text-[13px] uppercase tracking-wider text-[#C8A75B] font-bold block">Manfaat Utama</span>
-                <ul className="space-y-3 text-[13px] sm:text-[14px] text-[#1F1F1F]/75">
+              <div className="space-y-3 bg-[#FBF8F1] border border-[#C8A75B]/15 p-5 sm:p-6 rounded-2xl shadow-xs">
+                <span className="text-[11px] sm:text-[12px] uppercase tracking-wider text-[#C8A75B] font-bold block">Manfaat Utama</span>
+                <ul className="space-y-2 text-[13px] sm:text-[14px] text-[#1F1F1F]/75">
                   <li className="flex items-start gap-2.5">
-                    <CheckCircle size={18} className="text-[#C8A75B] shrink-0 mt-0.5" />
+                    <CheckCircle size={16} className="text-[#C8A75B] shrink-0 mt-0.5" />
                     <span>Mempromosikan tidur mendalam</span>
                   </li>
                   <li className="flex items-start gap-2.5">
-                    <CheckCircle size={18} className="text-[#C8A75B] shrink-0 mt-0.5" />
+                    <CheckCircle size={16} className="text-[#C8A75B] shrink-0 mt-0.5" />
                     <span>Melembutkan tekstur luaran tubuh</span>
                   </li>
                   <li className="flex items-start gap-2.5">
-                    <CheckCircle size={18} className="text-[#C8A75B] shrink-0 mt-0.5" />
+                    <CheckCircle size={16} className="text-[#C8A75B] shrink-0 mt-0.5" />
                     <span>Aromaterapi semulajadi yang mewah</span>
                   </li>
                 </ul>
               </div>
 
-              <div className="space-y-4 bg-[#FBF8F1] border border-[#C8A75B]/15 p-6 sm:p-8 rounded-2xl shadow-xs">
-                <span className="text-[12px] sm:text-[13px] uppercase tracking-wider text-[#C8A75B] font-bold block">Cara Penggunaan</span>
-                <p className="text-[13px] sm:text-[14px] text-[#1F1F1F]/75 leading-[1.8] font-light">
+              <div className="space-y-3 bg-[#FBF8F1] border border-[#C8A75B]/15 p-5 sm:p-6 rounded-2xl shadow-xs">
+                <span className="text-[11px] sm:text-[12px] uppercase tracking-wider text-[#C8A75B] font-bold block">Cara Penggunaan</span>
+                <p className="text-[13px] sm:text-[14px] text-[#1F1F1F]/75 leading-[1.7] font-light">
                   Titiskan 8-12 titis ke air mandian suam. Rendam bertenang dan hirup wap herba berkesan selama 15-20 minit rukun relaksasi.
                 </p>
               </div>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-2">
-              <div className="space-y-2">
-                <span className="text-[12px] uppercase tracking-wider text-[#1F1F1F]/50 font-bold block">Siapa Sesuai Guna</span>
+              <div className="space-y-1.5">
+                <span className="text-[11px] uppercase tracking-wider text-[#1F1F1F]/50 font-bold block">Siapa Sesuai Guna</span>
                 <p className="text-[13px] sm:text-[14px] text-[#1F1F1F]/70 leading-relaxed">Individu yang mahu ritual mandian tenang &amp; melegakan keletihan harian.</p>
               </div>
-              <div className="space-y-2">
-                <span className="text-[12px] uppercase tracking-wider text-[#1F1F1F]/50 font-bold block">Penyimpanan</span>
+              <div className="space-y-1.5">
+                <span className="text-[11px] uppercase tracking-wider text-[#1F1F1F]/50 font-bold block">Penyimpanan</span>
                 <p className="text-[13px] sm:text-[14px] text-[#1F1F1F]/70 leading-relaxed">Simpan di tempat kering suhu bilik, hindari panahan matahari terus.</p>
               </div>
             </div>
 
-            <div className="pt-6 flex flex-col sm:flex-row gap-4">
+            <div className="pt-4 flex flex-col sm:flex-row gap-4">
               <button
                 onClick={() => handleWhatsAppProduct("BMW Essence")}
-                className="cursor-pointer flex-1 h-[54px] sm:h-[58px] bg-[#1F1F1F] hover:bg-[#333333] text-white text-[15px] sm:text-[16px] uppercase tracking-wider font-bold transition-all rounded-md shadow-md flex items-center justify-center text-center"
+                className="cursor-pointer flex-1 h-[48px] sm:h-[52px] bg-[#1F1F1F] hover:bg-[#333333] text-white text-[14px] sm:text-[15px] uppercase tracking-wider font-bold transition-all rounded-lg shadow-md flex items-center justify-center text-center"
               >
                 Pesan Melalui WhatsApp
               </button>
               <button
                 onClick={() => onOpenConsultation("buy", "BMW Essence")}
-                className="cursor-pointer h-[54px] sm:h-[58px] px-8 bg-white border-2 border-[#C8A75B]/40 hover:border-[#C8A75B] text-[#C8A75B] hover:text-[#1F1F1F] text-[15px] sm:text-[16px] uppercase tracking-wider font-bold transition-all rounded-md flex items-center justify-center text-center"
+                className="cursor-pointer h-[48px] sm:h-[52px] px-6 bg-white border-2 border-[#C8A75B]/40 hover:border-[#C8A75B] text-[#C8A75B] hover:text-[#1F1F1F] text-[14px] sm:text-[15px] uppercase tracking-wider font-bold transition-all rounded-lg flex items-center justify-center text-center"
               >
                 Konsultasi Produk
               </button>
@@ -159,65 +159,65 @@ export default function ProductsView({ onOpenConsultation }: ProductsViewProps) 
         {/* 2. BMW SPRAY */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center" id="bmw-spray">
           {/* Content details left on desktop */}
-          <div className="lg:col-span-7 text-left space-y-8 order-2 lg:order-1">
-            <div className="space-y-3">
-              <span className="text-[12px] sm:text-[13px] uppercase tracking-widest text-[#C8A75B] font-bold block">PERLINDUNGAN KELENGKAPAN WAJAH</span>
-              <h2 className="font-serif text-[30px] sm:text-[34px] md:text-[38px] lg:text-[42px] xl:text-[48px] text-[#1F1F1F] font-bold tracking-tight leading-tight">BMW Spray</h2>
-              <p className="font-sans text-[15px] sm:text-[17px] uppercase tracking-wider text-[#1F1F1F]/60 font-semibold">Penyegar Kulit Premium &bull; RM 280</p>
+          <div className="lg:col-span-7 text-left space-y-6 order-2 lg:order-1">
+            <div className="space-y-2">
+              <span className="text-[11px] sm:text-[12px] uppercase tracking-widest text-[#C8A75B] font-bold block">PERLINDUNGAN KELENGKAPAN WAJAH</span>
+              <h2 className="font-serif text-[24px] sm:text-[28px] md:text-[32px] lg:text-[36px] xl:text-[42px] text-[#1F1F1F] font-bold tracking-tight leading-tight">BMW Spray</h2>
+              <p className="font-sans text-[13.5px] sm:text-[15px] uppercase tracking-wider text-[#1F1F1F]/60 font-semibold">Penyegar Kulit Premium &bull; RM 280</p>
             </div>
 
-            <p className="font-sans text-[14px] sm:text-[15px] text-[#1F1F1F]/80 leading-[1.8] font-light">
+            <p className="font-sans text-[13px] sm:text-[14px] text-[#1F1F1F]/80 leading-[1.7] font-light">
               Formula ultra-ringan BMW Spray memberikan semburan partikel halus menembusi lapisan kulit luar untuk memulihkan sensasi penghidratan berterusan. Sesuai digunakan sepanjang hari.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-2">
-              <div className="space-y-4 bg-[#FBF8F1] border border-[#C8A75B]/15 p-6 sm:p-8 rounded-2xl shadow-xs">
-                <span className="text-[12px] sm:text-[13px] uppercase tracking-wider text-[#C8A75B] font-bold block">Manfaat Utama</span>
-                <ul className="space-y-3 text-[13px] sm:text-[14px] text-[#1F1F1F]/75">
+              <div className="space-y-3 bg-[#FBF8F1] border border-[#C8A75B]/15 p-5 sm:p-6 rounded-2xl shadow-xs">
+                <span className="text-[11px] sm:text-[12px] uppercase tracking-wider text-[#C8A75B] font-bold block">Manfaat Utama</span>
+                <ul className="space-y-2 text-[13px] sm:text-[14px] text-[#1F1F1F]/75">
                   <li className="flex items-start gap-2.5">
-                    <CheckCircle size={18} className="text-[#C8A75B] shrink-0 mt-0.5" />
+                    <CheckCircle size={16} className="text-[#C8A75B] shrink-0 mt-0.5" />
                     <span>Penghidratan pantas zon kering</span>
                   </li>
                   <li className="flex items-start gap-2.5">
-                    <CheckCircle size={18} className="text-[#C8A75B] shrink-0 mt-0.5" />
+                    <CheckCircle size={16} className="text-[#C8A75B] shrink-0 mt-0.5" />
                     <span>Meresap tanpa rasa melekit</span>
                   </li>
                   <li className="flex items-start gap-2.5">
-                    <CheckCircle size={18} className="text-[#C8A75B] shrink-0 mt-0.5" />
+                    <CheckCircle size={16} className="text-[#C8A75B] shrink-0 mt-0.5" />
                     <span>Mengekalkan kestabilan solekan semula jadi</span>
                   </li>
                 </ul>
               </div>
 
-              <div className="space-y-4 bg-[#FBF8F1] border border-[#C8A75B]/15 p-6 sm:p-8 rounded-2xl shadow-xs">
-                <span className="text-[12px] sm:text-[13px] uppercase tracking-wider text-[#C8A75B] font-bold block">Cara Penggunaan</span>
-                <p className="text-[13px] sm:text-[14px] text-[#1F1F1F]/75 leading-[1.8] font-light">
+              <div className="space-y-3 bg-[#FBF8F1] border border-[#C8A75B]/15 p-5 sm:p-6 rounded-2xl shadow-xs">
+                <span className="text-[11px] sm:text-[12px] uppercase tracking-wider text-[#C8A75B] font-bold block">Cara Penggunaan</span>
+                <p className="text-[13px] sm:text-[14px] text-[#1F1F1F]/75 leading-[1.7] font-light">
                   Semburkan jarak 15-20cm secara bulatan lembut dari wajah. Boleh digunakan setiap beberapa jam untuk perlindungan tambahan.
                 </p>
               </div>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-2">
-              <div className="space-y-2">
-                <span className="text-[12px] uppercase tracking-wider text-[#1F1F1F]/50 font-bold block">Siapa Sesuai Guna</span>
+              <div className="space-y-1.5">
+                <span className="text-[11px] uppercase tracking-wider text-[#1F1F1F]/50 font-bold block">Siapa Sesuai Guna</span>
                 <p className="text-[13px] sm:text-[14px] text-[#1F1F1F]/70 leading-relaxed">Semua jenis kulit, terutamanya yang kerap berada di bilik berhawa dingin.</p>
               </div>
-              <div className="space-y-2">
-                <span className="text-[12px] uppercase tracking-wider text-[#1F1F1F]/50 font-bold block">Penyimpanan</span>
+              <div className="space-y-1.5">
+                <span className="text-[11px] uppercase tracking-wider text-[#1F1F1F]/50 font-bold block">Penyimpanan</span>
                 <p className="text-[13px] sm:text-[14px] text-[#1F1F1F]/70 leading-relaxed">Simpan dalam suhu terkawal. Jauhkan daripada jangkauan haba langsung.</p>
               </div>
             </div>
 
-            <div className="pt-6 flex flex-col sm:flex-row gap-4">
+            <div className="pt-4 flex flex-col sm:flex-row gap-4">
               <button
                 onClick={() => handleWhatsAppProduct("BMW Spray")}
-                className="cursor-pointer flex-1 h-[54px] sm:h-[58px] bg-[#1F1F1F] hover:bg-[#333333] text-white text-[15px] sm:text-[16px] uppercase tracking-wider font-bold transition-all rounded-md shadow-md flex items-center justify-center text-center"
+                className="cursor-pointer flex-1 h-[48px] sm:h-[52px] bg-[#1F1F1F] hover:bg-[#333333] text-white text-[14px] sm:text-[15px] uppercase tracking-wider font-bold transition-all rounded-lg shadow-md flex items-center justify-center text-center"
               >
                 Pesan Melalui WhatsApp
               </button>
               <button
                 onClick={() => onOpenConsultation("buy", "BMW Spray")}
-                className="cursor-pointer h-[54px] sm:h-[58px] px-8 bg-white border-2 border-[#C8A75B]/40 hover:border-[#C8A75B] text-[#C8A75B] hover:text-[#1F1F1F] text-[15px] sm:text-[16px] uppercase tracking-wider font-bold transition-all rounded-md flex items-center justify-center text-center"
+                className="cursor-pointer h-[48px] sm:h-[52px] px-6 bg-white border-2 border-[#C8A75B]/40 hover:border-[#C8A75B] text-[#C8A75B] hover:text-[#1F1F1F] text-[14px] sm:text-[15px] uppercase tracking-wider font-bold transition-all rounded-lg flex items-center justify-center text-center"
               >
                 Konsultasi Produk
               </button>
@@ -226,19 +226,19 @@ export default function ProductsView({ onOpenConsultation }: ProductsViewProps) 
 
           {/* Image visual right */}
           <div className="lg:col-span-5 relative group order-1 lg:order-2">
-            <div className="absolute inset-0 bg-gradient-to-tr from-[#C8A75B]/10 to-transparent rounded-3xl filter blur-xl pointer-events-none" />
+            <div className="absolute inset-0 bg-gradient-to-tr from-[#C8A75B]/10 to-transparent rounded-2xl filter blur-xl pointer-events-none" />
             <div className="w-full">
-              <div className="relative w-full aspect-square rounded-[2rem] border-2 border-[#C8A75B]/30 overflow-hidden shadow-2xl bg-white p-1.5 group/img-view">
+              <div className="relative w-full aspect-square rounded-2xl border-2 border-[#C8A75B]/30 overflow-hidden shadow-2xl bg-white p-1.5 group/img-view">
                 <img 
                   src={sprayImage} 
                   alt="BMW Spray" 
-                  className="w-full h-full object-cover rounded-[1.75rem] transition-transform duration-700 group-hover/img-view:scale-105"
+                  className="w-full h-full object-cover rounded-xl transition-transform duration-700 group-hover/img-view:scale-105"
                   referrerPolicy="no-referrer"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none rounded-[1.75rem]" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none rounded-xl" />
                 <div className="absolute bottom-6 left-8 text-left z-10">
-                  <span className="text-[11px] uppercase tracking-widest text-[#C8A75B] font-bold block mb-1">PENGALAMAN PREMIUM</span>
-                  <h4 className="font-serif text-white text-[18px] font-semibold leading-tight">BMW Spray Penyegar Wajah</h4>
+                  <span className="text-[10px] uppercase tracking-widest text-[#C8A75B] font-bold block mb-1">PENGALAMAN PREMIUM</span>
+                  <h4 className="font-serif text-white text-[16px] font-semibold leading-tight">BMW Spray Penyegar Wajah</h4>
                 </div>
               </div>
             </div>
@@ -249,84 +249,84 @@ export default function ProductsView({ onOpenConsultation }: ProductsViewProps) 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center" id="bmw-drop">
           {/* Image visual left */}
           <div className="lg:col-span-5 relative group">
-            <div className="absolute inset-0 bg-gradient-to-tr from-[#C8A75B]/10 to-transparent rounded-3xl filter blur-xl pointer-events-none" />
+            <div className="absolute inset-0 bg-gradient-to-tr from-[#C8A75B]/10 to-transparent rounded-2xl filter blur-xl pointer-events-none" />
             <div className="w-full">
-              <div className="relative w-full aspect-square rounded-[2rem] border-2 border-[#C8A75B]/30 overflow-hidden shadow-2xl bg-white p-1.5 group/img-view">
+              <div className="relative w-full aspect-square rounded-2xl border-2 border-[#C8A75B]/30 overflow-hidden shadow-2xl bg-white p-1.5 group/img-view">
                 <img 
                   src={dropImage} 
                   alt="BMW Drop" 
-                  className="w-full h-full object-cover rounded-[1.75rem] transition-transform duration-700 group-hover/img-view:scale-105"
+                  className="w-full h-full object-cover rounded-xl transition-transform duration-700 group-hover/img-view:scale-105"
                   referrerPolicy="no-referrer"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none rounded-[1.75rem]" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none rounded-xl" />
                 <div className="absolute bottom-6 left-8 text-left z-10">
-                  <span className="text-[11px] uppercase tracking-widest text-[#C8A75B] font-bold block mb-1">FORMULA BOTANI</span>
-                  <h4 className="font-serif text-white text-[18px] font-semibold leading-tight">BMW Drop Titisan Kesejahteraan</h4>
+                  <span className="text-[10px] uppercase tracking-widest text-[#C8A75B] font-bold block mb-1">FORMULA BOTANI</span>
+                  <h4 className="font-serif text-white text-[16px] font-semibold leading-tight">BMW Drop Titisan Kesejahteraan</h4>
                 </div>
               </div>
             </div>
           </div>
 
           {/* Content details right */}
-          <div className="lg:col-span-7 text-left space-y-8">
-            <div className="space-y-3">
-              <span className="text-[12px] sm:text-[13px] uppercase tracking-widest text-[#C8A75B] font-bold block">NUTRISI LUAR BIASA</span>
-              <h2 className="font-serif text-[30px] sm:text-[34px] md:text-[38px] lg:text-[42px] xl:text-[48px] text-[#1F1F1F] font-bold tracking-tight leading-tight">BMW Drop</h2>
-              <p className="font-sans text-[15px] sm:text-[17px] uppercase tracking-wider text-[#1F1F1F]/60 font-semibold">Suplemen Kesejahteraan Premium &bull; RM 480</p>
+          <div className="lg:col-span-7 text-left space-y-6">
+            <div className="space-y-2">
+              <span className="text-[11px] sm:text-[12px] uppercase tracking-widest text-[#C8A75B] font-bold block">NUTRISI LUAR BIASA</span>
+              <h2 className="font-serif text-[24px] sm:text-[28px] md:text-[32px] lg:text-[36px] xl:text-[42px] text-[#1F1F1F] font-bold tracking-tight leading-tight">BMW Drop</h2>
+              <p className="font-sans text-[13.5px] sm:text-[15px] uppercase tracking-wider text-[#1F1F1F]/60 font-semibold">Suplemen Kesejahteraan Premium &bull; RM 480</p>
             </div>
 
-            <p className="font-sans text-[14px] sm:text-[15px] text-[#1F1F1F]/80 leading-[1.8] font-light">
+            <p className="font-sans text-[13px] sm:text-[14px] text-[#1F1F1F]/80 leading-[1.7] font-light">
               Titisan premium BMW Drop dirumus untuk menyokong metabolisme harian dan kesejahteraan organik seluruh tubuh anda bagi gaya hidup sihat aktif yang cemerlang.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-2">
-              <div className="space-y-4 bg-[#FBF8F1] border border-[#C8A75B]/15 p-6 sm:p-8 rounded-2xl shadow-xs">
-                <span className="text-[12px] sm:text-[13px] uppercase tracking-wider text-[#C8A75B] font-bold block">Manfaat Utama</span>
-                <ul className="space-y-3 text-[13px] sm:text-[14px] text-[#1F1F1F]/75">
+              <div className="space-y-3 bg-[#FBF8F1] border border-[#C8A75B]/15 p-5 sm:p-6 rounded-2xl shadow-xs">
+                <span className="text-[11px] sm:text-[12px] uppercase tracking-wider text-[#C8A75B] font-bold block">Manfaat Utama</span>
+                <ul className="space-y-2 text-[13px] sm:text-[14px] text-[#1F1F1F]/75">
                   <li className="flex items-start gap-2.5">
-                    <CheckCircle size={18} className="text-[#C8A75B] shrink-0 mt-0.5" />
+                    <CheckCircle size={16} className="text-[#C8A75B] shrink-0 mt-0.5" />
                     <span>Mengekalkan stamina bersih tubuh</span>
                   </li>
                   <li className="flex items-start gap-2.5">
-                    <CheckCircle size={18} className="text-[#C8A75B] shrink-0 mt-0.5" />
+                    <CheckCircle size={16} className="text-[#C8A75B] shrink-0 mt-0.5" />
                     <span>Titisan pekat botani premium</span>
                   </li>
                   <li className="flex items-start gap-2.5">
-                    <CheckCircle size={18} className="text-[#C8A75B] shrink-0 mt-0.5" />
+                    <CheckCircle size={16} className="text-[#C8A75B] shrink-0 mt-0.5" />
                     <span>Menyokong kesejahteraan dalaman</span>
                   </li>
                 </ul>
               </div>
 
-              <div className="space-y-4 bg-[#FBF8F1] border border-[#C8A75B]/15 p-6 sm:p-8 rounded-2xl shadow-xs">
-                <span className="text-[12px] sm:text-[13px] uppercase tracking-wider text-[#C8A75B] font-bold block">Cara Penggunaan</span>
-                <p className="text-[13px] sm:text-[14px] text-[#1F1F1F]/75 leading-[1.8] font-light">
+              <div className="space-y-3 bg-[#FBF8F1] border border-[#C8A75B]/15 p-5 sm:p-6 rounded-2xl shadow-xs">
+                <span className="text-[11px] sm:text-[12px] uppercase tracking-wider text-[#C8A75B] font-bold block">Cara Penggunaan</span>
+                <p className="text-[13px] sm:text-[14px] text-[#1F1F1F]/75 leading-[1.7] font-light">
                   Titiskan 3 hingga 5 titis menggunakan pipet emas ke dalam segelas air mineral atau minuman kegemaran anda setiap pagi.
                 </p>
               </div>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-2">
-              <div className="space-y-2">
-                <span className="text-[12px] uppercase tracking-wider text-[#1F1F1F]/50 font-bold block">Siapa Sesuai Guna</span>
+              <div className="space-y-1.5">
+                <span className="text-[11px] uppercase tracking-wider text-[#1F1F1F]/50 font-bold block">Siapa Sesuai Guna</span>
                 <p className="text-[13px] sm:text-[14px] text-[#1F1F1F]/70 leading-relaxed">Individu aktif yang mengutamakan kelengkapan nutrien organik terpelihara.</p>
               </div>
-              <div className="space-y-2">
-                <span className="text-[12px] uppercase tracking-wider text-[#1F1F1F]/50 font-bold block">Penyimpanan</span>
+              <div className="space-y-1.5">
+                <span className="text-[11px] uppercase tracking-wider text-[#1F1F1F]/50 font-bold block">Penyimpanan</span>
                 <p className="text-[13px] sm:text-[14px] text-[#1F1F1F]/70 leading-relaxed">Letakkan di tempat terlindung sejuk. Tutup rapat penutup botol setiap kali pemakaian.</p>
               </div>
             </div>
 
-            <div className="pt-6 flex flex-col sm:flex-row gap-4">
+            <div className="pt-4 flex flex-col sm:flex-row gap-4">
               <button
                 onClick={() => handleWhatsAppProduct("BMW Drop")}
-                className="cursor-pointer flex-1 h-[54px] sm:h-[58px] bg-[#1F1F1F] hover:bg-[#333333] text-white text-[15px] sm:text-[16px] uppercase tracking-wider font-bold transition-all rounded-md shadow-md flex items-center justify-center text-center"
+                className="cursor-pointer flex-1 h-[48px] sm:h-[52px] bg-[#1F1F1F] hover:bg-[#333333] text-white text-[14px] sm:text-[15px] uppercase tracking-wider font-bold transition-all rounded-lg shadow-md flex items-center justify-center text-center"
               >
                 Pesan Melalui WhatsApp
               </button>
               <button
                 onClick={() => onOpenConsultation("buy", "BMW Drop")}
-                className="cursor-pointer h-[54px] sm:h-[58px] px-8 bg-white border-2 border-[#C8A75B]/40 hover:border-[#C8A75B] text-[#C8A75B] hover:text-[#1F1F1F] text-[15px] sm:text-[16px] uppercase tracking-wider font-bold transition-all rounded-md flex items-center justify-center text-center"
+                className="cursor-pointer h-[48px] sm:h-[52px] px-6 bg-white border-2 border-[#C8A75B]/40 hover:border-[#C8A75B] text-[#C8A75B] hover:text-[#1F1F1F] text-[14px] sm:text-[15px] uppercase tracking-wider font-bold transition-all rounded-lg flex items-center justify-center text-center"
               >
                 Konsultasi Produk
               </button>
@@ -337,17 +337,17 @@ export default function ProductsView({ onOpenConsultation }: ProductsViewProps) 
       </section>
 
       {/* MATRIX COMPARISON TABLE */}
-      <section className="bg-white py-24 border-y border-[#C8A75B]/15 max-w-full">
-        <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-12 lg:px-16 text-center space-y-16">
-          <div className="space-y-4">
-            <span className="text-[12px] sm:text-[13px] uppercase tracking-[0.25em] text-[#C8A75B] font-bold block">RUJUKAN PERBANDINGAN SILANG</span>
-            <h2 className="font-serif text-[30px] sm:text-[34px] md:text-[38px] lg:text-[42px] xl:text-[50px] text-[#1F1F1F] font-semibold tracking-tight">
+      <section className="bg-white py-16 border-y border-[#C8A75B]/15 max-w-full">
+        <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-12 lg:px-16 text-center space-y-12">
+          <div className="space-y-3">
+            <span className="text-[11px] sm:text-[12px] uppercase tracking-[0.25em] text-[#C8A75B] font-bold block">RUJUKAN PERBANDINGAN SILANG</span>
+            <h2 className="font-serif text-[24px] sm:text-[28px] md:text-[32px] lg:text-[42px] xl:text-[48px] text-[#1F1F1F] font-bold tracking-tight">
               Essence vs Spray vs Drop
             </h2>
-            <div className="w-20 h-[1.5px] bg-[#C8A75B] mx-auto mt-4" />
+            <div className="w-16 h-[1.5px] bg-[#C8A75B] mx-auto mt-3" />
           </div>
 
-          <div className="overflow-x-auto rounded-[1.5rem] border border-[#C8A75B]/25">
+          <div className="overflow-x-auto rounded-2xl border border-[#C8A75B]/25">
             <table className="w-full text-left font-sans text-[13px] sm:text-[14px] border-collapse min-w-[850px] bg-white">
                <thead>
                  <tr className="bg-[#FAF8F1] border-b border-[#C8A75B]/20">
@@ -390,17 +390,17 @@ export default function ProductsView({ onOpenConsultation }: ProductsViewProps) 
 
       {/* FINAL INTERACTIVE ADVICE CALL */}
       <section className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-12 lg:px-16">
-        <div className="bg-[#FAF8F1] border border-[#C8A75B]/25 rounded-[3rem] p-10 sm:p-16 text-center max-w-4xl mx-auto space-y-8 shadow-xs">
-          <h3 className="font-serif text-[26px] sm:text-[30px] md:text-[34px] font-semibold text-[#1F1F1F]">
+        <div className="bg-[#FAF8F1] border border-[#C8A75B]/25 rounded-2xl p-6 sm:p-10 text-center max-w-4xl mx-auto space-y-6 shadow-xs">
+          <h3 className="font-serif text-[18px] sm:text-[22px] md:text-[26px] font-bold text-[#1F1F1F]">
             Masih Ragu Tentang Pilihan Terbaik?
           </h3>
-          <p className="font-sans text-[13px] sm:text-[14px] text-[#1F1F1F]/70 leading-[1.8] max-w-2xl mx-auto font-light">
+          <p className="font-sans text-[13px] sm:text-[14px] text-[#1F1F1F]/70 leading-[1.7] max-w-2xl mx-auto font-light">
             Tidak pasti produk mana yang sesuai dengan rutin dan gaya hidup anda? Usah bimbang. Pasukan perunding kesihatan AquivaGold sedia membimbing anda secara peribadi percuma di talian sekarang.
           </p>
 
           <button
             onClick={() => onOpenConsultation("consult")}
-            className="cursor-pointer h-[54px] sm:h-[58px] px-10 bg-[#1F1F1F] hover:bg-[#333333] text-white text-[15px] sm:text-[16px] uppercase tracking-wider font-bold transition-all rounded-md shadow-md inline-flex items-center justify-center"
+            className="cursor-pointer h-[48px] sm:h-[52px] px-8 bg-[#1F1F1F] hover:bg-[#333333] text-white text-[14px] sm:text-[15px] uppercase tracking-wider font-bold transition-all rounded-lg shadow-md inline-flex items-center justify-center"
           >
             Dapatkan Konsultasi Percuma Sekarang
           </button>
