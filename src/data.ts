@@ -1,4 +1,8 @@
 import { Product, WhyChoose, Review, FAQItem } from "./types";
+import sprayImage from "./assets/images/spray.jpeg";
+import essenceImage from "./assets/images/Essence.jpeg";
+import dropImage from "./assets/images/Drop.jpeg";
+import heroBanner from "./assets/images/hero-banner.png";
 
 export const PRODUCTS: Product[] = [
   {
@@ -16,8 +20,8 @@ export const PRODUCTS: Product[] = [
     ],
     price: "RM 280",
     images: [
-      "https://raw.githubusercontent.com/aisyahz/Aquivagold/main/src/assets/images/spray.jpeg",
-      "https://raw.githubusercontent.com/aisyahz/Aquivagold/main/src/assets/images/aquvia_spa_hero_1780832150912.png"
+      sprayImage,
+      heroBanner
     ],
     directions: "Semburkan botol eksklusif ini pada jarak kira-kira 15-20cm dari wajah atau badan. Pejamkan mata dan sembur secara perlahan dengan gerakan bulat. Gunakan pada bila-bila masa—pagi, petang, atau malam—untuk mengembalikan kesegaran, atau sapukan sejurus selepas pembersihan bagi mengunci kelembapan harian.",
     faqs: [
@@ -59,8 +63,8 @@ export const PRODUCTS: Product[] = [
     ],
     price: "RM 390",
     images: [
-      "https://raw.githubusercontent.com/aisyahz/Aquivagold/main/src/assets/images/Essence.jpeg",
-      "https://raw.githubusercontent.com/aisyahz/Aquivagold/main/src/assets/images/aquvia_spa_hero_1780832150912.png"
+      essenceImage,
+      heroBanner
     ],
     directions: "Titiskan 8 hingga 12 titis essence eksklusif ini ke dalam air mandian suam. Kacau perlahan agar formulanya tersebar sekata. Berbaring bertenang, tarik nafas dalam-dalam, dan nikmati wap terapi spa yang menenangkan selama 15 hingga 20 minit.",
     faqs: [
@@ -101,8 +105,8 @@ export const PRODUCTS: Product[] = [
     ],
     price: "RM 480",
     images: [
-      "https://raw.githubusercontent.com/aisyahz/Aquivagold/main/src/assets/images/Drop.jpeg",
-      "https://raw.githubusercontent.com/aisyahz/Aquivagold/main/src/assets/images/aquvia_spa_hero_1780832150912.png"
+      dropImage,
+      heroBanner
     ],
     directions: "Dengan menggunakan pipet emas yang elegan, titiskan 3 hingga 5 titis ke dalam segelas air mineral suam atau teh organik kegemaran anda. Kacau perlahan dan amalkan setiap pagi untuk menyokong kesejahteraan jangka panjang dan kecergasan menyeluruh.",
     faqs: [

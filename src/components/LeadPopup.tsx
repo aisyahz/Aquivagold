@@ -127,14 +127,15 @@ export default function LeadPopup({
     if (activeFlow === "buy") {
       // Flow 1 Buy Product WhatsApp message
       const greetingHeader = "Hi AquivaGold,\n\n";
-      const nameLine = `Nama: ${buyForm.fullName}\n\n`;
-      const interestLine = `Saya berminat dengan:\n${buyForm.productInterested}\n\n`;
+      const nameLine = `Nama: ${buyForm.fullName}\n`;
+      const phoneLine = `Telefon: ${buyForm.phoneNumber}\n`;
+      const interestLine = `Produk / Minat: ${buyForm.productInterested}\n`;
       const noteLine = buyForm.additionalNotes.trim()
-        ? `Nota tambahan:\n${buyForm.additionalNotes}\n\n`
+        ? `Mesej:\n${buyForm.additionalNotes}\n\n`
         : "";
       const footerText = "Boleh saya dapatkan maklumat harga dan cara penggunaan?\n\nTerima kasih.";
 
-      fullMessage = greetingHeader + nameLine + interestLine + noteLine + footerText;
+      fullMessage = greetingHeader + nameLine + phoneLine + interestLine + noteLine + footerText;
     } else {
       // Flow 2 Consultation WhatsApp message
       const selectedTopics = Object.entries(consultTopics)
@@ -143,27 +144,26 @@ export default function LeadPopup({
         .join("\n");
 
       const greetingHeader = "Hi AquivaGold,\n\n";
-      const nameLine = `Nama: ${consultForm.fullName}\n\n`;
-      const introLine = "Saya ingin mendapatkan konsultasi.\n\n";
+      const nameLine = `Nama: ${consultForm.fullName}\n`;
+      const phoneLine = `Telefon: ${consultForm.phoneNumber}\n`;
+      const interestLine = "Produk / Minat: Konsultasi Percuma\n";
       const topicsLine = selectedTopics
-        ? `Perkara yang ingin saya bincangkan:\n${selectedTopics}\n\n`
+        ? `Topik Perbincangan:\n${selectedTopics}\n`
         : "";
       const noteLine = consultForm.additionalNotes.trim()
-        ? `Maklumat tambahan:\n${consultForm.additionalNotes}\n\n`
+        ? `Mesej:\n${consultForm.additionalNotes}\n\n`
         : "";
       const footerText = "Mohon cadangan yang sesuai.\n\nTerima kasih.";
 
-      fullMessage = greetingHeader + nameLine + introLine + topicsLine + noteLine + footerText;
+      fullMessage = greetingHeader + nameLine + phoneLine + interestLine + topicsLine + noteLine + footerText;
     }
 
     const encodedMessage = encodeURIComponent(fullMessage);
     const whatsappUrl = `https://wa.me/601139900920?text=${encodedMessage}`;
 
-    setTimeout(() => {
-      setIsSubmitting(false);
-      onClose();
-      window.open(whatsappUrl, "_blank", "noopener,noreferrer");
-    }, 800);
+    setIsSubmitting(false);
+    onClose();
+    window.location.href = whatsappUrl;
   };
 
   return (

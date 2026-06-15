@@ -23,13 +23,13 @@ export default function AboutView() {
       <section className="relative bg-[#FAF8F1] py-24 border-b border-[#C8A75B]/15 text-center max-w-full">
         <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-12 lg:px-16 space-y-4">
           <span className="text-[12px] sm:text-[13px] uppercase tracking-[0.3em] text-[#C8A75B] font-bold block">MENGENALI WARISAN BRAND</span>
-          <h1 className="font-serif text-[32px] sm:text-[38px] md:text-[44px] lg:text-[48px] xl:text-[54px] text-[#1F1F1F] font-medium tracking-tight leading-tight">
+          <h1 className="font-serif text-[32px] sm:text-[38px] md:text-[44px] lg:text-[48px] xl:text-[54px] text-[#1F1F1F] font-bold tracking-tight leading-tight">
             Tentang Aquiva Gold
           </h1>
-          <p className="font-sans text-[16px] sm:text-[18px] md:text-[17px] lg:text-[18px] xl:text-[20px] text-[#1F1F1F]/60 max-w-2xl mx-auto leading-[1.8]">
-            Menelusuri sejarah penubuhan syarikat, prinsip kemurnian botani murni, dan falsafah kesejahteraan bertaraf butik lima bintang yang memacu legasi kami.
+          <p className="font-sans text-[16px] sm:text-[18px] md:text-[18px] text-neutral-800 max-w-2xl mx-auto leading-[1.8] font-normal">
+            Menelusuri sejarah penubuhan syarikat, prinsip kemurnian botani murni, dan falsafah kesejahteraan bertaraf butik ultra-premium yang memacu legasi kami.
           </p>
-          <div className="w-20 h-[1.5px] bg-[#C8A75B] mx-auto mt-4" />
+          <div className="w-20 h-[2px] bg-[#C8A75B] mx-auto mt-4" />
         </div>
       </section>
 
@@ -48,8 +48,8 @@ export default function AboutView() {
               <div className="absolute -bottom-6 -right-6 bg-white border border-[#C8A75B]/25 p-6 rounded-2xl hidden sm:flex items-center gap-4 shadow-md max-w-xs text-left z-20">
                 <div className="text-[#C8A75B]"><MapPin size={28} /></div>
                 <div>
-                  <h4 className="font-serif text-[14px] sm:text-[15px] font-bold text-[#1F1F1F]">Pusat Pentadbiran</h4>
-                  <p className="text-[12px] text-[#1F1F1F]/60 mt-1">Bukit Damansara, Kuala Lumpur, Malaysia</p>
+                  <h4 className="font-serif text-[15px] sm:text-[16px] font-bold text-[#1F1F1F]">Pusat Pentadbiran</h4>
+                  <p className="text-[13px] text-neutral-700 mt-1">Bukit Damansara, Kuala Lumpur, Malaysia</p>
                 </div>
               </div>
             </div>
@@ -57,28 +57,28 @@ export default function AboutView() {
 
           {/* Core Text details right */}
           <div className="lg:col-span-11 xl:col-span-7 text-left space-y-8">
-            <span className="text-[12px] sm:text-[13px] uppercase tracking-[0.25em] text-[#C8A75B] font-bold block">CERITA DI SEBALIK NAMA</span>
-            <h2 className="font-serif text-[30px] sm:text-[34px] md:text-[38px] lg:text-[44px] xl:text-[50px] text-[#1F1F1F] font-semibold tracking-tight leading-tight">Kisah Pengasasan Kami</h2>
+            <span className="text-[12px] sm:text-[14px] uppercase tracking-[0.25em] text-[#C8A75B] font-bold block">CERITA DI SEBALIK NAMA</span>
+            <h2 className="font-serif text-[30px] sm:text-[34px] md:text-[38px] lg:text-[44px] text-[#1F1F1F] font-bold tracking-tight leading-tight">Kisah Pengasasan Kami</h2>
             
-            <p className="font-sans text-[16px] sm:text-[18px] md:text-[17px] lg:text-[18px] xl:text-[19px] text-[#1F1F1F]/80 leading-[1.8] font-light">
+            <p className="font-sans text-[16px] sm:text-[18px] md:text-[18px] text-neutral-800 leading-[1.8] font-normal">
               Aquiva Gold Black Millenia diasaskan atas dedikasi mendalam terhadap penemuan rahsia alam semula jadi yang berkesan menyokong kesejahteraan rohani dan jasmani. Menyedari bahawa lambakan pengeluaran kosmetik dan terapi moden dipenuhi aromatik tiruan sintetik keras yang membebankan sistem metabolisme tubuh, pengasas kami memulakan ekspedisi saintifik botani harian untuk menapis intisari cecair yang paling suci.
             </p>
 
-            <p className="font-sans text-[16px] sm:text-[18px] md:text-[17px] lg:text-[18px] xl:text-[19px] text-[#1F1F1F]/80 leading-[1.8] font-light">
-              Melalui gabungan siri pembersihan berkala dan teknologi ekstraksi sejuk, lahirlah rangkaian **Black Millenia Water**—penulisan semula kepada falsafah penjagaan kesihatan butik premium yang telus, diyakini laporan analisis COA makmal penuh, bebas daripada paraben keras, merkuri logam, ataupun toksik.
+            <p className="font-sans text-[16px] sm:text-[18px] md:text-[18px] text-neutral-800 leading-[1.8] font-normal">
+              Melalui gabungan siri pembersihan berkala dan teknologi ekstraksi sejuk, lahirlah rangkaian <strong>Black Millenia Water</strong>—penulisan semula kepada falsafah penjagaan kesihatan butik premium yang telus, diyakini laporan analisis COA makmal penuh, bebas daripada paraben keras, merkuri logam, ataupun toksik.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 pt-6 border-t border-[#EFEAE2]">
               <div className="space-y-2">
-                <span className="text-[12px] sm:text-[13px] uppercase tracking-widest text-[#C8A75B] font-bold block">VISI SYARIKAT</span>
-                <p className="text-[15px] sm:text-[16px] lg:text-[17px] text-[#1F1F1F]/70 leading-[1.8] font-light">
+                <span className="text-[12px] sm:text-[14px] uppercase tracking-widest text-[#C8A75B] font-bold block">VISI SYARIKAT</span>
+                <p className="text-[15px] sm:text-[17px] text-neutral-800 leading-[1.8] font-normal">
                   Menjadi peneraju butik penjagaan diri gred premium yang dihormati di seluruh Asia Tenggara menjelang tahun 2030 melalui pembuktian integriti dokumen saintifik yang telus.
                 </p>
               </div>
 
               <div className="space-y-2">
-                <span className="text-[12px] sm:text-[13px] uppercase tracking-widest text-[#C8A75B] font-bold block">MISI UTAMA</span>
-                <p className="text-[15px] sm:text-[16px] lg:text-[17px] text-[#1F1F1F]/70 leading-[1.8] font-light">
+                <span className="text-[12px] sm:text-[14px] uppercase tracking-widest text-[#C8A75B] font-bold block">MISI UTAMA</span>
+                <p className="text-[15px] sm:text-[17px] text-neutral-800 leading-[1.8] font-normal">
                   Menawarkan bimbingan rundingan kesihatan peribadi dwi-bahasa berkualiti tinggi bagi membantu setiap individu melengkapkan gaya hidup sihat yang teratur.
                 </p>
               </div>
@@ -103,9 +103,9 @@ export default function AboutView() {
           <div className="max-w-3xl mx-auto space-y-12 relative before:absolute before:left-4 sm:before:left-1/2 before:top-0 before:bottom-0 before:w-0.5 before:bg-[#C8A75B]/20">
             
             {[
-              { year: "2024", title: "Idea Pengasasan & Pendaftaran", desc: "Syarikat mendaftar sah di bawah Suruhanjaya Syarikat Malaysia (SSM) dan memulakan perolehan herba botani perintis." },
-              { year: "2025", title: "Pematuhan Garis Panduan KKM & Makmal", desc: "Pelepasan laporan analitis COA makmal bertauliah melepasi 100% penapisan kimia logam berat. Siasatan premis sanitari pengilangan dilakukan secara ketat." },
-              { year: "2026", title: "Pelancaran Rangkaian Black Millenia", desc: "Melahirkan trio premium: BMW Essence, BMW Spray, dan BMW Drop. Pusat khidmat nasihat peribadi dibuka di pusat digital Bukit Damansara, KL." }
+              { year: "2024", title: "Idea Pengasasan & Pendaftaran", desc: "Syarikat mendaftar sah di bawah Suruhanjaya Syarikat Malaysia (SSM) (Akan dikemaskini) dan memulakan perolehan herba botani perintis." },
+              { year: "2025", title: "Pematuhan Garis Panduan & Makmal Teratur", desc: "Selesai laporan analisis COA makmal bertauliah melepasi 100% standard penapisan kimia logam berat. Siasatan premis sanitari pengilangan dijalankan secara teliti dan patuh syariah." },
+              { year: "2026", title: "Pelancaran Rangkaian Black Millenia", desc: "Melahirkan trio premium: Black Millenia Essence, Black Millenia Spray, dan Black Millenia Drop. Pusat khidmat nasihat peribadi dibuka di pusat digital Bukit Damansara, KL." }
             ].map((milestone, idx) => (
               <div key={idx} className="relative pl-12 sm:pl-0 flex flex-col sm:grid sm:grid-cols-2 gap-4 text-left sm:even:text-right even:flex-row-reverse">
                 
@@ -116,8 +116,8 @@ export default function AboutView() {
 
                 <div className={idx % 2 === 0 ? "sm:pr-12" : "sm:col-start-2 sm:pl-12"}>
                   <span className="font-serif text-[22px] sm:text-[24px] font-bold text-[#C8A75B] block">{milestone.year}</span>
-                  <h4 className="font-serif text-[17px] sm:text-[18px] font-bold text-[#1F1F1F] mt-1">{milestone.title}</h4>
-                   <p className="text-[15px] sm:text-[16px] text-[#1F1F1F]/70 mt-1.5 font-light leading-[1.8]">{milestone.desc}</p>
+                  <h4 className="font-serif text-[17px] sm:text-[18px] font-black text-[#1F1F1F] mt-1">{milestone.title}</h4>
+                   <p className="text-[15px] sm:text-[16px] text-neutral-800 mt-1.5 font-normal leading-[1.8]">{milestone.desc}</p>
                 </div>
               </div>
             ))}
@@ -148,7 +148,7 @@ export default function AboutView() {
                 {i + 1}
               </div>
               <h4 className="font-serif text-[18px] sm:text-[20px] font-bold text-[#1F1F1F]">{v.title}</h4>
-              <p className="text-[15px] sm:text-[16px] text-[#1F1F1F]/70 mt-3 leading-[1.8] font-light">{v.desc}</p>
+              <p className="text-[15px] sm:text-[16px] text-neutral-800 mt-3 leading-[1.8] font-normal">{v.desc}</p>
             </div>
           ))}
         </div>
@@ -162,7 +162,7 @@ export default function AboutView() {
             <div className="lg:col-span-8 space-y-5">
               <span className="text-[12px] sm:text-[13px] uppercase tracking-[0.3em] text-[#C8A75B] font-bold block">PANGKALAN OPERASI UTAMA</span>
               <h3 className="font-serif text-[26px] sm:text-[30px] text-white font-medium leading-tight">Ibu Pejabat Aquiva Gold</h3>
-              <p className="font-sans text-[15px] sm:text-[17px] text-white/70 font-light leading-[1.8]">
+              <p className="font-sans text-[15px] sm:text-[17px] text-neutral-200 font-normal leading-[1.8]">
                 Operasi pendaftaran dan pemantauan kualiti kami berpangkalan di kompleks butik korporat Bukit Damansara, Kuala Lumpur. Hubungi kami sekiranya anda memerlukan bimbingan penjejakan surat kurier berdaftar khas.
               </p>
               
@@ -173,7 +173,7 @@ export default function AboutView() {
                 </div>
                 <div className="flex items-center gap-2.5">
                   <CheckCircle size={20} className="text-[#C8A75B]" />
-                  <span>Syarikat SSM: 202401xxxx33</span>
+                  <span>Syarikat SSM: Akan dikemaskini</span>
                 </div>
               </div>
             </div>

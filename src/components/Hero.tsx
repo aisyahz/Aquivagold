@@ -1,5 +1,9 @@
 import { ArrowDown, MessageCircle, ArrowRight } from "lucide-react";
 import { motion } from "motion/react";
+import sprayImage from "../assets/images/spray.jpeg";
+import essenceImage from "../assets/images/Essence.jpeg";
+import dropImage from "../assets/images/Drop.jpeg";
+import heroBanner from "../assets/images/hero-banner.png";
 
 interface HeroProps {
   onOpenConsultation: () => void;
@@ -31,9 +35,9 @@ export default function Hero({ onOpenConsultation }: HeroProps) {
 
   // Three products to feature visually in the Hero base
   const heroProducts = [
-    { name: "Spray", label: "Penyegar Kulit", img: "https://raw.githubusercontent.com/aisyahz/Aquivagold/main/src/assets/images/spray.jpeg" },
-    { name: "Essence", label: "Terapi Mandian", img: "https://raw.githubusercontent.com/aisyahz/Aquivagold/main/src/assets/images/Essence.jpeg" },
-    { name: "Drop", label: "Suplemen Premium", img: "https://raw.githubusercontent.com/aisyahz/Aquivagold/main/src/assets/images/Drop.jpeg" },
+    { name: "Spray", label: "Penyegar Kulit", img: sprayImage },
+    { name: "Essence", label: "Terapi Mandian", img: essenceImage },
+    { name: "Drop", label: "Suplemen Premium", img: dropImage },
   ];
 
   return (
@@ -41,9 +45,8 @@ export default function Hero({ onOpenConsultation }: HeroProps) {
       {/* Background with Ambient Overlay */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://raw.githubusercontent.com/aisyahz/Aquivagold/main/src/assets/images/aquvia_spa_hero_1780832150912.png"
+          src={heroBanner}
           alt="Luxury soft beige sunlit spa surroundings"
-          referrerPolicy="no-referrer"
           className="w-full h-full object-cover object-center scale-105 filter brightness-[0.96] contrast-[0.98]"
         />
         {/* Soft, warm luxury radial and linear gradient overrides to guarantee excellent text contrast */}
@@ -63,7 +66,7 @@ export default function Hero({ onOpenConsultation }: HeroProps) {
           {/* Subtle Label */}
           <motion.div variants={itemVariants} className="flex items-center space-x-2">
             <span className="w-6 h-[1px] bg-gold" />
-            <span className="font-display text-[10px] md:text-xs uppercase tracking-[0.3em] text-[#C9A227] font-semibold">
+            <span className="font-display text-[10px] md:text-sm uppercase tracking-[0.3em] text-[#C9A227] font-bold">
               Penjagaan Diri Premium
             </span>
           </motion.div>
@@ -71,7 +74,7 @@ export default function Hero({ onOpenConsultation }: HeroProps) {
           {/* Headline */}
           <motion.h1
             variants={itemVariants}
-            className="font-serif text-4xl sm:text-5xl md:text-6xl font-medium tracking-tight text-charcoal leading-[1.15]"
+            className="font-serif text-4xl sm:text-5xl md:text-6xl font-semibold tracking-tight text-charcoal leading-[1.15]"
           >
             Tingkatkan Kesejahteraan Anda <br />
             <span className="italic font-light text-gold">Secara Semula Jadi</span>
@@ -80,16 +83,16 @@ export default function Hero({ onOpenConsultation }: HeroProps) {
           {/* Subheadline */}
           <motion.p
             variants={itemVariants}
-            className="text-sm md:text-base font-light text-charcoal-light max-w-lg leading-relaxed"
+            className="text-[16px] sm:text-[18px] md:text-[18px] font-normal text-neutral-800 max-w-lg leading-relaxed"
           >
-            Koleksi premium AquivaGold untuk melengkapkan rutin penjagaan diri dan kesejahteraan harian.
+            Koleksi premium AquivaGold untuk melengkapkan rutin penjagaan diri dan kesejahteraan harian secara selamat dan telus.
           </motion.p>
 
           {/* Action CTAs */}
           <motion.div variants={itemVariants} className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto">
             <a
               href="#collection"
-              className="py-4 px-8 bg-charcoal hover:bg-charcoal-light text-white text-xs uppercase tracking-widest font-semibold text-center transition-all duration-300 shadow-md hover:shadow-lg flex items-center justify-center space-x-2 border border-transparent"
+              className="py-4 px-8 bg-charcoal hover:bg-charcoal-light text-white text-xs uppercase tracking-widest font-semibold text-center transition-all duration-300 shadow-md hover:shadow-lg flex items-center justify-center space-x-2 border border-transparent min-h-[48px]"
               id="hero-primary-cta"
             >
               <span>Lihat Produk</span>
@@ -98,7 +101,7 @@ export default function Hero({ onOpenConsultation }: HeroProps) {
 
             <button
               onClick={onOpenConsultation}
-              className="cursor-pointer py-4 px-8 glass-panel hover:bg-white hover:text-gold hover:border-gold text-charcoal text-xs uppercase tracking-widest font-semibold text-center transition-all duration-300 flex items-center justify-center space-x-2 shadow-xs hover:shadow-md"
+              className="cursor-pointer py-4 px-8 glass-panel hover:bg-white hover:text-gold hover:border-gold text-charcoal text-xs uppercase tracking-widest font-semibold text-center transition-all duration-300 flex items-center justify-center space-x-2 shadow-xs hover:shadow-md min-h-[48px]"
               id="hero-secondary-cta"
             >
               <MessageCircle size={14} className="text-gold" />
@@ -110,15 +113,15 @@ export default function Hero({ onOpenConsultation }: HeroProps) {
           <motion.div variants={itemVariants} className="pt-6 grid grid-cols-3 gap-6 border-t border-stone/40 w-full max-w-md">
             <div>
               <span className="font-serif text-lg text-charcoal block">100%</span>
-              <span className="text-[10px] uppercase tracking-wider text-charcoal-light font-light">Suci &amp; Tulen</span>
+              <span className="text-[11px] uppercase tracking-wider text-charcoal-light font-bold">Suci &amp; Tulen</span>
             </div>
             <div>
               <span className="font-serif text-lg text-charcoal block">MYR</span>
-              <span className="text-[10px] uppercase tracking-wider text-charcoal-light font-light">Pilihan Spa Mewah</span>
+              <span className="text-[11px] uppercase tracking-wider text-charcoal-light font-bold">Pilihan Spa Mewah</span>
             </div>
             <div>
               <span className="font-serif text-lg text-charcoal block">Bespoke</span>
-              <span className="text-[10px] uppercase tracking-wider text-charcoal-light font-light">Rundingan Peribadi</span>
+              <span className="text-[11px] uppercase tracking-wider text-charcoal-light font-bold">Rundingan Peribadi</span>
             </div>
           </motion.div>
         </motion.div>
@@ -138,18 +141,17 @@ export default function Hero({ onOpenConsultation }: HeroProps) {
             {/* Center Product Showcase (Alternating Preview Bottles) */}
             <div className="relative w-48 h-48 flex items-center justify-center z-10 transition-transform duration-700 hover:scale-105">
               <img
-                src="https://raw.githubusercontent.com/aisyahz/Aquivagold/main/src/assets/images/spray.jpeg"
+                src={sprayImage}
                 alt="Highlighting Black Millenia line bottle"
-                referrerPolicy="no-referrer"
                 className="w-full h-full object-contain filter drop-shadow-[0_15px_30px_rgba(43,43,43,0.15)]"
               />
             </div>
 
              {/* Float tags */}
-            <div className="absolute top-8 right-0 glass-panel px-3 py-1.5 text-[10px] uppercase tracking-widest text-[#C9A227] font-semibold shadow-sm">
+            <div className="absolute top-8 right-0 glass-panel px-3 py-1.5 text-[11px] uppercase tracking-widest text-[#C9A227] font-semibold shadow-sm">
               Botol Kaca Premium
             </div>
-            <div className="absolute bottom-12 left-0 glass-panel px-3 py-1.5 text-[10px] uppercase tracking-widest text-[#2B2B2B] font-medium shadow-sm">
+            <div className="absolute bottom-12 left-0 glass-panel px-3 py-1.5 text-[11px] uppercase tracking-widest text-[#2B2B2B] font-medium shadow-sm">
               Reka Bentuk Minimalis
             </div>
           </div>
@@ -166,14 +168,13 @@ export default function Hero({ onOpenConsultation }: HeroProps) {
                   <img
                     src={p.img}
                     alt={p.name}
-                    referrerPolicy="no-referrer"
                     className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500"
                   />
                 </div>
-                <span className="text-[9px] uppercase tracking-wider font-semibold text-charcoal text-ellipsis overflow-hidden whitespace-nowrap w-full">
+                <span className="text-[11px] uppercase tracking-wider font-semibold text-charcoal text-ellipsis overflow-hidden whitespace-nowrap w-full">
                   {p.name}
                 </span>
-                <span className="text-[8px] tracking-wide text-gold font-light mt-0.5 uppercase">
+                <span className="text-[9px] tracking-wide text-gold font-bold mt-0.5 uppercase">
                   {p.label}
                 </span>
               </a>
@@ -184,7 +185,7 @@ export default function Hero({ onOpenConsultation }: HeroProps) {
 
       {/* Bounce-Down Indicator */}
       <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center space-y-1 opacity-60 hover:opacity-100 transition-opacity z-10">
-        <span className="text-[9px] uppercase tracking-[0.3em] text-charcoal font-light">Ketahui Lanjut</span>
+        <span className="text-[10px] uppercase tracking-[0.3em] text-charcoal font-bold">Ketahui Lanjut</span>
         <motion.div
           animate={{ y: [0, 6, 0] }}
           transition={{ repeat: Infinity, duration: 1.5 }}
