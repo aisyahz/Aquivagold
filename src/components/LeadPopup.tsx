@@ -35,15 +35,6 @@ export default function LeadPopup({
     additionalNotes: "",
   });
 
-  const [consultTopics, setConsultTopics] = useState<Record<string, boolean>>({
-    "Penjagaan Kulit": false,
-    "Keselesaan Wanita": false,
-    "Keselesaan Lelaki": false,
-    "Kesejahteraan Harian": false,
-    "Kesihatan Dalaman": false,
-    "Tidak Pasti": false,
-  });
-
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -90,28 +81,21 @@ export default function LeadPopup({
     }
   };
 
-  const toggleTopic = (topic: string) => {
-    setConsultTopics((prev) => ({
-      ...prev,
-      [topic]: !prev[topic],
-    }));
-  };
-
   const validate = (): boolean => {
     const newErrors: Record<string, string> = {};
     const name = activeFlow === "buy" ? buyForm.fullName : consultForm.fullName;
     const phone = activeFlow === "buy" ? buyForm.phoneNumber : consultForm.phoneNumber;
 
     if (!name.trim()) {
-      newErrors.fullName = "Nama Penuh diperlukan untuk pendaftaran";
+      newErrors.fullName = "Sila isi Nama Panggilan / Penuh anda";
     }
 
     if (!phone.trim()) {
-      newErrors.phoneNumber = "Nombor Telefon diperlukan untuk dihubungi";
+      newErrors.phoneNumber = "Sila isi Nombor Telefon / WhatsApp anda";
     } else {
       const sanitizedPhone = phone.replace(/[\s-]/g, "");
       if (sanitizedPhone.length < 8 || !/^\+?[0-9]+$/.test(sanitizedPhone)) {
-        newErrors.phoneNumber = "Sila isi nombor telefon yang sah";
+        newErrors.phoneNumber = "Sila masukkan nombor telefon yang sah (cth: 0191234567)";
       }
     }
 
@@ -130,38 +114,29 @@ export default function LeadPopup({
     if (activeFlow === "buy") {
       // Flow 1 Buy Product WhatsApp message
       // Pre-filled WhatsApp message including: Product, Name, Phone, State
-      const greetingHeader = "Hi Aquiva Gold,\n\nSaya ingin membuat pesanan untuk produk berikut:\n\n";
+      const greetingHeader = "Hi Aquiva Gold,\n\nSaya berminat untuk menempah produk berikut:\n\n";
       const productLine = `*Produk:* ${buyForm.productInterested}\n`;
       const nameLine = `*Nama:* ${buyForm.fullName}\n`;
       const phoneLine = `*Telefon:* ${buyForm.phoneNumber}\n`;
-      const stateLine = `*Negeri:* ${buyForm.state}\n`;
+      const stateLine = `*Negeri Tinggal:* ${buyForm.state}\n`;
       const noteLine = buyForm.additionalNotes.trim()
         ? `*Nota Tambahan:* ${buyForm.additionalNotes}\n\n`
         : "";
-      const footerText = "\nSila hubungi saya semula untuk tindakan lanjut. Terima kasih.";
+      const footerText = "\nSila bantu saya uruskan pesanan ini melalui WhatsApp. Terima kasih!";
 
       fullMessage = greetingHeader + productLine + nameLine + phoneLine + stateLine + noteLine + footerText;
     } else {
       // Flow 2 Consultation WhatsApp message including: Product, Name, Phone, State
-      const selectedTopics = Object.entries(consultTopics)
-        .filter(([_, checked]) => checked)
-        .map(([topic]) => `- ${topic}`)
-        .join("\n");
-
-      const greetingHeader = "Hi Aquiva Gold,\n\nSaya memerlukan sesi konsultasi/rundingan bagi perkara berikut:\n\n";
-      const productLine = `*Produk:* Konsultasi Kesejahteraan\n`;
+      const greetingHeader = "Hi Aquiva Gold,\n\nSaya ingin mendapatkan Sembang Rundingan Kesejahteraan Percuma:\n\n";
       const nameLine = `*Nama:* ${consultForm.fullName}\n`;
       const phoneLine = `*Telefon:* ${consultForm.phoneNumber}\n`;
-      const stateLine = `*Negeri:* ${consultForm.state}\n`;
-      const topicsLine = selectedTopics
-        ? `*Topik Perbincangan:*\n${selectedTopics}\n`
-        : "";
+      const stateLine = `*Negeri Tinggal:* ${consultForm.state}\n`;
       const noteLine = consultForm.additionalNotes.trim()
-        ? `*Mesej/Keadaan:* ${consultForm.additionalNotes}\n\n`
+        ? `*Keadaan / Soalan Saya:* ${consultForm.additionalNotes}\n\n`
         : "";
-      const footerText = "\nSila maklumkan slot yang sesuai. Terima kasih.";
+      const footerText = "\nMohon maklum balas dan cadangan daripada perunding. Terima kasih.";
 
-      fullMessage = greetingHeader + productLine + nameLine + phoneLine + stateLine + topicsLine + noteLine + footerText;
+      fullMessage = greetingHeader + nameLine + phoneLine + stateLine + noteLine + footerText;
     }
 
     const encodedMessage = encodeURIComponent(fullMessage);
@@ -217,19 +192,19 @@ export default function LeadPopup({
               {activeFlow === "buy" ? (
                 <>
                   <h3 className="font-serif text-2xl md:text-3xl font-medium tracking-tight text-charcoal">
-                    Tempahan &amp; Pertanyaan Produk
+                    Pesanan WhatsApp Mesra
                   </h3>
-                  <p className="text-xs md:text-sm text-charcoal-light font-light max-w-sm mx-auto mt-2 leading-relaxed">
-                    Sila isi butiran mudah berikut. Perunding sah kami akan segera melayani pesanan premium anda menerusi WhatsApp.
+                  <p className="text-xs md:text-sm text-charcoal-light/80 font-light max-w-sm mx-auto mt-2 leading-relaxed">
+                    Sila isi butiran mudah berikut. Pembantu butik kami sedia membantu menguruskan pesanan anda secara selamat, tertib, dan tenang menerusi WhatsApp.
                   </p>
                 </>
               ) : (
                 <>
                   <h3 className="font-serif text-2xl md:text-3xl font-medium tracking-tight text-charcoal">
-                    Konsultasi Percuma
+                    Rundingan &amp; Bimbingan Percuma
                   </h3>
-                  <p className="text-xs md:text-sm text-charcoal-light font-light max-w-sm mx-auto mt-2 leading-relaxed">
-                    Tidak pasti produk yang sesuai? Pasukan butik berpengalaman kami sedia membantu anda memilih produk yang bersesuaian.
+                  <p className="text-xs md:text-sm text-charcoal-light/80 font-light max-w-sm mx-auto mt-2 leading-relaxed">
+                    Sembang santai bersama Perunding Peribadi kami. 100% selesa, ramah, jujur, serta bebas dari sebarang paksaan membeli.
                   </p>
                 </>
               )}
@@ -249,7 +224,7 @@ export default function LeadPopup({
                     : "border-transparent text-charcoal-light/40 hover:text-charcoal"
                 }`}
               >
-                Beli Produk
+                Pesan Produk
               </button>
               <button
                 type="button"
@@ -263,7 +238,7 @@ export default function LeadPopup({
                     : "border-transparent text-charcoal-light/40 hover:text-charcoal"
                 }`}
               >
-                Perlukan Konsultasi?
+                Sembang Rundingan
               </button>
             </div>
 
@@ -276,13 +251,13 @@ export default function LeadPopup({
                   htmlFor="fullName" 
                   className="block text-xs md:text-sm font-semibold uppercase tracking-wider text-charcoal mb-1.5"
                 >
-                  Nama Penuh <span className="text-gold">*</span>
+                  Nama Panggilan / Nama Penuh <span className="text-gold">*</span>
                 </label>
                 <input
                   type="text"
                   id="fullName"
                   name="fullName"
-                  placeholder="cth. Datin Sophia"
+                  placeholder="cth. Kak Sophia / Haji Ahmad"
                   value={activeFlow === "buy" ? buyForm.fullName : consultForm.fullName}
                   onChange={activeFlow === "buy" ? handleBuyChange : handleConsultChange}
                   className={`w-full px-4 py-3 bg-white/70 backdrop-blur-xs border text-base text-charcoal focus:outline-none transition-all duration-300 rounded-md min-h-[48px] ${
@@ -301,13 +276,13 @@ export default function LeadPopup({
                   htmlFor="phoneNumber" 
                   className="block text-xs md:text-sm font-semibold uppercase tracking-wider text-charcoal mb-1.5"
                 >
-                  Nombor Telefon <span className="text-gold">*</span>
+                  Nombor Telefon / WhatsApp <span className="text-gold">*</span>
                 </label>
                 <input
                   type="tel"
                   id="phoneNumber"
                   name="phoneNumber"
-                  placeholder="cth. 012-3456789"
+                  placeholder="cth. 019-1234567"
                   value={activeFlow === "buy" ? buyForm.phoneNumber : consultForm.phoneNumber}
                   onChange={activeFlow === "buy" ? handleBuyChange : handleConsultChange}
                   className={`w-full px-4 py-3 bg-white/70 backdrop-blur-xs border text-base text-charcoal focus:outline-none transition-all duration-300 rounded-md min-h-[48px] ${
@@ -327,7 +302,7 @@ export default function LeadPopup({
                   htmlFor="state" 
                   className="block text-xs md:text-sm font-semibold uppercase tracking-wider text-charcoal mb-1.5"
                 >
-                  Negeri <span className="text-gold">*</span>
+                  Negeri Kita <span className="text-stone-400 font-normal text-xs">(Pilihan)</span>
                 </label>
                 <select
                   id="state"
@@ -344,7 +319,7 @@ export default function LeadPopup({
                 </select>
               </div>
 
-              {/* FLOW 1 Specfic: Product Selection Dropdown */}
+              {/* FLOW 1 Specific: Product Selection Dropdown */}
               {activeFlow === "buy" && (
                 <div>
                   <label 
@@ -369,39 +344,31 @@ export default function LeadPopup({
                 </div>
               )}
 
-              {/* FLOW 2 Specific: Large checkable grid options */}
+              {/* FLOW 2 Specific: Consultation Benefits Infobox instead of small checkbox grids */}
               {activeFlow === "consult" && (
-                <div className="space-y-2">
-                  <span className="block text-xs md:text-sm font-semibold uppercase tracking-wider text-charcoal">
-                    Apakah yang anda ingin bincangkan?
+                <div className="bg-[#FAF8F1] border border-[#C8A75B]/20 rounded-xl p-4 md:p-5 space-y-3 shadow-xs">
+                  <span className="block text-xs font-semibold uppercase tracking-wider text-[#C8A75B] font-mono">
+                    ✦ Manfaat Rundingan Percuma Anda:
                   </span>
-                  
-                  {/* Grid of highly clickable checklist selections */}
-                  <div className="grid grid-cols-2 gap-2 pt-1">
-                    {Object.keys(consultTopics).map((topic) => {
-                      const isChecked = consultTopics[topic];
-                      return (
-                        <button
-                          key={topic}
-                          type="button"
-                          onClick={() => toggleTopic(topic)}
-                          className={`flex items-center space-x-3 p-3 text-left border rounded-md cursor-pointer transition-all duration-300 select-none min-h-[46px] ${
-                            isChecked
-                              ? "bg-gold/15 border-gold shadow-xs"
-                              : "bg-white/60 border-stone/50 hover:border-gold/50"
-                          }`}
-                        >
-                          <div className={`w-5 h-5 rounded flex items-center justify-center border transition-all duration-150 ${
-                            isChecked ? "bg-gold border-gold text-white" : "border-stone-400 bg-white"
-                          }`}>
-                            {isChecked && <Check size={14} strokeWidth={3} />}
-                          </div>
-                          <span className="text-xs md:text-sm font-medium text-charcoal">
-                            {topic}
-                          </span>
-                        </button>
-                      );
-                    })}
+                  <div className="space-y-2.5 text-left font-sans text-[12.5px] text-charcoal/80 leading-relaxed font-light">
+                    <div className="flex items-start gap-2.5">
+                      <span className="text-[#C8A75B] mt-0.5 text-xs">✔</span>
+                      <div>
+                        <strong>Bimbingan Khusus:</strong> Cadangan produk terbaik yang sesuai mengikut keperluan kesegaran fizikal &amp; kulit anda.
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-2.5">
+                      <span className="text-[#C8A75B] mt-0.5 text-xs">✔</span>
+                      <div>
+                        <strong>Kakitangan Mesra:</strong> Perunding yang sopan, mesra-warga-emas, bersedia membantu dengan sangat bertenang dan aman.
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-2.5">
+                      <span className="text-[#C8A75B] mt-0.5 text-xs">✔</span>
+                      <div>
+                        <strong>100% Bebas Komitmen:</strong> Sembang santai sepuasnya tanpa sebarang paksaan agresif atau kewajipan membeli.
+                      </div>
+                    </div>
                   </div>
                 </div>
               )}
@@ -412,15 +379,15 @@ export default function LeadPopup({
                   htmlFor="additionalNotes" 
                   className="block text-xs md:text-sm font-semibold uppercase tracking-wider text-charcoal mb-1.5"
                 >
-                  {activeFlow === "buy" ? "Mesej Tambahan (Pilihan)" : "Terangkan keadaan anda (Pilihan)"}
+                  {activeFlow === "buy" ? "Mesej & Keperluan Penghantaran (Pilihan)" : "Soalan / Keadaan Kesihatan Anda (Pilihan)"}
                 </label>
                 <textarea
                   id="additionalNotes"
                   name="additionalNotes"
                   placeholder={
                     activeFlow === "buy" 
-                      ? "Sila berikan maklumat tambahan di sini jika ada..." 
-                      : "Sila kongsi kebimbangan kesihatan atau soalan anda kepada kami secara mesra..."
+                      ? "Tuliskan jika ada permintaan tarikh hantaran, atau biarkan kosong untuk bincang di WhatsApp..." 
+                      : "Sila kongsi kebimbangan kesihatan atau soalan anda kepada kami secara mesra (cth: sengal sendi, kulit kering)..."
                   }
                   rows={2}
                   value={activeFlow === "buy" ? buyForm.additionalNotes : consultForm.additionalNotes}
@@ -433,7 +400,7 @@ export default function LeadPopup({
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full mt-3 cursor-pointer py-4 px-6 bg-charcoal hover:bg-charcoal-light text-white uppercase text-sm tracking-widest font-bold transition-all duration-300 shadow-md hover:shadow-lg flex items-center justify-center space-x-2 rounded-md min-h-[50px]"
+                className="w-full mt-3 cursor-pointer py-4 px-6 bg-charcoal hover:bg-charcoal-light text-white uppercase text-xs md:text-sm tracking-widest font-bold transition-all duration-300 shadow-md hover:shadow-lg flex items-center justify-center space-x-2 rounded-md min-h-[50px]"
                 id="submit-flow-btn"
               >
                 {isSubmitting ? (
@@ -444,16 +411,21 @@ export default function LeadPopup({
                 ) : (
                   <>
                     <Send size={15} className="text-gold" />
-                    <span>{activeFlow === "buy" ? "WhatsApp Sekarang" : "Dapatkan Konsultasi"}</span>
+                    <span>{activeFlow === "buy" ? "Hantar Pesanan Ke WhatsApp" : "Mula Sembang Rundingan"}</span>
                   </>
                 )}
               </button>
 
               {/* Security Badges / Assurance */}
-              <div className="text-center pt-1.5 border-t border-stone/20">
-                <span className="text-[11px] text-charcoal-light/70 text-center block leading-relaxed">
-                  🛡️ Kurasi Rundingan &amp; Penghantaran yang Selamat. Bebas MLM, perunding peribadi mesra.
-                </span>
+              <div className="text-center pt-3.5 border-t border-stone/20 space-y-2">
+                <div className="flex flex-col md:flex-row items-center justify-center gap-x-4 gap-y-1 text-[11px] text-charcoal-light/85">
+                  <span className="flex items-center gap-1 font-medium">🛡️ Data Peribadi Rahsia &amp; Selamat</span>
+                  <span className="hidden md:inline text-stone-300">&bull;</span>
+                  <span className="flex items-center gap-1 font-medium">🚫 Bebas MLM / Bebas Paksaan Membeli</span>
+                </div>
+                <p className="text-[10px] text-charcoal-light/60 font-light leading-relaxed max-w-sm mx-auto">
+                  Butiran anda terpelihara sepenuhnya. Perunding peribadi kami komited melayani anda dengan penuh sopan, hormat, amanah, dan rasa rendah diri.
+                </p>
               </div>
             </form>
           </motion.div>

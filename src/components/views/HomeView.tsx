@@ -37,6 +37,31 @@ interface HomeViewProps {
 }
 
 export default function HomeView({ onNavigate, onOpenConsultation }: HomeViewProps) {
+  // Quantities state for premium checkout
+  const [quantities, setQuantities] = React.useState<Record<string, number>>({
+    spray: 1,
+    essence: 1,
+    drop: 1,
+    therapySet: 1
+  });
+
+  const getQuantity = (id: string) => quantities[id] || 1;
+  const setQuantity = (id: string, qty: number) => {
+    if (qty < 1) return;
+    setQuantities(prev => ({ ...prev, [id]: qty }));
+  };
+
+  const getWhatsAppBuyLink = (title: string, priceStr: string, qty: number) => {
+    const numeric = parseFloat(priceStr.replace(/[^0-9.]/g, "")) || 0;
+    const total = (numeric * qty).toFixed(2).replace(/\.00$/, "");
+    const qtyText = qty > 1 ? `${qty} unit ` : "";
+    const totalText = qty > 1 ? ` (Jumlah keseluruhan: RM${total})` : "";
+    
+    return `https://wa.me/60172887123?text=${encodeURIComponent(
+      `Hi Aquiva Gold, saya mahu membuat tempahan segera untuk ${qtyText}${title} (${priceStr}${qty > 1 ? '/unit' : ''})${totalText}. Boleh bantu saya dengan butiran pembayaran dan penghantaran?`
+    )}`;
+  };
+
   // Animation triggers
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -602,21 +627,50 @@ export default function HomeView({ onNavigate, onOpenConsultation }: HomeViewPro
 
                   <p className="font-sans text-[12.5px] sm:text-[13.5px] text-[#1F1F1F]/65 leading-relaxed min-h-[40px] font-light">{prod.desc}</p>
                 </div>
+
+                {/* Premium Elegant Quantity Selector */}
+                <div className="pt-4 border-t border-[#C8A75B]/10">
+                  <div className="flex items-center justify-between bg-[#FBF8F1] border border-[#C8A75B]/20 p-2 rounded-xl">
+                    <span className="font-bold text-[11px] tracking-wider uppercase text-stone-500 font-sans pl-1">Kuantiti</span>
+                    <div className="flex items-center gap-3">
+                      <button
+                        onClick={() => setQuantity(prod.id, Math.max(1, getQuantity(prod.id) - 1))}
+                        className="w-7 h-7 rounded-full border border-[#C8A75B]/30 flex items-center justify-center text-[#1F1F1F] hover:bg-[#C8A75B] hover:text-white transition-all font-bold text-sm bg-white"
+                        title="Kurangkan kuantiti"
+                      >
+                        -
+                      </button>
+                      <span className="font-serif text-[13px] font-bold text-[#1F1F1F] w-5 text-center select-none">{getQuantity(prod.id)}</span>
+                      <button
+                        onClick={() => setQuantity(prod.id, getQuantity(prod.id) + 1)}
+                        className="w-7 h-7 rounded-full border border-[#C8A75B]/30 flex items-center justify-center text-[#1F1F1F] hover:bg-[#C8A75B] hover:text-[#1F1F1F] hover:border-[#C8A75B] transition-all font-bold text-sm bg-white"
+                        title="Tambah kuantiti"
+                      >
+                        +
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
               </div>
 
-              <div className="pt-5 border-t border-[#C8A75B]/15 mt-5 grid grid-cols-2 gap-3">
-                <button
-                  onClick={() => onOpenConsultation("buy", prod.title)}
+              <div className="pt-4 border-t border-[#C8A75B]/15 mt-4 grid grid-cols-2 gap-3">
+                <a
+                  href={getWhatsAppBuyLink(prod.title, prod.price, getQuantity(prod.id))}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="cursor-pointer h-[48px] bg-[#C8A75B] hover:bg-[#D4B56C] active:scale-95 text-[#1F1F1F] text-[12.5px] uppercase tracking-wider font-extrabold transition-all rounded-lg flex items-center justify-center gap-1 shadow-xs"
+                  id={`buy-home-${prod.id}-btn`}
                 >
-                  Beli Segera
-                </button>
+                  BELI SEGERA
+                </a>
                 <button
                   onClick={() => onOpenConsultation("consult", prod.title)}
                   className="cursor-pointer h-[48px] bg-white hover:bg-[#FAF8F5] active:scale-95 border border-[#1F1F1F]/40 text-[#1F1F1F] text-[12.5px] uppercase tracking-wider font-extrabold transition-all rounded-lg flex items-center justify-center gap-1 shadow-xs"
+                  id={`consult-home-${prod.id}-btn`}
                 >
                   <MessageSquare size={13} className="text-[#C8A75B]" />
-                  <span>Rundingan</span>
+                  <span>RUNDINGAN</span>
                 </button>
               </div>
             </div>
@@ -819,23 +873,49 @@ export default function HomeView({ onNavigate, onOpenConsultation }: HomeViewPro
                   </span>
                 </div>
 
-                <div className="grid grid-cols-2 gap-3 pt-2">
-                  <button
-                    onClick={() => onOpenConsultation("buy", "Home Therapy Set")}
-                    className="cursor-pointer h-[48px] bg-[#C8A75B] hover:bg-[#D4B56C] active:scale-95 text-[#1F1F1F] font-sans text-[12px] uppercase tracking-wider font-extrabold transition-all duration-300 rounded-lg flex items-center justify-center gap-1 shadow-sm leading-none"
-                  >
-                    <span>Beli Sekarang</span>
-                    <ArrowRight size={13} />
-                  </button>
+                {/* Premium Elegant Quantity Selector for Home Therapy Set */}
+                <div className="pt-2">
+                  <div className="flex items-center justify-between bg-white border border-[#C8A75B]/20 p-2.5 rounded-xl shadow-xs">
+                    <span className="font-bold text-[11px] tracking-wider uppercase text-stone-500 font-sans pl-1">Kuantiti Set</span>
+                    <div className="flex items-center gap-3">
+                      <button
+                        onClick={() => setQuantity("therapySet", Math.max(1, getQuantity("therapySet") - 1))}
+                        className="w-7 h-7 rounded-full border border-[#C8A75B]/30 flex items-center justify-center text-[#1F1F1F] hover:bg-[#C8A75B] hover:text-white transition-all font-bold text-sm bg-white"
+                        title="Kurangkan kuantiti"
+                      >
+                        -
+                      </button>
+                      <span className="font-serif text-[13px] font-bold text-[#1F1F1F] w-5 text-center select-none">{getQuantity("therapySet")}</span>
+                      <button
+                        onClick={() => setQuantity("therapySet", getQuantity("therapySet") + 1)}
+                        className="w-7 h-7 rounded-full border border-[#C8A75B]/30 flex items-center justify-center text-[#1F1F1F] hover:bg-[#C8A75B] hover:text-[#1F1F1F] hover:border-[#C8A75B] transition-all font-bold text-sm bg-white"
+                        title="Tambah kuantiti"
+                       >
+                        +
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-2 gap-3 pt-1">
                   <a
-                    href="https://wa.me/601139900920?text=Hi%20AquivaGold%2C%20saya%20berminat%20dengan%20promosi%20*Home%20Therapy%20Set%20RM650*."
+                    href={getWhatsAppBuyLink("Home Therapy Set", "RM 650", getQuantity("therapySet"))}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="cursor-pointer h-[48px] bg-white hover:bg-[#FAF8F5] active:scale-95 border border-[#1F1F1F]/40 text-[#1F1F1F] font-sans text-[12px] uppercase tracking-wider font-extrabold transition-all rounded-lg flex items-center justify-center gap-1.5 shadow-xs leading-none"
+                    className="cursor-pointer h-[48px] bg-[#C8A75B] hover:bg-[#D4B56C] active:scale-95 text-[#1F1F1F] font-sans text-[12px] uppercase tracking-wider font-extrabold transition-all duration-300 rounded-lg flex items-center justify-center gap-1 shadow-sm"
+                    id="buy-home-therapy-btn"
+                  >
+                    <span>BELI SEGERA</span>
+                    <ArrowRight size={13} />
+                  </a>
+                  <button
+                    onClick={() => onOpenConsultation("consult", "Home Therapy Set")}
+                    className="cursor-pointer h-[48px] bg-white hover:bg-[#FAF8F5] active:scale-95 border border-[#1F1F1F]/40 text-[#1F1F1F] font-sans text-[12px] uppercase tracking-wider font-extrabold transition-all rounded-lg flex items-center justify-center gap-1.5 shadow-xs"
+                    id="consult-home-therapy-btn"
                   >
                     <MessageSquare size={13} className="text-[#C8A75B]" />
-                    <span>Rundingan</span>
-                  </a>
+                    <span>RUNDINGAN</span>
+                  </button>
                 </div>
 
               </div>

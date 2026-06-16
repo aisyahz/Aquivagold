@@ -1,3 +1,4 @@
+import React from "react";
 import { ArrowRight, Eye, Check } from "lucide-react";
 import { motion } from "motion/react";
 import { Product } from "../types";
@@ -9,6 +10,26 @@ interface CollectionProps {
 }
 
 export default function Collection({ onSelectProduct, onOpenConsultation }: CollectionProps) {
+  // Quantities state
+  const [quantities, setQuantities] = React.useState<Record<string, number>>({});
+
+  const getQuantity = (id: string) => quantities[id] || 1;
+  const setQuantity = (id: string, qty: number) => {
+    if (qty < 1) return;
+    setQuantities(prev => ({ ...prev, [id]: qty }));
+  };
+
+  const getWhatsAppBuyLink = (productTitle: string, priceStr: string, qty: number) => {
+    const numeric = parseFloat(priceStr.replace(/[^0-9.]/g, "")) || 0;
+    const total = (numeric * qty).toFixed(2).replace(/\.00$/, "");
+    const qtyText = qty > 1 ? `${qty} unit ` : "";
+    const totalText = qty > 1 ? ` (Jumlah keseluruhan: RM${total})` : "";
+    
+    return `https://wa.me/60172887123?text=${encodeURIComponent(
+      `Hi Aquiva Gold, saya mahu membuat tempahan segera untuk ${qtyText}${productTitle} (${priceStr}${qty > 1 ? '/unit' : ''})${totalText}. Boleh bantu saya dengan butiran pembayaran dan penghantaran?`
+    )}`;
+  };
+
   return (
     <section id="collection" className="scroll-mt-12">
       {/* Editorial Collection Header */}
@@ -116,14 +137,42 @@ export default function Collection({ onSelectProduct, onOpenConsultation }: Coll
                     </div>
 
                     {/* Active Price Anchor */}
-                    <div className="pt-2 flex items-center space-x-3">
-                      <span className="text-xs uppercase tracking-widest text-[#2B2B2B] font-light">Anggaran Nilai Devosi:</span>
-                      <span className="font-serif text-xl font-medium text-charcoal">{product.price}</span>
-                      <span className="text-[10px] uppercase tracking-wider text-charcoal-light/60"> / Sebotol</span>
+                    <div className="pt-2 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                      <div className="flex items-center space-x-3">
+                        <span className="text-xs uppercase tracking-widest text-[#2B2B2B] font-light">Anggaran Nilai Devosi:</span>
+                        <span className="font-serif text-xl font-medium text-charcoal">{product.price}</span>
+                        <span className="text-[10px] uppercase tracking-wider text-charcoal-light/60"> / Sebotol</span>
+                      </div>
+
+                      {/* Editorial Quality & Quantity Selector */}
+                      <div className="w-full sm:w-auto">
+                        <div className="flex items-center justify-between sm:justify-start gap-4 bg-[#FAF8F3] border border-gold/20 px-3 py-1.5 rounded-lg">
+                          <span className="text-[10px] font-display uppercase tracking-widest text-charcoal font-medium">Kuantiti</span>
+                          <div className="flex items-center space-x-3">
+                            <button
+                              onClick={() => setQuantity(product.id, Math.max(1, getQuantity(product.id) - 1))}
+                              className="w-6 h-6 rounded-full border border-gold/30 hover:bg-gold hover:text-white flex items-center justify-center text-charcoal text-xs font-bold transition-all bg-white shadow-xs active:scale-90"
+                              title="Kurangkan"
+                            >
+                              -
+                            </button>
+                            <span className="font-serif text-charcoal font-medium text-xs select-none w-4 text-center">
+                              {getQuantity(product.id)}
+                            </span>
+                            <button
+                              onClick={() => setQuantity(product.id, getQuantity(product.id) + 1)}
+                              className="w-6 h-6 rounded-full border border-gold/30 hover:bg-gold hover:text-white flex items-center justify-center text-charcoal text-xs font-bold transition-all bg-white shadow-xs active:scale-90"
+                              title="Tambah"
+                            >
+                              +
+                            </button>
+                          </div>
+                        </div>
+                      </div>
                     </div>
 
                     {/* CTAs */}
-                    <div className="flex flex-wrap gap-4 pt-2">
+                    <div className="flex flex-wrap gap-4 pt-4 border-t border-stone/10">
                       <button
                         onClick={() => onSelectProduct(product)}
                         className="cursor-pointer py-3.5 px-6 bg-charcoal hover:bg-charcoal-light text-white text-xs uppercase tracking-widest font-semibold font-display shadow-xs flex items-center space-x-2 transition-colors duration-300"
@@ -132,14 +181,16 @@ export default function Collection({ onSelectProduct, onOpenConsultation }: Coll
                         <span>Lihat Butiran</span>
                         <ArrowRight size={14} className="text-gold" />
                       </button>
-
-                      <button
-                        onClick={() => onOpenConsultation(product.title)}
-                        className="cursor-pointer py-3.5 px-6 bg-transparent border border-gold hover:bg-gold hover:text-white text-[#C9A227] text-xs uppercase tracking-widest font-semibold flex items-center space-x-2 transition-all duration-300"
+ 
+                      <a
+                        href={getWhatsAppBuyLink(product.title, product.price, getQuantity(product.id))}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="cursor-pointer py-3.5 px-6 bg-transparent border border-gold hover:bg-gold hover:text-white text-[#C9A227] text-xs uppercase tracking-widest font-semibold flex items-center justify-center space-x-2 transition-all duration-300"
                         id={`order-${product.id}`}
                       >
-                        <span>Beli Sekarang</span>
-                      </button>
+                        <span>BELI SEGERA ({getQuantity(product.id) > 1 ? `${getQuantity(product.id)}x` : 'BELI'})</span>
+                      </a>
                     </div>
 
                   </div>

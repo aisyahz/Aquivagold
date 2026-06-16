@@ -12,12 +12,27 @@ interface ProductDetailModalProps {
 export default function ProductDetailModal({ product, onClose, onOpenConsultation }: ProductDetailModalProps) {
   const [activeImageIdx, setActiveImageIdx] = useState(0);
   const [activeTab, setActiveTab] = useState<"overview" | "directions" | "reviews">("overview");
+  const [quantity, setQuantity] = useState(1);
 
-  // Reset active image/tab when a different product loads
+  // Reset active image/tab/quantity when a different product loads
   useEffect(() => {
     setActiveImageIdx(0);
     setActiveTab("overview");
+    setQuantity(1);
   }, [product]);
+
+  const getWhatsAppBuyLink = () => {
+    if (!product) return "";
+    const priceStr = product.price;
+    const numeric = parseFloat(priceStr.replace(/[^0-9.]/g, "")) || 0;
+    const total = (numeric * quantity).toFixed(2).replace(/\.00$/, "");
+    const qtyText = quantity > 1 ? `${quantity} unit ` : "";
+    const totalText = quantity > 1 ? ` (Jumlah keseluruhan: RM${total})` : "";
+    
+    return `https://wa.me/60172887123?text=${encodeURIComponent(
+      `Hi Aquiva Gold, saya mahu membuat tempahan segera untuk ${qtyText}${product.title} (${priceStr}${quantity > 1 ? '/unit' : ''})${totalText}. Boleh bantu saya dengan butiran pembayaran dan penghantaran?`
+    )}`;
+  };
 
   // Handle escape key closure
   useEffect(() => {
@@ -276,19 +291,60 @@ export default function ProductDetailModal({ product, onClose, onOpenConsultatio
               </div>
 
               {/* Action Consultation Box */}
-              <div className="pt-4 border-t border-stone/30 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-                <div className="text-left">
-                  <span className="text-[10px] tracking-widest uppercase text-charcoal-light/80 block">Kurasi Peribadi</span>
-                  <span className="font-serif text-lg font-medium text-charcoal">{product.price}</span>
+              <div className="pt-4 border-t border-stone/30 flex flex-col gap-4">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                  <div className="text-left">
+                    <span className="text-[10px] tracking-widest uppercase text-charcoal-light/80 block">Kurasi Peribadi</span>
+                    <span className="font-serif text-lg font-medium text-charcoal">{product.price}</span>
+                  </div>
+
+                  {/* Elegant Quantity Laras bar inside Modal */}
+                  <div className="flex items-center justify-between sm:justify-start gap-4 bg-beige/20 border border-gold/25 px-3 py-1.5 rounded-lg">
+                    <span className="text-[10px] font-display uppercase tracking-widest text-charcoal font-semibold">Kuantiti</span>
+                    <div className="flex items-center space-x-2.5">
+                      <button
+                        onClick={() => setQuantity(Math.max(1, quantity - 1))}
+                        className="w-6 h-6 rounded-full border border-gold/30 hover:bg-gold hover:text-white flex items-center justify-center text-charcoal text-xs font-bold transition-all bg-white shadow-xs active:scale-95"
+                        title="Kurangkan"
+                      >
+                        -
+                      </button>
+                      <span className="font-serif text-charcoal font-medium text-xs select-none w-4 text-center">
+                        {quantity}
+                      </span>
+                      <button
+                        onClick={() => setQuantity(quantity + 1)}
+                        className="w-6 h-6 rounded-full border border-gold/30 hover:bg-gold hover:text-white flex items-center justify-center text-charcoal text-xs font-bold transition-all bg-white shadow-xs active:scale-95"
+                        title="Tambah"
+                      >
+                        +
+                      </button>
+                    </div>
+                  </div>
                 </div>
-                <button
-                  onClick={() => onOpenConsultation(product.title)}
-                  className="cursor-pointer py-3.5 px-6 bg-charcoal hover:bg-charcoal-light text-white text-xs uppercase tracking-widest font-bold flex items-center justify-center space-x-2 transition-all duration-300"
-                  id={`modal-acquire-btn-${product.id}`}
-                >
-                  <span>Beli Sekarang</span>
-                  <ArrowRight size={14} className="text-gold" />
-                </button>
+
+                <div className="flex flex-col sm:flex-row gap-3 pt-1">
+                  <a
+                    href={getWhatsAppBuyLink()}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="cursor-pointer flex-1 py-3.5 px-6 bg-charcoal hover:bg-charcoal-light text-white text-xs uppercase tracking-widest font-bold flex items-center justify-center space-x-2 transition-all duration-300 rounded-lg shadow-sm"
+                    id={`modal-acquire-btn-${product.id}`}
+                  >
+                    <span>BELI SEGERA ({quantity > 1 ? `${quantity}x Set` : 'TEMPAH SEKARANG'})</span>
+                    <ArrowRight size={14} className="text-gold" />
+                  </a>
+                  <button
+                    onClick={() => {
+                      onClose();
+                      onOpenConsultation(product.title);
+                    }}
+                    className="cursor-pointer py-3.5 px-6 bg-white border border-[#1F1F1F]/40 hover:bg-[#FAF8F5] text-[#1F1F1F] text-xs uppercase tracking-widest font-bold flex items-center justify-center transition-all duration-300 rounded-lg"
+                    id={`modal-consult-btn-${product.id}`}
+                  >
+                    RUNDINGAN
+                  </button>
+                </div>
               </div>
 
             </div>

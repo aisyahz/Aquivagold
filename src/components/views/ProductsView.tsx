@@ -23,6 +23,29 @@ interface ProductsViewProps {
 }
 
 export default function ProductsView({ onOpenConsultation }: ProductsViewProps) {
+  // Quantities state
+  const [quantities, setQuantities] = React.useState<Record<string, number>>({
+    essence: 1,
+    spray: 1,
+    drop: 1,
+  });
+
+  const getQuantity = (id: string) => quantities[id] || 1;
+  const setQuantity = (id: string, qty: number) => {
+    if (qty < 1) return;
+    setQuantities(prev => ({ ...prev, [id]: qty }));
+  };
+
+  const getWhatsAppBuyLink = (title: string, priceStr: string, qty: number) => {
+    const numeric = parseFloat(priceStr.replace(/[^0-9.]/g, "")) || 0;
+    const total = (numeric * qty).toFixed(2).replace(/\.00$/, "");
+    const qtyText = qty > 1 ? `${qty} unit ` : "";
+    const totalText = qty > 1 ? ` (Jumlah keseluruhan: RM${total})` : "";
+    
+    return `https://wa.me/60172887123?text=${encodeURIComponent(
+      `Hi Aquiva Gold, saya mahu membuat tempahan segera untuk ${qtyText}${title} (${priceStr}${qty > 1 ? '/unit' : ''})${totalText}. Boleh bantu saya dengan butiran pembayaran dan penghantaran?`
+    )}`;
+  };
   
   const scrollToProduct = (id: string) => {
     const el = document.getElementById(id);
@@ -139,18 +162,47 @@ export default function ProductsView({ onOpenConsultation }: ProductsViewProps) 
               </div>
             </div>
 
+            {/* Premium Elegant Quantity Selector */}
+            <div className="bg-[#FBF8F1] border border-[#C8A75B]/25 p-3 rounded-2xl flex items-center justify-between max-w-sm shadow-xs">
+              <div className="text-left pl-1">
+                <span className="font-bold text-[11px] tracking-widest uppercase text-[#C8A75B] block mb-0.5">Kuantiti</span>
+                <span className="text-[12px] text-[#1F1F1F]/60 font-medium">Laras kuantiti tempahan</span>
+              </div>
+              <div className="flex items-center gap-3 bg-white border border-[#C8A75B]/20 rounded-full px-2 py-1 shadow-xs">
+                <button
+                  onClick={() => setQuantity("essence", Math.max(1, getQuantity("essence") - 1))}
+                  className="w-7 h-7 rounded-full border border-stone-200 flex items-center justify-center text-[#1F1F1F] hover:bg-[#C8A75B] hover:text-white hover:border-[#C8A75B] transition-all font-bold text-sm bg-white"
+                  title="Kurangkan kuantiti"
+                >
+                  -
+                </button>
+                <span className="font-serif text-[14px] font-bold text-[#1F1F1F] w-5 text-center select-none">{getQuantity("essence")}</span>
+                <button
+                  onClick={() => setQuantity("essence", getQuantity("essence") + 1)}
+                  className="w-7 h-7 rounded-full border border-stone-200 flex items-center justify-center text-[#1F1F1F] hover:bg-[#C8A75B] hover:text-white hover:border-[#C8A75B] transition-all font-bold text-sm bg-white"
+                  title="Tambah kuantiti"
+                >
+                  +
+                </button>
+              </div>
+            </div>
+
             <div className="pt-4 flex flex-col sm:flex-row gap-4">
-              <button
-                onClick={() => onOpenConsultation("buy", "Black Millenia Essence")}
+              <a
+                href={getWhatsAppBuyLink("Black Millenia Essence", "RM 69.90", getQuantity("essence"))}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="cursor-pointer flex-1 h-[48px] sm:h-[52px] bg-[#1F1F1F] hover:bg-[#C8A75B] hover:text-black text-white text-[14px] sm:text-[15px] uppercase tracking-wider font-bold transition-all rounded-lg shadow-md flex items-center justify-center text-center"
+                id="buy-essence-btn"
               >
-                Beli Segera (RM 69.90)
-              </button>
+                BELI SEGERA (RM {(69.90 * getQuantity("essence")).toFixed(2).replace(/\.00$/, "")})
+              </a>
               <button
                 onClick={() => onOpenConsultation("consult", "Black Millenia Essence")}
                 className="cursor-pointer h-[48px] sm:h-[52px] px-6 bg-white border-2 border-[#C8A75B]/40 hover:border-[#C8A75B] text-[#C8A75B] hover:text-[#1F1F1F] text-[14px] sm:text-[15px] uppercase tracking-wider font-bold transition-all rounded-lg flex items-center justify-center text-center"
+                id="consult-essence-btn"
               >
-                Rundingan Percuma
+                RUNDINGAN PERCUMA
               </button>
             </div>
           </div>
@@ -208,18 +260,47 @@ export default function ProductsView({ onOpenConsultation }: ProductsViewProps) 
               </div>
             </div>
 
+            {/* Premium Elegant Quantity Selector */}
+            <div className="bg-[#FBF8F1] border border-[#C8A75B]/25 p-3 rounded-2xl flex items-center justify-between max-w-sm shadow-xs">
+              <div className="text-left pl-1">
+                <span className="font-bold text-[11px] tracking-widest uppercase text-[#C8A75B] block mb-0.5">Kuantiti</span>
+                <span className="text-[12px] text-[#1F1F1F]/60 font-medium">Laras kuantiti tempahan</span>
+              </div>
+              <div className="flex items-center gap-3 bg-white border border-[#C8A75B]/20 rounded-full px-2 py-1 shadow-xs">
+                <button
+                  onClick={() => setQuantity("spray", Math.max(1, getQuantity("spray") - 1))}
+                  className="w-7 h-7 rounded-full border border-stone-200 flex items-center justify-center text-[#1F1F1F] hover:bg-[#C8A75B] hover:text-white hover:border-[#C8A75B] transition-all font-bold text-sm bg-white"
+                  title="Kurangkan kuantiti"
+                >
+                  -
+                </button>
+                <span className="font-serif text-[14px] font-bold text-[#1F1F1F] w-5 text-center select-none">{getQuantity("spray")}</span>
+                <button
+                  onClick={() => setQuantity("spray", getQuantity("spray") + 1)}
+                  className="w-7 h-7 rounded-full border border-stone-200 flex items-center justify-center text-[#1F1F1F] hover:bg-[#C8A75B] hover:text-white hover:border-[#C8A75B] transition-all font-bold text-sm bg-white"
+                  title="Tambah kuantiti"
+                >
+                  +
+                </button>
+              </div>
+            </div>
+
             <div className="pt-4 flex flex-col sm:flex-row gap-4">
-              <button
-                onClick={() => onOpenConsultation("buy", "Black Millenia Spray")}
+              <a
+                href={getWhatsAppBuyLink("Black Millenia Spray", "RM 59.90", getQuantity("spray"))}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="cursor-pointer flex-1 h-[48px] sm:h-[52px] bg-[#1F1F1F] hover:bg-[#C8A75B] hover:text-black text-white text-[14px] sm:text-[15px] uppercase tracking-wider font-bold transition-all rounded-lg shadow-md flex items-center justify-center text-center"
+                id="buy-spray-btn"
               >
-                Beli Segera (RM 59.90)
-              </button>
+                BELI SEGERA (RM {(59.90 * getQuantity("spray")).toFixed(2).replace(/\.00$/, "")})
+              </a>
               <button
                 onClick={() => onOpenConsultation("consult", "Black Millenia Spray")}
                 className="cursor-pointer h-[48px] sm:h-[52px] px-6 bg-white border-2 border-[#C8A75B]/40 hover:border-[#C8A75B] text-[#C8A75B] hover:text-[#1F1F1F] text-[14px] sm:text-[15px] uppercase tracking-wider font-bold transition-all rounded-lg flex items-center justify-center text-center"
+                id="consult-spray-btn"
               >
-                Rundingan Percuma
+                RUNDINGAN PERCUMA
               </button>
             </div>
           </div>
@@ -317,18 +398,47 @@ export default function ProductsView({ onOpenConsultation }: ProductsViewProps) 
               </div>
             </div>
 
+            {/* Premium Elegant Quantity Selector */}
+            <div className="bg-[#FBF8F1] border border-[#C8A75B]/25 p-3 rounded-2xl flex items-center justify-between max-w-sm shadow-xs">
+              <div className="text-left pl-1">
+                <span className="font-bold text-[11px] tracking-widest uppercase text-[#C8A75B] block mb-0.5">Kuantiti</span>
+                <span className="text-[12px] text-[#1F1F1F]/60 font-medium">Laras kuantiti tempahan</span>
+              </div>
+              <div className="flex items-center gap-3 bg-white border border-[#C8A75B]/20 rounded-full px-2 py-1 shadow-xs">
+                <button
+                  onClick={() => setQuantity("drop", Math.max(1, getQuantity("drop") - 1))}
+                  className="w-7 h-7 rounded-full border border-stone-200 flex items-center justify-center text-[#1F1F1F] hover:bg-[#C8A75B] hover:text-white hover:border-[#C8A75B] transition-all font-bold text-sm bg-white"
+                  title="Kurangkan kuantiti"
+                >
+                  -
+                </button>
+                <span className="font-serif text-[14px] font-bold text-[#1F1F1F] w-5 text-center select-none">{getQuantity("drop")}</span>
+                <button
+                  onClick={() => setQuantity("drop", getQuantity("drop") + 1)}
+                  className="w-7 h-7 rounded-full border border-stone-200 flex items-center justify-center text-[#1F1F1F] hover:bg-[#C8A75B] hover:text-white hover:border-[#C8A75B] transition-all font-bold text-sm bg-white"
+                  title="Tambah kuantiti"
+                >
+                  +
+                </button>
+              </div>
+            </div>
+
             <div className="pt-4 flex flex-col sm:flex-row gap-4">
-              <button
-                onClick={() => onOpenConsultation("buy", "Black Millenia Drop")}
+              <a
+                href={getWhatsAppBuyLink("Black Millenia Drop", "RM 139.90", getQuantity("drop"))}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="cursor-pointer flex-1 h-[48px] sm:h-[52px] bg-[#1F1F1F] hover:bg-[#C8A75B] hover:text-black text-white text-[14px] sm:text-[15px] uppercase tracking-wider font-bold transition-all rounded-lg shadow-md flex items-center justify-center text-center"
+                id="buy-drop-btn"
               >
-                Beli Segera (RM 139.90)
-              </button>
+                BELI SEGERA (RM {(139.90 * getQuantity("drop")).toFixed(2).replace(/\.00$/, "")})
+              </a>
               <button
                 onClick={() => onOpenConsultation("consult", "Black Millenia Drop")}
                 className="cursor-pointer h-[48px] sm:h-[52px] px-6 bg-white border-2 border-[#C8A75B]/40 hover:border-[#C8A75B] text-[#C8A75B] hover:text-[#1F1F1F] text-[14px] sm:text-[15px] uppercase tracking-wider font-bold transition-all rounded-lg flex items-center justify-center text-center"
+                id="consult-drop-btn"
               >
-                Rundingan Percuma
+                RUNDINGAN PERCUMA
               </button>
             </div>
           </div>
