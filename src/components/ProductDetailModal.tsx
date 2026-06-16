@@ -342,7 +342,7 @@ export default function ProductDetailModal({ product, onClose, onOpenConsultatio
                     className="cursor-pointer py-3.5 px-6 bg-white border border-[#1F1F1F]/40 hover:bg-[#FAF8F5] text-[#1F1F1F] text-xs uppercase tracking-widest font-bold flex items-center justify-center transition-all duration-300 rounded-lg"
                     id={`modal-consult-btn-${product.id}`}
                   >
-                    RUNDINGAN
+                    PERLUKAN BANTUAN?
                   </button>
                 </div>
               </div>

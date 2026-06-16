@@ -41,15 +41,19 @@ export default function AboutView() {
           <div className="lg:col-span-5 relative group">
             <div className="absolute inset-0 bg-[#C8A75B]/5 rounded-3xl filter blur-xl pointer-events-none" />
             
-            {/* Elegant luxury presentation of building preview */}
+            {/* Elegant luxury presentation of botanical spa preview */}
             <div className="relative z-10 w-full max-w-md mx-auto">
-              <PlaceholderImage label="PEJABAT HQ BUKIT DAMANSARA" type="building" aspect="aspect-[4/5] rounded-2xl" />
+              <PlaceholderImage 
+                label="Aura Kesejahteraan Botani" 
+                imageUrl="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=2400&q=80" 
+                aspect="aspect-[4/5] rounded-2xl" 
+              />
               
               <div className="absolute -bottom-6 -right-6 bg-white border border-[#C8A75B]/25 p-6 rounded-2xl hidden sm:flex items-center gap-4 shadow-md max-w-xs text-left z-20">
-                <div className="text-[#C8A75B]"><MapPin size={28} /></div>
+                <div className="text-[#C8A75B]"><Sparkles size={28} /></div>
                 <div>
-                  <h4 className="font-serif text-[15px] sm:text-[16px] font-bold text-[#1F1F1F]">Pusat Pentadbiran</h4>
-                  <p className="text-[13px] text-neutral-700 mt-1">Bukit Damansara, Kuala Lumpur, Malaysia</p>
+                  <h4 className="font-serif text-[15px] sm:text-[16px] font-bold text-[#1F1F1F]">Ritual Kesejahteraan</h4>
+                  <p className="text-[13px] text-neutral-700 mt-1">Estetika kemewahan semulajadi diyakini ramai</p>
                 </div>
               </div>
             </div>

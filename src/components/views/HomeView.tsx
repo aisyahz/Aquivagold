@@ -670,7 +670,7 @@ export default function HomeView({ onNavigate, onOpenConsultation }: HomeViewPro
                   id={`consult-home-${prod.id}-btn`}
                 >
                   <MessageSquare size={13} className="text-[#C8A75B]" />
-                  <span>RUNDINGAN</span>
+                  <span>PERLUKAN BANTUAN?</span>
                 </button>
               </div>
             </div>
@@ -914,7 +914,7 @@ export default function HomeView({ onNavigate, onOpenConsultation }: HomeViewPro
                     id="consult-home-therapy-btn"
                   >
                     <MessageSquare size={13} className="text-[#C8A75B]" />
-                    <span>RUNDINGAN</span>
+                    <span>PERLUKAN BANTUAN?</span>
                   </button>
                 </div>
 

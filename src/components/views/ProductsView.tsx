@@ -199,10 +199,10 @@ export default function ProductsView({ onOpenConsultation }: ProductsViewProps) 
               </a>
               <button
                 onClick={() => onOpenConsultation("consult", "Black Millenia Essence")}
-                className="cursor-pointer h-[48px] sm:h-[52px] px-6 bg-white border-2 border-[#C8A75B]/40 hover:border-[#C8A75B] text-[#C8A75B] hover:text-[#1F1F1F] text-[14px] sm:text-[15px] uppercase tracking-wider font-bold transition-all rounded-lg flex items-center justify-center text-center"
+                className="cursor-pointer h-[48px] sm:h-[52px] px-6 bg-white border-2 border-[#C8A75B]/40 hover:border-[#C8A75B] text-[#C8A75B] hover:text-[#1F1F1F] text-[13px] sm:text-[14px] uppercase tracking-wider font-extrabold transition-all rounded-lg flex items-center justify-center text-center"
                 id="consult-essence-btn"
               >
-                RUNDINGAN PERCUMA
+                PERLUKAN BANTUAN?
               </button>
             </div>
           </div>
@@ -297,10 +297,10 @@ export default function ProductsView({ onOpenConsultation }: ProductsViewProps) 
               </a>
               <button
                 onClick={() => onOpenConsultation("consult", "Black Millenia Spray")}
-                className="cursor-pointer h-[48px] sm:h-[52px] px-6 bg-white border-2 border-[#C8A75B]/40 hover:border-[#C8A75B] text-[#C8A75B] hover:text-[#1F1F1F] text-[14px] sm:text-[15px] uppercase tracking-wider font-bold transition-all rounded-lg flex items-center justify-center text-center"
+                className="cursor-pointer h-[48px] sm:h-[52px] px-6 bg-white border-2 border-[#C8A75B]/40 hover:border-[#C8A75B] text-[#C8A75B] hover:text-[#1F1F1F] text-[13px] sm:text-[14px] uppercase tracking-wider font-extrabold transition-all rounded-lg flex items-center justify-center text-center"
                 id="consult-spray-btn"
               >
-                RUNDINGAN PERCUMA
+                PERLUKAN BANTUAN?
               </button>
             </div>
           </div>
@@ -435,10 +435,10 @@ export default function ProductsView({ onOpenConsultation }: ProductsViewProps) 
               </a>
               <button
                 onClick={() => onOpenConsultation("consult", "Black Millenia Drop")}
-                className="cursor-pointer h-[48px] sm:h-[52px] px-6 bg-white border-2 border-[#C8A75B]/40 hover:border-[#C8A75B] text-[#C8A75B] hover:text-[#1F1F1F] text-[14px] sm:text-[15px] uppercase tracking-wider font-bold transition-all rounded-lg flex items-center justify-center text-center"
+                className="cursor-pointer h-[48px] sm:h-[52px] px-6 bg-white border-2 border-[#C8A75B]/40 hover:border-[#C8A75B] text-[#C8A75B] hover:text-[#1F1F1F] text-[13px] sm:text-[14px] uppercase tracking-wider font-extrabold transition-all rounded-lg flex items-center justify-center text-center"
                 id="consult-drop-btn"
               >
-                RUNDINGAN PERCUMA
+                PERLUKAN BANTUAN?
               </button>
             </div>
           </div>
