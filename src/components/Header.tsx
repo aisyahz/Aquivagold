@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Menu, X, ArrowRight, Compass } from "lucide-react";
+import { Menu, X, ArrowRight } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 
 interface HeaderProps {
@@ -10,7 +10,7 @@ interface HeaderProps {
 
 export default function Header({ onOpenConsultation, currentView, onNavigate }: HeaderProps) {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isMenuDrawerOpen, setIsMenuDrawerOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,6 +22,17 @@ export default function Header({ onOpenConsultation, currentView, onNavigate }: 
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // Escape key handler to close drawer
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setIsMenuDrawerOpen(false);
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
   }, []);
 
   const navLinks = [
@@ -37,130 +48,149 @@ export default function Header({ onOpenConsultation, currentView, onNavigate }: 
 
   const handleLinkClick = (view: string, e: React.MouseEvent) => {
     e.preventDefault();
-    setIsMobileMenuOpen(false);
+    setIsMenuDrawerOpen(false);
     onNavigate(view);
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-40 transition-all duration-500 ${
-        isScrolled
-          ? "bg-white/90 backdrop-blur-md py-3.5 border-b border-[#C8A75B]/20 shadow-xs"
-          : "bg-[#F6F3EE]/80 backdrop-blur-sm py-5 border-b border-transparent"
-      }`}
-      id="main-header"
-    >
-      <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-12 flex items-center justify-between gap-4">
-        
-        {/* Brand Logo Identity */}
-        <button
-          onClick={() => {
-            onNavigate("home");
-            window.scrollTo({ top: 0, behavior: "smooth" });
-          }}
-          className="flex flex-col select-none group text-left cursor-pointer focus:outline-none shrink-0"
-          id="header-logo"
-        >
-          <span className="font-serif text-lg sm:text-xl md:text-2xl font-black tracking-[0.25em] text-[#1F1F1F] group-hover:text-[#C8A75B] transition-colors duration-300">
-            AQUIVAGOLD
-          </span>
-          <span className="text-[10px] sm:text-[11px] uppercase tracking-[0.4em] text-[#C8A75B] font-bold mt-1.5 leading-none">
-            Black Millenia
-          </span>
-        </button>
-
-        {/* Desktop Links (8 view tabs arranged and responsive) */}
-        <nav className="hidden xl:flex items-center space-x-5 shrink whitespace-nowrap" aria-label="Main Navigation">
-          {navLinks.map((link) => (
-            <button
-              key={link.view}
-              onClick={(e) => handleLinkClick(link.view, e)}
-              className={`cursor-pointer text-[13px] xl:text-[14px] uppercase tracking-[0.12em] font-medium transition-all duration-300 relative py-2.5 hover:text-[#C8A75B] whitespace-nowrap ${
-                currentView === link.view ? "text-[#C8A75B]" : "text-neutral-900"
-              }`}
-            >
-              {link.label}
-              {currentView === link.view && (
-                <span className="absolute bottom-0 left-0 right-0 h-[2.5px] bg-[#C8A75B]" />
-              )}
-            </button>
-          ))}
-        </nav>
-
-        {/* Action Button */}
-        <div className="hidden lg:flex items-center space-x-4 shrink-0">
-          <button
-            onClick={onOpenConsultation}
-            className="cursor-pointer py-3.5 px-6 bg-transparent border-2 border-[#C8A75B] hover:bg-[#C8A75B] text-[#C8A75B] hover:text-white transition-all duration-300 text-[14px] xl:text-[16px] font-bold uppercase tracking-wider rounded-md min-h-[50px] flex items-center justify-center"
-            id="desktop-header-cta"
-          >
-            Hubungi Konsultasi
-          </button>
-        </div>
-
-        {/* Mobile menu and small device controls */}
-        <div className="flex xl:hidden items-center space-x-3 shrink-0">
-          <button
-            onClick={onOpenConsultation}
-            className="cursor-pointer py-2.5 px-4 text-[13px] bg-[#1F1F1F] text-white hover:bg-[#C8A75B] transition-all font-bold uppercase tracking-wider rounded-md min-h-[44px] flex items-center justify-center"
-            id="mobile-header-cta"
-          >
-            Konsultasi
-          </button>
+    <>
+      <header
+        className={`fixed top-0 left-0 right-0 z-40 transition-all duration-500 ${
+          isScrolled
+            ? "bg-[#FAF8F3]/95 backdrop-blur-md py-3.5 border-b border-[#C8A75B]/20 shadow-xs"
+            : "bg-[#FAF8F3]/90 backdrop-blur-sm py-4 sm:py-5 border-b border-[#C8A75B]/10"
+        }`}
+        id="main-header"
+      >
+        <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-12 flex items-center justify-between gap-4">
           
+          {/* LEFT: Brand Logo Identity */}
           <button
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="p-3 text-[#1F1F1F] hover:text-[#C8A75B] hover:bg-neutral-100 transition-colors cursor-pointer rounded-full min-h-[48px] min-w-[48px] flex items-center justify-center border border-neutral-300/50"
-            aria-label="Toggle menu"
-            id="mobile-menu-toggle"
+            onClick={() => {
+              onNavigate("home");
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }}
+            className="flex flex-col select-none group text-left cursor-pointer focus:outline-none shrink-0"
+            id="header-logo"
+            aria-label="Aquiva Gold Brand Home"
           >
-            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            <span className="font-serif text-[18px] sm:text-lg md:text-xl font-black tracking-[0.25em] text-[#1F1F1F] group-hover:text-[#C8A75B] transition-colors duration-300">
+              AQUIVAGOLD
+            </span>
+            <span className="text-[9px] sm:text-[10px] uppercase tracking-[0.4em] text-[#C8A75B] font-bold mt-1 leading-none">
+              Black Millenia
+            </span>
           </button>
+
+          {/* RIGHT: KONSULTASI button and Hamburger list/drawer icon */}
+          <div className="flex items-center space-x-3 sm:space-x-4 shrink-0">
+            <button
+              onClick={onOpenConsultation}
+              className="cursor-pointer py-2 px-3.5 sm:px-5 bg-transparent hover:bg-[#C8A75B] text-[#1F1F1F] hover:text-white border border-[#C8A75B] transition-all duration-300 text-[11px] sm:text-[12px] md:text-[13px] font-bold uppercase tracking-[0.15em] rounded-lg min-h-[40px] flex items-center justify-center whitespace-nowrap"
+              id="header-cta"
+            >
+              KONSULTASI
+            </button>
+            
+            <button
+              onClick={() => setIsMenuDrawerOpen(true)}
+              className="p-2 sm:p-2.5 text-[#1F1F1F] hover:text-[#C8A75B] hover:bg-[#C8A75B]/10 transition-all cursor-pointer rounded-full min-h-[40px] min-w-[40px] flex items-center justify-center border border-[#C8A75B]/20"
+              aria-label="Open navigation menu"
+              id="menu-toggle"
+            >
+              <Menu size={20} />
+            </button>
+          </div>
         </div>
-      </div>
+      </header>
 
-      {/* Mobile Menu Slide */}
+      {/* Menu Drawer Overlay & Content */}
       <AnimatePresence>
-        {isMobileMenuOpen && (
-          <motion.div
-            className="fixed inset-x-0 top-[70px] bg-[#FAF8F3] border-b-2 border-[#C8A75B] shadow-2xl flex flex-col px-6 py-8 space-y-6 xl:hidden z-30 max-h-[85vh] overflow-y-auto"
-            initial={{ opacity: 0, scaleY: 0.95 }}
-            animate={{ opacity: 1, scaleY: 1 }}
-            exit={{ opacity: 0, scaleY: 0.95 }}
-            transition={{ duration: 0.2 }}
-            id="mobile-nav-panel"
-          >
-            <div className="flex flex-col">
-              {navLinks.map((link) => (
-                <button
-                  key={link.view}
-                  onClick={(e) => handleLinkClick(link.view, e)}
-                  className={`text-left text-[14px] sm:text-[15px] uppercase tracking-widest font-black py-4 px-2 block hover:text-[#C8A75B] border-b border-[#C8A75B]/15 transition-colors ${
-                    currentView === link.view ? "text-[#C8A75B] bg-white/50" : "text-neutral-900"
-                  }`}
-                >
-                  {link.label}
-                </button>
-              ))}
-            </div>
+        {isMenuDrawerOpen && (
+          <>
+            {/* Backdrop */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 0.4 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setIsMenuDrawerOpen(false)}
+              className="fixed inset-0 bg-black z-50 pointer-events-auto"
+              id="drawer-backdrop"
+            />
 
-            <div className="pt-4">
-              <button
-                onClick={() => {
-                  setIsMobileMenuOpen(false);
-                  onOpenConsultation();
-                }}
-                className="w-full py-4 px-5 bg-[#1F1F1F] hover:bg-[#333333] text-white text-[14px] font-bold uppercase tracking-widest transition-all duration-300 flex items-center justify-center space-x-2 rounded-md shadow-md min-h-[48px]"
-                id="mobile-nav-cta"
-              >
-                <span>Perlukan Konsultasi?</span>
-                <ArrowRight size={16} className="text-[#C8A75B]" />
-              </button>
-            </div>
-          </motion.div>
+            {/* Slide-out Drawer */}
+            <motion.div
+              initial={{ x: "100%" }}
+              animate={{ x: 0 }}
+              exit={{ x: "100%" }}
+              transition={{ type: "spring", damping: 28, stiffness: 220 }}
+              className="fixed right-0 top-0 bottom-0 w-full sm:max-w-md h-screen bg-[#FAF8F3] border-l border-[#C8A75B]/20 shadow-[0_0_50px_rgba(0,0,0,0.15)] z-50 flex flex-col justify-between p-8 sm:p-12 overflow-y-auto"
+              id="drawer-panel"
+              role="dialog"
+              aria-modal="true"
+              aria-label="Navigation drawer"
+            >
+              <div>
+                {/* Drawer Header */}
+                <div className="flex justify-between items-center mb-10 pb-4 border-b border-[#C8A75B]/10">
+                  <div className="flex flex-col text-left">
+                    <span className="font-serif text-[15px] sm:text-[16px] font-black tracking-[0.25em] text-[#1F1F1F]">
+                      AQUIVAGOLD
+                    </span>
+                    <span className="text-[9px] uppercase tracking-[0.3em] text-[#C8A75B] font-bold mt-1">
+                      Black Millenia
+                    </span>
+                  </div>
+                  
+                  <button
+                    onClick={() => setIsMenuDrawerOpen(false)}
+                    className="p-2 sm:p-2.5 text-[#1F1F1F] hover:text-[#C8A75B] transition-colors duration-300 rounded-full hover:bg-[#C8A75B]/10 flex items-center justify-center min-h-[40px] min-w-[40px] border border-[#C8A75B]/15"
+                    aria-label="Close navigation menu"
+                  >
+                    <X size={20} />
+                  </button>
+                </div>
+
+                {/* Drawer Scrollable Links Container */}
+                <nav className="flex flex-col space-y-5 text-left py-4" aria-label="Expanded Navigation">
+                  {navLinks.map((link) => (
+                    <button
+                      key={link.view}
+                      onClick={(e) => handleLinkClick(link.view, e)}
+                      className={`text-left text-[16px] sm:text-[18px] uppercase tracking-[0.18em] font-semibold py-3 px-2 hover:text-[#C8A75B] hover:pl-4 transition-all duration-300 block relative group border-b border-[#C8A75B]/5 ${
+                        currentView === link.view ? "text-[#C8A75B] pl-4 font-black" : "text-neutral-900"
+                      }`}
+                    >
+                      <span className="relative z-10">{link.label}</span>
+                      {currentView === link.view && (
+                        <span className="absolute left-0 top-1/2 -translate-y-1/2 w-1.5 h-1.5 bg-[#C8A75B] rounded-full" />
+                      )}
+                    </button>
+                  ))}
+                </nav>
+              </div>
+
+              {/* Drawer Footer with Spa-like content and CTA */}
+              <div className="pt-8 border-t border-[#C8A75B]/15 space-y-4">
+                <p className="font-serif italic text-[#1F1F1F]/60 text-[12px] sm:text-[13px] leading-relaxed text-left">
+                  "Menyelami kekayaan alam tulen untuk harmoni fizikal dan ketenangan jiwa murni harian."
+                </p>
+                <button
+                  onClick={() => {
+                    setIsMenuDrawerOpen(false);
+                    onOpenConsultation();
+                  }}
+                  className="w-full h-[48px] bg-[#1F1F1F] hover:bg-[#C8A75B] text-white hover:text-black uppercase tracking-widest text-[12px] font-extrabold transition-all duration-300 rounded-lg flex items-center justify-center gap-2 group shadow-md"
+                >
+                  <span>MULA KONSULTASI</span>
+                  <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
+                </button>
+              </div>
+            </motion.div>
+          </>
         )}
       </AnimatePresence>
-    </header>
+    </>
   );
 }
