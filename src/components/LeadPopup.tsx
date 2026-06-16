@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { X, Send, Check } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
+import { MALAYSIAN_STATES } from "../data";
 
 interface LeadPopupProps {
   isOpen: boolean;
@@ -22,6 +23,7 @@ export default function LeadPopup({
     fullName: "",
     phoneNumber: "",
     productInterested: "Saya Tidak Pasti",
+    state: "Selangor",
     additionalNotes: "",
   });
 
@@ -29,6 +31,7 @@ export default function LeadPopup({
   const [consultForm, setConsultForm] = useState({
     fullName: "",
     phoneNumber: "",
+    state: "Selangor",
     additionalNotes: "",
   });
 
@@ -78,7 +81,7 @@ export default function LeadPopup({
   };
 
   const handleConsultChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
   ) => {
     const { name, value } = e.target;
     setConsultForm((prev) => ({ ...prev, [name]: value }));
@@ -126,36 +129,39 @@ export default function LeadPopup({
 
     if (activeFlow === "buy") {
       // Flow 1 Buy Product WhatsApp message
-      const greetingHeader = "Hi AquivaGold,\n\n";
-      const nameLine = `Nama: ${buyForm.fullName}\n`;
-      const phoneLine = `Telefon: ${buyForm.phoneNumber}\n`;
-      const interestLine = `Produk / Minat: ${buyForm.productInterested}\n`;
+      // Pre-filled WhatsApp message including: Product, Name, Phone, State
+      const greetingHeader = "Hi Aquiva Gold,\n\nSaya ingin membuat pesanan untuk produk berikut:\n\n";
+      const productLine = `*Produk:* ${buyForm.productInterested}\n`;
+      const nameLine = `*Nama:* ${buyForm.fullName}\n`;
+      const phoneLine = `*Telefon:* ${buyForm.phoneNumber}\n`;
+      const stateLine = `*Negeri:* ${buyForm.state}\n`;
       const noteLine = buyForm.additionalNotes.trim()
-        ? `Mesej:\n${buyForm.additionalNotes}\n\n`
+        ? `*Nota Tambahan:* ${buyForm.additionalNotes}\n\n`
         : "";
-      const footerText = "Boleh saya dapatkan maklumat harga dan cara penggunaan?\n\nTerima kasih.";
+      const footerText = "\nSila hubungi saya semula untuk tindakan lanjut. Terima kasih.";
 
-      fullMessage = greetingHeader + nameLine + phoneLine + interestLine + noteLine + footerText;
+      fullMessage = greetingHeader + productLine + nameLine + phoneLine + stateLine + noteLine + footerText;
     } else {
-      // Flow 2 Consultation WhatsApp message
+      // Flow 2 Consultation WhatsApp message including: Product, Name, Phone, State
       const selectedTopics = Object.entries(consultTopics)
         .filter(([_, checked]) => checked)
         .map(([topic]) => `- ${topic}`)
         .join("\n");
 
-      const greetingHeader = "Hi AquivaGold,\n\n";
-      const nameLine = `Nama: ${consultForm.fullName}\n`;
-      const phoneLine = `Telefon: ${consultForm.phoneNumber}\n`;
-      const interestLine = "Produk / Minat: Konsultasi Percuma\n";
+      const greetingHeader = "Hi Aquiva Gold,\n\nSaya memerlukan sesi konsultasi/rundingan bagi perkara berikut:\n\n";
+      const productLine = `*Produk:* Konsultasi Kesejahteraan\n`;
+      const nameLine = `*Nama:* ${consultForm.fullName}\n`;
+      const phoneLine = `*Telefon:* ${consultForm.phoneNumber}\n`;
+      const stateLine = `*Negeri:* ${consultForm.state}\n`;
       const topicsLine = selectedTopics
-        ? `Topik Perbincangan:\n${selectedTopics}\n`
+        ? `*Topik Perbincangan:*\n${selectedTopics}\n`
         : "";
       const noteLine = consultForm.additionalNotes.trim()
-        ? `Mesej:\n${consultForm.additionalNotes}\n\n`
+        ? `*Mesej/Keadaan:* ${consultForm.additionalNotes}\n\n`
         : "";
-      const footerText = "Mohon cadangan yang sesuai.\n\nTerima kasih.";
+      const footerText = "\nSila maklumkan slot yang sesuai. Terima kasih.";
 
-      fullMessage = greetingHeader + nameLine + phoneLine + interestLine + topicsLine + noteLine + footerText;
+      fullMessage = greetingHeader + productLine + nameLine + phoneLine + stateLine + topicsLine + noteLine + footerText;
     }
 
     const encodedMessage = encodeURIComponent(fullMessage);
@@ -163,7 +169,7 @@ export default function LeadPopup({
 
     setIsSubmitting(false);
     onClose();
-    window.location.href = whatsappUrl;
+    window.open(whatsappUrl, "_blank", "noopener,noreferrer");
   };
 
   return (
@@ -315,6 +321,29 @@ export default function LeadPopup({
                 )}
               </div>
 
+              {/* State (Negeri) Selection Dropdown - Captured for both flow states */}
+              <div>
+                <label 
+                  htmlFor="state" 
+                  className="block text-xs md:text-sm font-semibold uppercase tracking-wider text-charcoal mb-1.5"
+                >
+                  Negeri <span className="text-gold">*</span>
+                </label>
+                <select
+                  id="state"
+                  name="state"
+                  value={activeFlow === "buy" ? buyForm.state : consultForm.state}
+                  onChange={activeFlow === "buy" ? handleBuyChange : handleConsultChange}
+                  className="w-full px-4 py-3 bg-white border border-stone text-base text-charcoal focus:outline-none focus:border-gold focus:ring-2 focus:ring-gold/20 transition-all duration-300 rounded-md min-h-[48px]"
+                >
+                  {MALAYSIAN_STATES.map((st) => (
+                    <option key={st} value={st}>
+                      {st}
+                    </option>
+                  ))}
+                </select>
+              </div>
+
               {/* FLOW 1 Specfic: Product Selection Dropdown */}
               {activeFlow === "buy" && (
                 <div>
@@ -331,9 +360,10 @@ export default function LeadPopup({
                     onChange={handleBuyChange}
                     className="w-full px-4 py-3 bg-white border border-stone text-base text-charcoal focus:outline-none focus:border-gold focus:ring-2 focus:ring-gold/20 transition-all duration-300 rounded-md min-h-[48px]"
                   >
-                    <option value="Black Millenia Spray">Black Millenia Spray (RM 280)</option>
-                    <option value="Black Millenia Essence">Black Millenia Essence (RM 390)</option>
-                    <option value="Black Millenia Drop">Black Millenia Drop (RM 480)</option>
+                    <option value="Black Millenia Spray">Black Millenia Spray (RM 59.90)</option>
+                    <option value="Black Millenia Essence">Black Millenia Essence (RM 69.90)</option>
+                    <option value="Black Millenia Drop">Black Millenia Drop (RM 139.90)</option>
+                    <option value="Home Therapy Set">Home Therapy Set (RM 650)</option>
                     <option value="Saya Tidak Pasti">Saya Tidak Pasti</option>
                   </select>
                 </div>

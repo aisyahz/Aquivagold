@@ -18,12 +18,12 @@ export const PRODUCTS: Product[] = [
       "Mudah dibawa ke mana-mana",
       "Sesuai sebelum dan selepas solekan"
     ],
-    price: "RM 280",
+    price: "RM 59.90",
     images: [
       sprayImage,
       heroBanner
     ],
-    directions: "Semburkan botol eksklusif ini pada jarak kira-kira 15-20cm dari wajah atau badan. Pejamkan mata dan sembur secara perlahan dengan gerakan bulat. Gunakan pada bila-bila masa—pagi, petang, atau malam—untuk mengembalikan kesegaran, atau sapukan sejurus selepas pembersihan bagi mengunci kelembapan harian.",
+    directions: "Sembur pada wajah & badan sepanjang hari untuk mengembalikan kesegaran dan mengunci kelembapan harian.",
     faqs: [
       {
         question: "Bolehkah saya menggunakan Black Millenia Spray pada kulit sensitif?",
@@ -61,12 +61,12 @@ export const PRODUCTS: Product[] = [
       "Sesuai untuk rutin kesejahteraan diri",
       "Pengalaman aromaterapi yang mewah"
     ],
-    price: "RM 390",
+    price: "RM 69.90",
     images: [
       essenceImage,
       heroBanner
     ],
-    directions: "Titiskan 8 hingga 12 titis essence eksklusif ini ke dalam air mandian suam. Kacau perlahan agar formulanya tersebar sekata. Berbaring bertenang, tarik nafas dalam-dalam, dan nikmati wap terapi spa yang menenangkan selama 15 hingga 20 minit.",
+    directions: "Gunakan ketika mandian harian atau terapi ritual spa anda.",
     faqs: [
       {
         question: "Apakah profil aroma utama bagi produk ini?",
@@ -103,12 +103,12 @@ export const PRODUCTS: Product[] = [
       "Rutin harian yang mudah",
       "Formulasi gred premium"
     ],
-    price: "RM 480",
+    price: "RM 139.90",
     images: [
       dropImage,
       heroBanner
     ],
-    directions: "Dengan menggunakan pipet emas yang elegan, titiskan 3 hingga 5 titis ke dalam segelas air mineral suam atau teh organik kegemaran anda. Kacau perlahan dan amalkan setiap pagi untuk menyokong kesejahteraan jangka panjang dan kecergasan menyeluruh.",
+    directions: "Titiskan 10-15 titis ke dalam 500ml air mineral setiap pagi.",
     faqs: [
       {
         question: "Apakah perbezaan produk ini berbanding suplemen kesihatan biasa?",

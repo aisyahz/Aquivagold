@@ -94,7 +94,7 @@ export default function ProductsView({ onOpenConsultation }: ProductsViewProps) 
             <div className="space-y-2">
               <span className="text-[11px] sm:text-[12px] uppercase tracking-widest text-[#C8A75B] font-bold block">MEMULIHKAN KETENANGAN MINDA</span>
               <h2 className="font-serif text-[24px] sm:text-[28px] md:text-[32px] lg:text-[36px] xl:text-[42px] text-[#1F1F1F] font-bold tracking-tight leading-tight">BMW Essence</h2>
-              <p className="font-sans text-[13.5px] sm:text-[15px] uppercase tracking-wider text-[#1F1F1F]/60 font-semibold">Terapi Mandian Premium &bull; RM 390</p>
+              <p className="font-sans text-[13.5px] sm:text-[15px] uppercase tracking-wider text-[#1F1F1F]/60 font-semibold">Terapi Mandian Premium &bull; RM 69.90</p>
             </div>
 
             <p className="font-sans text-[13px] sm:text-[14px] text-[#1F1F1F]/80 leading-[1.7] font-light">
@@ -123,7 +123,7 @@ export default function ProductsView({ onOpenConsultation }: ProductsViewProps) 
               <div className="space-y-3 bg-[#FBF8F1] border border-[#C8A75B]/15 p-5 sm:p-6 rounded-2xl shadow-xs">
                 <span className="text-[11px] sm:text-[12px] uppercase tracking-wider text-[#C8A75B] font-bold block">Cara Penggunaan</span>
                 <p className="text-[13px] sm:text-[14px] text-[#1F1F1F]/75 leading-[1.7] font-light">
-                  Titiskan 8-12 titis ke air mandian suam. Rendam bertenang dan hirup wap herba berkesan selama 15-20 minit rukun relaksasi.
+                  Gunakan ketika mandian harian atau terapi ritual spa anda. Titiskan ke air mandian suam atau letakkan bersama mandian tangas wap herba.
                 </p>
               </div>
             </div>
@@ -141,16 +141,16 @@ export default function ProductsView({ onOpenConsultation }: ProductsViewProps) 
 
             <div className="pt-4 flex flex-col sm:flex-row gap-4">
               <button
-                onClick={() => handleWhatsAppProduct("BMW Essence")}
-                className="cursor-pointer flex-1 h-[48px] sm:h-[52px] bg-[#1F1F1F] hover:bg-[#333333] text-white text-[14px] sm:text-[15px] uppercase tracking-wider font-bold transition-all rounded-lg shadow-md flex items-center justify-center text-center"
+                onClick={() => onOpenConsultation("buy", "Black Millenia Essence")}
+                className="cursor-pointer flex-1 h-[48px] sm:h-[52px] bg-[#1F1F1F] hover:bg-[#C8A75B] hover:text-black text-white text-[14px] sm:text-[15px] uppercase tracking-wider font-bold transition-all rounded-lg shadow-md flex items-center justify-center text-center"
               >
-                Pesan Melalui WhatsApp
+                Beli Segera (RM 69.90)
               </button>
               <button
-                onClick={() => onOpenConsultation("buy", "BMW Essence")}
+                onClick={() => onOpenConsultation("consult", "Black Millenia Essence")}
                 className="cursor-pointer h-[48px] sm:h-[52px] px-6 bg-white border-2 border-[#C8A75B]/40 hover:border-[#C8A75B] text-[#C8A75B] hover:text-[#1F1F1F] text-[14px] sm:text-[15px] uppercase tracking-wider font-bold transition-all rounded-lg flex items-center justify-center text-center"
               >
-                Konsultasi Produk
+                Rundingan Percuma
               </button>
             </div>
           </div>
@@ -163,7 +163,7 @@ export default function ProductsView({ onOpenConsultation }: ProductsViewProps) 
             <div className="space-y-2">
               <span className="text-[11px] sm:text-[12px] uppercase tracking-widest text-[#C8A75B] font-bold block">PERLINDUNGAN KELENGKAPAN WAJAH</span>
               <h2 className="font-serif text-[24px] sm:text-[28px] md:text-[32px] lg:text-[36px] xl:text-[42px] text-[#1F1F1F] font-bold tracking-tight leading-tight">BMW Spray</h2>
-              <p className="font-sans text-[13.5px] sm:text-[15px] uppercase tracking-wider text-[#1F1F1F]/60 font-semibold">Penyegar Kulit Premium &bull; RM 280</p>
+              <p className="font-sans text-[13.5px] sm:text-[15px] uppercase tracking-wider text-[#1F1F1F]/60 font-semibold">Penyegar Kulit Premium &bull; RM 59.90</p>
             </div>
 
             <p className="font-sans text-[13px] sm:text-[14px] text-[#1F1F1F]/80 leading-[1.7] font-light">
@@ -192,7 +192,7 @@ export default function ProductsView({ onOpenConsultation }: ProductsViewProps) 
               <div className="space-y-3 bg-[#FBF8F1] border border-[#C8A75B]/15 p-5 sm:p-6 rounded-2xl shadow-xs">
                 <span className="text-[11px] sm:text-[12px] uppercase tracking-wider text-[#C8A75B] font-bold block">Cara Penggunaan</span>
                 <p className="text-[13px] sm:text-[14px] text-[#1F1F1F]/75 leading-[1.7] font-light">
-                  Semburkan jarak 15-20cm secara bulatan lembut dari wajah. Boleh digunakan setiap beberapa jam untuk perlindungan tambahan.
+                  Sembur pada wajah & badan bila diperlukan sepanjang hari bagi mengekalkan kelembapan semulajadi kulit.
                 </p>
               </div>
             </div>
@@ -210,16 +210,16 @@ export default function ProductsView({ onOpenConsultation }: ProductsViewProps) 
 
             <div className="pt-4 flex flex-col sm:flex-row gap-4">
               <button
-                onClick={() => handleWhatsAppProduct("BMW Spray")}
-                className="cursor-pointer flex-1 h-[48px] sm:h-[52px] bg-[#1F1F1F] hover:bg-[#333333] text-white text-[14px] sm:text-[15px] uppercase tracking-wider font-bold transition-all rounded-lg shadow-md flex items-center justify-center text-center"
+                onClick={() => onOpenConsultation("buy", "Black Millenia Spray")}
+                className="cursor-pointer flex-1 h-[48px] sm:h-[52px] bg-[#1F1F1F] hover:bg-[#C8A75B] hover:text-black text-white text-[14px] sm:text-[15px] uppercase tracking-wider font-bold transition-all rounded-lg shadow-md flex items-center justify-center text-center"
               >
-                Pesan Melalui WhatsApp
+                Beli Segera (RM 59.90)
               </button>
               <button
-                onClick={() => onOpenConsultation("buy", "BMW Spray")}
+                onClick={() => onOpenConsultation("consult", "Black Millenia Spray")}
                 className="cursor-pointer h-[48px] sm:h-[52px] px-6 bg-white border-2 border-[#C8A75B]/40 hover:border-[#C8A75B] text-[#C8A75B] hover:text-[#1F1F1F] text-[14px] sm:text-[15px] uppercase tracking-wider font-bold transition-all rounded-lg flex items-center justify-center text-center"
               >
-                Konsultasi Produk
+                Rundingan Percuma
               </button>
             </div>
           </div>
@@ -272,7 +272,7 @@ export default function ProductsView({ onOpenConsultation }: ProductsViewProps) 
             <div className="space-y-2">
               <span className="text-[11px] sm:text-[12px] uppercase tracking-widest text-[#C8A75B] font-bold block">NUTRISI LUAR BIASA</span>
               <h2 className="font-serif text-[24px] sm:text-[28px] md:text-[32px] lg:text-[36px] xl:text-[42px] text-[#1F1F1F] font-bold tracking-tight leading-tight">BMW Drop</h2>
-              <p className="font-sans text-[13.5px] sm:text-[15px] uppercase tracking-wider text-[#1F1F1F]/60 font-semibold">Suplemen Kesejahteraan Premium &bull; RM 480</p>
+              <p className="font-sans text-[13.5px] sm:text-[15px] uppercase tracking-wider text-[#1F1F1F]/60 font-semibold">Suplemen Kesejahteraan Premium &bull; RM 139.90</p>
             </div>
 
             <p className="font-sans text-[13px] sm:text-[14px] text-[#1F1F1F]/80 leading-[1.7] font-light">
@@ -301,7 +301,7 @@ export default function ProductsView({ onOpenConsultation }: ProductsViewProps) 
               <div className="space-y-3 bg-[#FBF8F1] border border-[#C8A75B]/15 p-5 sm:p-6 rounded-2xl shadow-xs">
                 <span className="text-[11px] sm:text-[12px] uppercase tracking-wider text-[#C8A75B] font-bold block">Cara Penggunaan</span>
                 <p className="text-[13px] sm:text-[14px] text-[#1F1F1F]/75 leading-[1.7] font-light">
-                  Titiskan 3 hingga 5 titis menggunakan pipet emas ke dalam segelas air mineral atau minuman kegemaran anda setiap pagi.
+                  Tambah ke dalam air minuman pagi anda. Secara klinikal disokong dengan mencampurkan 10-15 titis ke dalam 500ml air mineral.
                 </p>
               </div>
             </div>
@@ -319,16 +319,16 @@ export default function ProductsView({ onOpenConsultation }: ProductsViewProps) 
 
             <div className="pt-4 flex flex-col sm:flex-row gap-4">
               <button
-                onClick={() => handleWhatsAppProduct("BMW Drop")}
-                className="cursor-pointer flex-1 h-[48px] sm:h-[52px] bg-[#1F1F1F] hover:bg-[#333333] text-white text-[14px] sm:text-[15px] uppercase tracking-wider font-bold transition-all rounded-lg shadow-md flex items-center justify-center text-center"
+                onClick={() => onOpenConsultation("buy", "Black Millenia Drop")}
+                className="cursor-pointer flex-1 h-[48px] sm:h-[52px] bg-[#1F1F1F] hover:bg-[#C8A75B] hover:text-black text-white text-[14px] sm:text-[15px] uppercase tracking-wider font-bold transition-all rounded-lg shadow-md flex items-center justify-center text-center"
               >
-                Pesan Melalui WhatsApp
+                Beli Segera (RM 139.90)
               </button>
               <button
-                onClick={() => onOpenConsultation("buy", "BMW Drop")}
+                onClick={() => onOpenConsultation("consult", "Black Millenia Drop")}
                 className="cursor-pointer h-[48px] sm:h-[52px] px-6 bg-white border-2 border-[#C8A75B]/40 hover:border-[#C8A75B] text-[#C8A75B] hover:text-[#1F1F1F] text-[14px] sm:text-[15px] uppercase tracking-wider font-bold transition-all rounded-lg flex items-center justify-center text-center"
               >
-                Konsultasi Produk
+                Rundingan Percuma
               </button>
             </div>
           </div>

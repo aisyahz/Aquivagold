@@ -29,7 +29,7 @@ import dropImage from "../../assets/images/Drop.jpeg";
 import halalMestiImage from "../../assets/images/halal mesti.jpeg";
 import kkmImage from "../../assets/images/kkm.jpeg";
 import labReportImage from "../../assets/images/lab test report.jpeg";
-import spaImage from "../../assets/images/spa.png";
+import spaImage from "../../assets/images/spa_kerusi.png";
 
 interface HomeViewProps {
   onNavigate: (view: string) => void;
@@ -254,6 +254,65 @@ export default function HomeView({ onNavigate, onOpenConsultation }: HomeViewPro
       </section>
       </div>
 
+      {/* THREE SIMPLE STEPS SECTION */}
+      <section className="bg-white py-12 border-b border-[#C8A75B]/15 max-w-full !mt-0" id="three-steps">
+        <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-12 lg:px-16 text-center space-y-10">
+          <div className="space-y-3">
+            <span className="text-[11px] sm:text-[12px] uppercase tracking-[0.3em] text-[#C8A75B] font-bold block">
+              PANDUAN AMALAN RINGKAS
+            </span>
+            <h2 className="font-serif text-[22px] sm:text-[24px] md:text-[28px] lg:text-[32px] text-[#1F1F1F] font-semibold tracking-tight">
+              Rutin Black Millenia Dalam 3 Langkah
+            </h2>
+            <div className="w-16 h-[1.5px] bg-[#C8A75B] mx-auto mt-2" />
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {/* Step 1 */}
+            <div className="bg-[#FAF8F1] border border-[#C8A75B]/20 rounded-2xl p-6 text-left space-y-4 hover:border-[#C8A75B]/60 transition-all duration-300 shadow-xs relative">
+              <div className="flex items-center justify-between">
+                <span className="text-[11px] uppercase tracking-wider text-[#C8A75B] font-extrabold font-mono">LANGKAH 01</span>
+                <span className="font-serif italic text-stone-300 text-3xl font-extrabold">01</span>
+              </div>
+              <div className="space-y-2">
+                <h3 className="font-serif text-[18px] font-bold text-[#1F1F1F]">BMW Drop</h3>
+                <p className="font-sans text-[13.5px] text-[#2C2C2C] leading-relaxed">
+                  Tambah ke dalam air minuman pagi anda
+                </p>
+              </div>
+            </div>
+
+            {/* Step 2 */}
+            <div className="bg-[#FAF8F1] border border-[#C8A75B]/20 rounded-2xl p-6 text-left space-y-4 hover:border-[#C8A75B]/60 transition-all duration-300 shadow-xs relative">
+              <div className="flex items-center justify-between">
+                <span className="text-[11px] uppercase tracking-wider text-[#C8A75B] font-extrabold font-mono">LANGKAH 02</span>
+                <span className="font-serif italic text-stone-300 text-3xl font-extrabold">02</span>
+              </div>
+              <div className="space-y-2">
+                <h3 className="font-serif text-[18px] font-bold text-[#1F1F1F]">BMW Spray</h3>
+                <p className="font-sans text-[13.5px] text-[#2C2C2C] leading-relaxed">
+                  Sembur pada wajah & badan bila diperlukan
+                </p>
+              </div>
+            </div>
+
+            {/* Step 3 */}
+            <div className="bg-[#FAF8F1] border border-[#C8A75B]/20 rounded-2xl p-6 text-left space-y-4 hover:border-[#C8A75B]/60 transition-all duration-300 shadow-xs relative">
+              <div className="flex items-center justify-between">
+                <span className="text-[11px] uppercase tracking-wider text-[#C8A75B] font-extrabold font-mono">LANGKAH 03</span>
+                <span className="font-serif italic text-stone-300 text-3xl font-extrabold">03</span>
+              </div>
+              <div className="space-y-2">
+                <h3 className="font-serif text-[18px] font-bold text-[#1F1F1F]">BMW Essence</h3>
+                <p className="font-sans text-[13.5px] text-[#2C2C2C] leading-relaxed">
+                  Gunakan ketika mandian atau terapi wap
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* 2. PREMIUM SPA THERAPY INTRODUCTION (Pengalaman Spa Premium Di Rumah Anda) */}
       <section className="bg-[#FAF8F1] pt-6 pb-10 sm:pt-8 sm:pb-12 md:pt-10 md:pb-12 border-b border-[#C8A75B]/15 max-w-full !mt-0" id="spa-therapy">
         <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-12 lg:px-16">
@@ -458,7 +517,7 @@ export default function HomeView({ onNavigate, onOpenConsultation }: HomeViewPro
         </div>
       </section>
 
-      {/* 4. FEATURED PRODUCT PREVIEW (Koleksi Black Millenia - Using Premium Placeholders) */}
+      {/* 4. FEATURED PRODUCT PREVIEW (Koleksi Black Millenia - Improved Cards) */}
       <section className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-12 lg:px-16 py-8" id="collection-preview">
         <div className="text-center max-w-3xl mx-auto space-y-3 mb-12">
           <span className="text-[11px] sm:text-[12px] uppercase tracking-[0.3em] text-[#C8A75B] font-bold block">RANGKAIAN EKSKLUSIF</span>
@@ -466,85 +525,98 @@ export default function HomeView({ onNavigate, onOpenConsultation }: HomeViewPro
             Koleksi Black Millenia
           </h2>
           <p className="text-[13px] sm:text-[14px] text-[#1F1F1F]/70 max-w-xl mx-auto leading-[1.7]">
-            Terapi harian yang disesuaikan secara berasingan mengikut gaya penjagaan kesihatan pilihan anda.
+            Rangkaian terapi harian yang disesuaikan secara berasingan mengikut gaya penjagaan kesihatan pilihan anda.
           </p>
           <div className="w-16 h-[1.5px] bg-[#C8A75B] mx-auto mt-3" />
         </div>
 
-        {/* 3 Key Products Showcase with Actual Images */}
+        {/* 3 Key Products Showcase with Actual Images & High-impact Details */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10">
           {[
             {
-              id: "essence",
-              title: "BMW Essence",
-              desc: "Terapi terapi mandian bertahap tinggi untuk pengalaman ketenangan spa maksimum di bilik tidur anda.",
-              img: essenceImage,
-            },
-            {
               id: "spray",
-              title: "BMW Spray",
-              desc: "Semburan mikro penyegar kulit wajah & badan yang melindungi perlindungan kelembapan semula jadi anda.",
+              title: "Black Millenia Spray",
+              price: "RM 59.90",
+              usage: "Sembur pada wajah & badan sepanjang hari untuk mendinginkan kulit.",
+              desc: "Formula ringan tanpa alkohol yang menyegarkan semula kulit kering serta-merta bila-bila masa diperlukan.",
               img: sprayImage,
             },
             {
+              id: "essence",
+              title: "Black Millenia Essence",
+              price: "RM 69.90",
+              usage: "Gunakan ketika mandian harian atau terapi ritual spa anda.",
+              desc: "Sesuai dititiskan ke air mandian suam atau terapi wap herba bagi mewujudkan ketenangan spa eksklusif.",
+              img: essenceImage,
+            },
+            {
               id: "drop",
-              title: "BMW Drop",
-              desc: "Formula titisan kesejahteraan premium yang menyahut bertenaga bersih sepanjang hari secara holistik.",
+              title: "Black Millenia Drop",
+              price: "RM 139.90",
+              usage: "Titiskan 10-15 titis ke dalam 500ml air mineral setiap pagi.",
+              desc: "Pati botani tulen untuk dicampur bersama minuman kegemaran bagi kelengkapan kesegaran fizikal berpanjangan.",
               img: dropImage,
             }
           ].map((prod) => (
             <div 
               key={prod.id}
-              className="bg-[#FBF8F1] border border-[#C8A75B]/20 rounded-2xl p-6 sm:p-8 flex flex-col justify-between hover:shadow-md transition-all duration-300 group"
+              className="bg-[#FBF8F1] border border-[#C8A75B]/20 rounded-2xl p-6 sm:p-8 flex flex-col justify-between hover:shadow-lg transition-all duration-300 group"
             >
-              <div className="space-y-8">
-                {/* Premium Golden Frame with Actual Image */}
+              <div className="space-y-5">
+                {/* Premium Golden Frame with Actual Image & Price Tag */}
                 <div className="relative w-full aspect-square rounded-[1.25rem] border border-[#C8A75B]/20 overflow-hidden shadow-xs group/img hover:border-[#C8A75B]/60 transition-all duration-500 bg-white">
                   <img 
                     src={prod.img} 
                     alt={prod.title} 
                     referrerPolicy="no-referrer"
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover/img:scale-110" 
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover/img:scale-105" 
                   />
+                  {/* Price Tag badge */}
+                  <div className="absolute top-3 right-3 bg-[#1F1F1F]/90 backdrop-blur-xs text-[#C8A75B] text-xs font-bold font-mono py-1 px-3 rounded-full border border-[#C8A75B]/30 shadow-md">
+                    Intro: {prod.price}
+                  </div>
+                  
                   {/* Subtle elegant gradient overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-60 group-hover/img:opacity-40 transition-opacity duration-500" />
                   
                   {/* Golden frame outline inside the image borders */}
                   <div className="absolute inset-3 rounded-[0.9rem] border border-dashed border-white/20 pointer-events-none group-hover/img:border-[#C8A75B]/30 transition-colors duration-500" />
-                  
-                  {/* Floating micro label for prestige */}
-                  <div className="absolute bottom-4 left-4 right-4 z-10 flex justify-between items-center bg-[#1F1F1F]/80 backdrop-blur-md border border-[#C8A75B]/30 px-3.5 py-2 rounded-xl text-left">
-                    <div>
-                      <span className="font-serif text-white text-[12px] tracking-wide block font-bold leading-none">
-                        {prod.title}
-                      </span>
-                      <span className="font-sans text-[8px] text-[#C8A75B] uppercase tracking-[0.2em] block font-semibold mt-1 leading-none">
-                        Black Millenia Series
-                      </span>
-                    </div>
-                    <Sparkles size={12} className="text-[#C8A75B] shrink-0" />
-                  </div>
                 </div>
 
-                <div className="space-y-2 text-left">
+                <div className="space-y-3.5 text-left">
                   <h3 className="font-serif text-[18px] sm:text-[20px] font-bold text-[#1F1F1F]">{prod.title}</h3>
-                  <p className="font-sans text-[12.5px] sm:text-[13.5px] text-[#1F1F1F]/75 leading-[1.7] min-h-[48px]">{prod.desc}</p>
+                  
+                  {/* Intro Price row */}
+                  <div className="flex items-center gap-2">
+                    <span className="text-[11px] uppercase text-[#1F1F1F]/60 font-bold block">Harga Pengenalan:</span>
+                    <span className="text-base font-serif font-black text-[#C8A75B]">{prod.price}</span>
+                  </div>
+
+                  {/* Simple Usage info directly on card */}
+                  <div className="bg-[#FAF8F1] border-l-2 border-[#C8A75B] p-3 rounded-r-lg">
+                    <span className="text-[9px] uppercase tracking-wider text-[#C8A75B] font-extrabold block mb-1">Cara Guna:</span>
+                    <p className="font-sans text-[12px] text-[#1F1F1F] leading-relaxed font-semibold">
+                      {prod.usage}
+                    </p>
+                  </div>
+
+                  <p className="font-sans text-[12.5px] sm:text-[13.5px] text-[#1F1F1F]/65 leading-relaxed min-h-[40px] font-light">{prod.desc}</p>
                 </div>
               </div>
 
-              <div className="pt-8 border-t border-[#C8A75B]/15 mt-8 flex gap-4">
-                <button
-                  onClick={() => onNavigate("koleksi")}
-                  className="cursor-pointer flex-1 h-[52px] sm:h-[56px] bg-[#1F1F1F] hover:bg-[#333333] text-white text-[15px] sm:text-[16px] uppercase tracking-wider font-bold transition-all text-center rounded-md flex items-center justify-center"
-                >
-                  Lihat Produk
-                </button>
+              <div className="pt-5 border-t border-[#C8A75B]/15 mt-5 grid grid-cols-2 gap-3">
                 <button
                   onClick={() => onOpenConsultation("buy", prod.title)}
-                  className="cursor-pointer h-[52px] sm:h-[56px] px-6 border-2 border-[#C8A75B] text-[#C8A75B] hover:bg-[#C8A75B] hover:text-white text-[15px] sm:text-[16px] uppercase tracking-wider font-bold transition-all rounded-md flex items-center justify-center"
-                  title="Pesan Segera"
+                  className="cursor-pointer h-[48px] bg-[#C8A75B] hover:bg-[#D4B56C] active:scale-95 text-[#1F1F1F] text-[12.5px] uppercase tracking-wider font-extrabold transition-all rounded-lg flex items-center justify-center gap-1 shadow-xs"
                 >
-                  Beli
+                  Beli Segera
+                </button>
+                <button
+                  onClick={() => onOpenConsultation("consult", prod.title)}
+                  className="cursor-pointer h-[48px] bg-white hover:bg-[#FAF8F5] active:scale-95 border border-[#1F1F1F]/40 text-[#1F1F1F] text-[12.5px] uppercase tracking-wider font-extrabold transition-all rounded-lg flex items-center justify-center gap-1 shadow-xs"
+                >
+                  <MessageSquare size={13} className="text-[#C8A75B]" />
+                  <span>Rundingan</span>
                 </button>
               </div>
             </div>
@@ -645,6 +717,132 @@ export default function HomeView({ onNavigate, onOpenConsultation }: HomeViewPro
               Lihat Pensijilan &amp; Bukti
             </button>
           </div>
+        </div>
+      </section>
+
+      {/* FEATURED HOME THERAPY SET SECTION */}
+      <section className="bg-white py-16 border-b border-[#C8A75B]/15 max-w-full" id="home-therapy-set">
+        <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-12 lg:px-16">
+          <div className="text-center max-w-3xl mx-auto space-y-3 mb-10">
+            <span className="text-[11px] sm:text-[12px] uppercase tracking-[0.3em] text-[#C8A75B] font-bold block">PAKEJ EKSKLUSIF SPA DI RUMAH</span>
+            <h2 className="font-serif text-[24px] sm:text-[28px] md:text-[32px] text-[#1F1F1F] font-semibold tracking-tight">
+              Set Terapi Rumah Lengkap &bull; Home Therapy Set
+            </h2>
+            <p className="text-[13px] sm:text-[14px] text-[#1F1F1F]/70 max-w-xl mx-auto leading-[1.7]">
+              Nikmati amalan mandian tangas herba berprestij bertaraf resort lima bintang secara selamat dan teratur di kediaman peribadi anda.
+            </p>
+            <div className="w-16 h-[1.5px] bg-[#C8A75B] mx-auto mt-2" />
+          </div>
+
+          <div className="bg-[#FAF8F1] border border-[#C8A75B]/25 rounded-3xl p-6 sm:p-8 lg:p-12 overflow-hidden shadow-xl max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+              
+              {/* Bundle Visual */}
+              <div className="space-y-4">
+                <div className="relative aspect-[4/3] rounded-2xl overflow-hidden border border-[#C8A75B]/20 bg-[#161614] shadow-md flex items-center justify-center p-4">
+                  <img 
+                    src={spaImage} 
+                    alt="Aquiva Gold Home Therapy Premium Bundle" 
+                    className="w-full h-full object-cover opacity-85"
+                    referrerPolicy="no-referrer"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
+                  <div className="absolute inset-4 rounded-xl border border-dashed border-white/20 pointer-events-none" />
+                  
+                  <div className="absolute bottom-4 left-4 right-4 text-left space-y-1">
+                    <span className="text-[10px] uppercase tracking-widest text-[#C8A75B] font-extrabold block">PAKEJ KOMPLET</span>
+                    <h4 className="font-serif text-white text-lg font-bold">Resort Spa Suite Koleksi</h4>
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-2 gap-2">
+                  <div className="bg-white border border-[#C8A75B]/15 px-3 py-2 rounded-lg text-center shadow-xs">
+                    <span className="text-[11px] font-sans font-bold text-[#1F1F1F] block">Kerusi Terapi</span>
+                    <span className="text-[9px] text-[#C8A75B] font-medium font-mono uppercase">Therapy Chair</span>
+                  </div>
+                  <div className="bg-white border border-[#C8A75B]/15 px-3 py-2 rounded-lg text-center shadow-xs">
+                    <span className="text-[11px] font-sans font-bold text-[#1F1F1F] block">Pakaian Belachu</span>
+                    <span className="text-[9px] text-[#C8A75B] font-medium font-mono uppercase">Spa Apparel</span>
+                  </div>
+                  <div className="bg-white border border-[#C8A75B]/15 px-3 py-1.5 rounded-lg text-center shadow-xs">
+                    <span className="text-[11px] font-sans font-bold text-[#1F1F1F] block">Steamer 1L</span>
+                    <span className="text-[9px] text-[#C8A75B] font-medium font-mono uppercase">1L Steam Unit</span>
+                  </div>
+                  <div className="bg-white border border-[#C8A75B]/15 px-3 py-1.5 rounded-lg text-center shadow-xs">
+                    <span className="text-[11px] font-sans font-bold text-red-700 block">2x BMW Essence</span>
+                    <span className="text-[9px] text-red-500 font-extrabold font-mono uppercase">FREE GIFT</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Bundle Copy */}
+              <div className="space-y-6 text-left">
+                <div className="space-y-2">
+                  <span className="text-[11px] uppercase tracking-widest bg-[#C8A75B]/15 text-[#C8A75B] font-extrabold px-2.5 py-1 rounded inline-block">
+                    PROMOSI PENGENALAN
+                  </span>
+                  <h3 className="font-serif text-2xl font-bold text-[#1F1F1F]">Home Therapy Set</h3>
+                  <p className="font-sans text-[13px] sm:text-[14px] text-[#1F1F1F]/70 leading-relaxed font-light">
+                    Lengkapi kediaman anda dengan rangkaian peralatan berkualiti tinggi dan kit titisan premium. Sesuai untuk melancarkan ritual mandi tangas herba tradisional kegunaan seisi keluarga dengan keselesaan optimum.
+                  </p>
+                </div>
+
+                <ul className="space-y-2.5 font-sans text-[13px] text-[#2C2C2C]">
+                  <li className="flex items-center gap-2.5">
+                    <span className="w-5 h-5 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center text-[10px] font-bold border border-emerald-100">✔</span>
+                    <span><strong>Kerusi Terapi Khas</strong> (Kukuh & Selesa)</span>
+                  </li>
+                  <li className="flex items-center gap-2.5">
+                    <span className="w-5 h-5 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center text-[10px] font-bold border border-emerald-100">✔</span>
+                    <span><strong>Pakaian Kain Belachu</strong> (Reka Bentuk Aromaterapi)</span>
+                  </li>
+                  <li className="flex items-center gap-2.5">
+                    <span className="w-5 h-5 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center text-[10px] font-bold border border-emerald-100">✔</span>
+                    <span><strong>Unit Penjana Wap Steamer 1L</strong> (Operasi Selamat)</span>
+                  </li>
+                  <li className="flex items-center gap-2.5">
+                    <span className="w-5 h-5 rounded-full bg-rose-50 text-rose-600 flex items-center justify-center text-[10px] font-bold border border-rose-100">★</span>
+                    <span className="text-rose-700"><strong>PERCUMA: 2 Botol BMW Essence Premium</strong> (Khas Untuk Terapi)</span>
+                  </li>
+                </ul>
+
+                <div className="bg-white/80 border border-[#C8A75B]/20 rounded-2xl p-4 flex justify-between items-center shadow-xs">
+                  <div>
+                    <span className="text-[10px] uppercase tracking-wider text-stone-400 block font-bold">Harga Set Lengkap</span>
+                    <div className="flex items-baseline gap-2">
+                      <span className="font-serif text-2xl font-black text-[#1F1F1F]">RM 650</span>
+                      <span className="text-[11px] text-stone-300 line-through">RM 789.80</span>
+                    </div>
+                  </div>
+                  <span className="text-[9px] border border-[#C8A75B] text-[#C8A75B] uppercase font-bold tracking-widest px-2.5 py-1 rounded-full">
+                    Jimat RM139.80
+                  </span>
+                </div>
+
+                <div className="grid grid-cols-2 gap-3 pt-2">
+                  <button
+                    onClick={() => onOpenConsultation("buy", "Home Therapy Set")}
+                    className="cursor-pointer h-[48px] bg-[#C8A75B] hover:bg-[#D4B56C] active:scale-95 text-[#1F1F1F] font-sans text-[12px] uppercase tracking-wider font-extrabold transition-all duration-300 rounded-lg flex items-center justify-center gap-1 shadow-sm leading-none"
+                  >
+                    <span>Beli Sekarang</span>
+                    <ArrowRight size={13} />
+                  </button>
+                  <a
+                    href="https://wa.me/601139900920?text=Hi%20AquivaGold%2C%20saya%20berminat%20dengan%20promosi%20*Home%20Therapy%20Set%20RM650*."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="cursor-pointer h-[48px] bg-white hover:bg-[#FAF8F5] active:scale-95 border border-[#1F1F1F]/40 text-[#1F1F1F] font-sans text-[12px] uppercase tracking-wider font-extrabold transition-all rounded-lg flex items-center justify-center gap-1.5 shadow-xs leading-none"
+                  >
+                    <MessageSquare size={13} className="text-[#C8A75B]" />
+                    <span>Rundingan</span>
+                  </a>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
         </div>
       </section>
 

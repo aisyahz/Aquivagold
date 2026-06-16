@@ -6,6 +6,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import StickyWhatsApp from "./components/StickyWhatsApp";
 import LeadPopup from "./components/LeadPopup";
+import TrustStrip from "./components/TrustStrip";
 
 // Sub View Pages (8 Pages)
 import HomeView from "./components/views/HomeView";
@@ -103,6 +104,9 @@ export default function App() {
       <main className="pt-[76px] lg:pt-[84px] min-h-[calc(100vh-400px)]">
         {renderViewContent()}
       </main>
+
+      {/* Trust factors compliance strip */}
+      <TrustStrip />
 
       {/* Footer information bar */}
       <Footer 
