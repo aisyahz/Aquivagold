@@ -114,7 +114,7 @@ export default function LeadPopup({
     if (activeFlow === "buy") {
       // Flow 1 Buy Product WhatsApp message
       // Pre-filled WhatsApp message including: Product, Name, Phone, State
-      const greetingHeader = "Hi Aquiva Gold,\n\nSaya berminat untuk menempah produk berikut:\n\n";
+      const greetingHeader = "Hi AQUIVA GOLD,\n\nSaya berminat untuk menempah produk berikut:\n\n";
       const productLine = `*Produk:* ${buyForm.productInterested}\n`;
       const nameLine = `*Nama:* ${buyForm.fullName}\n`;
       const phoneLine = `*Telefon:* ${buyForm.phoneNumber}\n`;
@@ -127,7 +127,7 @@ export default function LeadPopup({
       fullMessage = greetingHeader + productLine + nameLine + phoneLine + stateLine + noteLine + footerText;
     } else {
       // Flow 2 Consultation WhatsApp message including: Product, Name, Phone, State
-      const greetingHeader = "Hi Aquiva Gold,\n\nSaya ingin mendapatkan Sembang Rundingan Kesejahteraan Percuma:\n\n";
+      const greetingHeader = "Hi AQUIVA GOLD,\n\nSaya ingin mendapatkan Sembang Rundingan Kesejahteraan Percuma:\n\n";
       const nameLine = `*Nama:* ${consultForm.fullName}\n`;
       const phoneLine = `*Telefon:* ${consultForm.phoneNumber}\n`;
       const stateLine = `*Negeri Tinggal:* ${consultForm.state}\n`;
@@ -186,7 +186,7 @@ export default function LeadPopup({
             {/* Brand Header */}
             <div className="text-center mb-6 mt-1">
               <span className="font-display text-xs uppercase tracking-widest text-[#C9A227] font-semibold block mb-1">
-                AQUIVAGOLD
+                AQUIVA GOLD
               </span>
               
               {activeFlow === "buy" ? (
@@ -335,9 +335,9 @@ export default function LeadPopup({
                     onChange={handleBuyChange}
                     className="w-full px-4 py-3 bg-white border border-stone text-base text-charcoal focus:outline-none focus:border-gold focus:ring-2 focus:ring-gold/20 transition-all duration-300 rounded-md min-h-[48px]"
                   >
-                    <option value="Black Millenia Spray">Black Millenia Spray (RM 59.90)</option>
-                    <option value="Black Millenia Essence">Black Millenia Essence (RM 69.90)</option>
-                    <option value="Black Millenia Drop">Black Millenia Drop (RM 139.90)</option>
+                    <option value="Black Millenia Water (BMW) Spray">Black Millenia Water (BMW) Spray (RM 59.90)</option>
+                    <option value="Black Millenia Water (BMW) Essence">Black Millenia Water (BMW) Essence (RM 69.90)</option>
+                    <option value="Black Millenia Water (BMW) Drop">Black Millenia Water (BMW) Drop (RM 139.90)</option>
                     <option value="Home Therapy Set">Home Therapy Set (RM 650)</option>
                     <option value="Saya Tidak Pasti">Saya Tidak Pasti</option>
                   </select>

@@ -34,10 +34,10 @@ export default function CertificationsView() {
   const [zoomLevel, setZoomLevel] = useState<number>(1);
 
   useEffect(() => {
-    document.title = "Pensijilan & Bukti | Aquiva Gold";
+    document.title = "Pensijilan & Bukti | AQUIVA GOLD";
     const metaDesc = document.querySelector('meta[name="description"]');
     if (metaDesc) {
-      metaDesc.setAttribute("content", "Komitmen Aquiva Gold terhadap kualiti, keselamatan dan rujukan dokumentasi pensijilan HALAL, MESTI, KKM dan analisis makmal.");
+      metaDesc.setAttribute("content", "Komitmen AQUIVA GOLD terhadap kualiti, keselamatan dan rujukan dokumentasi pensijilan HALAL, MESTI, KKM dan analisis makmal.");
     }
   }, []);
 
@@ -64,7 +64,7 @@ export default function CertificationsView() {
       id: "lab_report",
       title: "Laporan Makmal",
       badge: "Dokumentasi Analisis",
-      desc: "Laporan analisis makmal yang berkaitan dengan produk Aquiva Gold Black Millenia.",
+      desc: "Laporan analisis makmal yang berkaitan dengan produk AQUIVA GOLD Black Millenia Water (BMW).",
       importance: "Laporan kualiti yang merekodkan pemantauan kandungan secara objektif berdasarkan analisis sampel sampel yang dinilai.",
       refNo: "No: Lab Test / Ref-1 (Sijil Analisis)",
       img: labReportImage
@@ -98,34 +98,34 @@ export default function CertificationsView() {
     <div className="space-y-16 pb-16">
       
       {/* 1. HERO SECTION (Premium corporate style with highly readable text) */}
-      <section className="bg-[#FAF8F1] py-12 border-b border-[#C8A75B]/15 text-center max-w-full relative overflow-hidden">
-        <div className="absolute top-0 left-0 w-64 h-64 bg-[#C8A75B]/5 rounded-full filter blur-3xl pointer-events-none" />
-        <div className="absolute bottom-0 right-0 w-64 h-64 bg-[#C8A75B]/5 rounded-full filter blur-3xl pointer-events-none" />
+      <section className="bg-[#FAF8F5] py-16 border-b border-[#B58D20]/15 text-center max-w-full relative overflow-hidden">
+        <div className="absolute top-0 left-0 w-64 h-64 bg-[#B58D20]/5 rounded-full filter blur-3xl pointer-events-none" />
+        <div className="absolute bottom-0 right-0 w-64 h-64 bg-[#B58D20]/5 rounded-full filter blur-3xl pointer-events-none" />
         
-        <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-12 lg:px-16 space-y-3 relative z-10">
-          <span className="text-[11px] sm:text-[12px] uppercase tracking-[0.3em] text-[#C8A75B] font-bold block">INTEGRITI DAN KETELUSAN</span>
-          <h1 className="font-serif text-[22px] sm:text-[24px] md:text-[28px] lg:text-[32px] xl:text-[38px] text-[#1F1F1F] font-bold tracking-tight leading-tight">
+        <div className="max-w-[1280px] mx-auto px-6 sm:px-8 space-y-3 relative z-10">
+          <span className="text-[11px] sm:text-[12px] uppercase tracking-[0.3em] text-[#B58D20] font-bold block">INTEGRITI DAN KETELUSAN</span>
+          <h1 className="text-h1 text-[#1A1A1A]">
             Pensijilan &amp; Bukti
           </h1>
-          <p className="font-sans text-[13px] sm:text-[14px] text-[#222222] max-w-2xl mx-auto leading-[1.7] font-normal">
-            Komitmen Aquiva Gold terhadap kualiti, keselarasan dokumen dan rujukan telus yang boleh diakses oleh semua pihak bertauliah. Kami menggalakkan pembacaan fakta rasmi demi membina keterbukaan maklumat.
+          <p className="text-body text-[#4A4A4A] max-w-2xl mx-auto">
+            Komitmen AQUIVA GOLD terhadap kualiti, keselarasan dokumen dan rujukan telus yang boleh diakses oleh semua pihak bertauliah. Kami menggalakkan pembacaan fakta rasmi demi membina keterbukaan maklumat.
           </p>
-            <div className="w-16 h-[1.5px] bg-[#C8A75B] mx-auto mt-3" />
+          <div className="w-16 h-[1.5px] bg-[#B58D20] mx-auto mt-3" />
         </div>
       </section>
 
       {/* 2. DOCUMENT LIST CARDS (5 Interactive Premium Cards) */}
-      <section className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-12 lg:px-16" id="document-center">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <section className="max-w-[1280px] mx-auto px-6 sm:px-8" id="document-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {docList.map((doc) => {
             return (
               <div 
                 key={doc.id}
-                className="bg-white border text-left border-[#C8A75B]/20 rounded-2xl p-5 sm:p-6 flex flex-col justify-between hover:shadow-md transition-all duration-300 group"
+                className="bg-white border text-left border-[#B58D20]/20 rounded-2xl p-5 sm:p-6 flex flex-col justify-between hover:shadow-md transition-all duration-300 group"
               >
                 <div className="space-y-5">
                   {/* Real Image Card with sleek overlay & preview indicators - ARIA and keyboard friendly */}
-                  <div className="relative w-full aspect-[4/3] rounded-xl border border-[#C8A75B]/20 overflow-hidden bg-stone-50 group-hover:border-[#C8A75B]/50 transition-all duration-500 shadow-xs p-1">
+                  <div className="relative w-full aspect-[4/3] rounded-xl border border-[#B58D20]/20 overflow-hidden bg-stone-50 group-hover:border-[#B58D20]/50 transition-all duration-500 shadow-xs p-1">
                     <img 
                       src={doc.img} 
                       alt={doc.title} 
@@ -138,10 +138,10 @@ export default function CertificationsView() {
                       type="button"
                       aria-label={`Lihat dokumen ${doc.title}`}
                       onClick={() => handleOpenDoc(doc)}
-                      className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition-opacity duration-300 flex items-center justify-center cursor-pointer rounded-lg border-0"
+                      className="absolute inset-0 bg-[#1A1A1A]/40 opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition-opacity duration-300 flex items-center justify-center cursor-pointer rounded-lg border-0"
                     >
-                      <div className="bg-white/95 text-black p-3.5 rounded-full shadow-lg transform translate-y-3 group-hover:translate-y-0 transition-transform duration-300">
-                        <Maximize2 size={18} className="text-[#C8A75B]" />
+                      <div className="bg-white/95 text-[#1A1A1A] p-3.5 rounded-full shadow-lg transform translate-y-3 group-hover:translate-y-0 transition-transform duration-300">
+                        <Maximize2 size={18} className="text-[#B58D20]" />
                       </div>
                     </button>
                     
@@ -151,17 +151,17 @@ export default function CertificationsView() {
 
                   <div className="space-y-2.5">
                     <div className="flex justify-between items-center">
-                      <span className="inline-block bg-[#FAF8F1] border border-[#C8A75B]/20 text-[10px] sm:text-[11px] uppercase tracking-wider font-extrabold text-[#C8A75B] px-2.5 py-1 rounded-md">
+                      <span className="inline-block bg-[#FAF8F5] border border-[#B58D20]/20 text-[10px] sm:text-[11px] uppercase tracking-wider font-extrabold text-[#B58D20] px-2.5 py-1 rounded-md">
                         {doc.badge}
                       </span>
-                      <span className="font-mono text-[9px] text-[#1F1F1F]/60 font-semibold uppercase">{doc.refNo.split(":")[0]}</span>
+                      <span className="font-mono text-[9px] text-[#1A1A1A]/60 font-semibold uppercase">{doc.refNo.split(":")[0]}</span>
                     </div>
 
-                    <h3 className="font-serif text-[18px] sm:text-[20px] font-bold text-[#1F1F1F] group-hover:text-[#C8A75B] transition-colors leading-snug">
+                    <h3 className="font-serif text-[18px] sm:text-[20px] font-bold text-[#1A1A1A] group-hover:text-[#B58D20] transition-colors leading-snug">
                       {doc.title}
                     </h3>
                     
-                    <p className="text-[13px] sm:text-[14px] text-[#222222] leading-[1.7] font-normal min-h-[48px] line-clamp-3">
+                    <p className="font-sans text-[13.5px] sm:text-[14px] text-[#4A4A4A] leading-relaxed font-normal min-h-[48px] line-clamp-3">
                       {doc.desc}
                     </p>
                   </div>
@@ -172,12 +172,12 @@ export default function CertificationsView() {
                     type="button"
                     aria-label={`Lihat dokumen penuh ${doc.title}`}
                     onClick={() => handleOpenDoc(doc)}
-                    className="cursor-pointer text-[13px] sm:text-[14px] uppercase tracking-widest font-extrabold text-[#C8A75B] hover:text-[#1F1F1F] transition-colors flex items-center gap-2 border-0 bg-transparent"
+                    className="cursor-pointer text-[13px] sm:text-[14px] uppercase tracking-widest font-extrabold text-[#B58D20] hover:text-[#1A1A1A] transition-colors flex items-center gap-2 border-0 bg-transparent"
                   >
                     <span>Lihat Dokumen</span>
                     <span>&rarr;</span>
                   </button>
-                  <span className="text-[10px] uppercase font-mono tracking-widest text-[#1F1F1F]/40 font-bold">TERSEDIA</span>
+                  <span className="text-[10px] uppercase font-mono tracking-widest text-[#1A1A1A]/40 font-bold">TERSEDIA</span>
                 </div>
               </div>
             );
@@ -186,42 +186,42 @@ export default function CertificationsView() {
       </section>
 
       {/* 3. SAFETY & AUTHENTICITY PHILOSOPHY SECTION (High readability and no guarantees) */}
-      <section className="bg-[#FAF8F1] py-12 border-y border-[#C8A75B]/15 max-w-full">
+      <section className="bg-[#FAF8F5] py-16 border-y border-[#B58D20]/15 max-w-full">
         <div className="max-w-4xl mx-auto px-6 sm:px-8 text-left space-y-10">
           
           <div className="text-center space-y-3">
-            <span className="text-[11px] sm:text-[12px] uppercase tracking-widest text-[#C8A75B] font-bold block">TUNTUTAN ETIKA PERNIAGAAN</span>
-            <h2 className="font-serif text-[22px] sm:text-[24px] md:text-[28px] lg:text-[32px] xl:text-[38px] text-[#1F1F1F] font-bold text-center leading-tight">MENGAPA DOKUMENTASI PENTING?</h2>
-            <div className="w-16 h-[1.5px] bg-[#C8A75B] mx-auto mt-3" />
+            <span className="text-[11px] sm:text-[12px] uppercase tracking-widest text-[#B58D20] font-bold block">TUNTUTAN ETIKA PERNIAGAAN</span>
+            <h2 className="text-h2 text-[#1A1A1A] text-center">MENGAPA DOKUMENTASI PENTING?</h2>
+            <div className="w-16 h-[1.5px] bg-[#B58D20] mx-auto mt-3" />
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="space-y-3 bg-white p-5 rounded-2xl border border-[#C8A75B]/10 shadow-xs">
-              <div className="w-10 h-10 rounded-full bg-[#FAF8F1] border border-[#C8A75B]/30 flex items-center justify-center text-[#C8A75B] text-[15px] font-bold font-serif">
+            <div className="space-y-3 bg-white p-5 rounded-2xl border border-[#B58D20]/10 shadow-xs">
+              <div className="w-10 h-10 rounded-full bg-[#FAF8F5] border border-[#B58D20]/30 flex items-center justify-center text-[#B58D20] text-[15px] font-bold font-serif">
                 01
               </div>
-              <h4 className="font-serif text-[17px] sm:text-[18px] font-bold text-[#1F1F1F]">Membina Kepercayaan</h4>
-              <p className="text-[13px] sm:text-[14px] text-[#222222] leading-[1.7] font-normal">
+              <h4 className="font-serif text-[17px] sm:text-[18px] font-bold text-[#1A1A1A]">Membina Kepercayaan</h4>
+              <p className="font-sans text-[13.5px] sm:text-[14px] text-[#4A4A4A] leading-relaxed font-normal">
                 Mencerminkan kejujuran dan ketelusan syarikat dalam penyediaan rujukan terbaik tanpa manipulasi maklumat pemasaran.
               </p>
             </div>
 
-            <div className="space-y-3 bg-white p-5 rounded-2xl border border-[#C8A75B]/10 shadow-xs">
-              <div className="w-10 h-10 rounded-full bg-[#FAF8F1] border border-[#C8A75B]/30 flex items-center justify-center text-[#C8A75B] text-[15px] font-bold font-serif">
+            <div className="space-y-3 bg-white p-5 rounded-2xl border border-[#B58D20]/10 shadow-xs">
+              <div className="w-10 h-10 rounded-full bg-[#FAF8F5] border border-[#B58D20]/30 flex items-center justify-center text-[#B58D20] text-[15px] font-bold font-serif">
                 02
               </div>
-              <h4 className="font-serif text-[17px] sm:text-[18px] font-bold text-[#1F1F1F]">Komitmen Kualiti</h4>
-              <p className="text-[13px] sm:text-[14px] text-[#222222] leading-[1.7] font-normal">
+              <h4 className="font-serif text-[17px] sm:text-[18px] font-bold text-[#1A1A1A]">Komitmen Kualiti</h4>
+              <p className="font-sans text-[13.5px] sm:text-[14px] text-[#4A4A4A] leading-relaxed font-normal">
                 Pemenuhan keselarasan kertas kerja rujukan menunjukkan komitmen kami mengutamakan pengurusan dokumentasi terbaik.
               </p>
             </div>
 
-            <div className="space-y-3 bg-white p-5 rounded-2xl border border-[#C8A75B]/10 shadow-xs">
-              <div className="w-10 h-10 rounded-full bg-[#FAF8F1] border border-[#C8A75B]/30 flex items-center justify-center text-[#C8A75B] text-[15px] font-bold font-serif">
+            <div className="space-y-3 bg-white p-5 rounded-2xl border border-[#B58D20]/10 shadow-xs">
+              <div className="w-10 h-10 rounded-full bg-[#FAF8F5] border border-[#B58D20]/30 flex items-center justify-center text-[#B58D20] text-[15px] font-bold font-serif">
                 03
               </div>
-              <h4 className="font-serif text-[17px] sm:text-[18px] font-bold text-[#1F1F1F]">Sokongan Keputusan</h4>
-              <p className="text-[13px] sm:text-[14px] text-[#222222] leading-[1.7] font-normal">
+              <h4 className="font-serif text-[17px] sm:text-[18px] font-bold text-[#1A1A1A]">Sokongan Keputusan</h4>
+              <p className="font-sans text-[13.5px] sm:text-[14px] text-[#4A4A4A] leading-relaxed font-normal">
                 Rakan konsultasi dan pelanggan boleh membuat pilihan bijak bersandarkan hujah dokumentasi teknikal yang disediakan.
               </p>
             </div>
@@ -231,19 +231,19 @@ export default function CertificationsView() {
       </section>
 
       {/* 4. FINAL ENQUIRY CTA */}
-      <section className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-12 lg:px-16">
-        <div className="bg-[#1F1F1F] text-white rounded-2xl border border-[#C8A75B]/25 p-5 sm:p-8 text-center max-w-3xl mx-auto shadow-xl relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-32 h-32 bg-[#C8A75B]/5 rounded-full blur-2xl pointer-events-none" />
+      <section className="max-w-[1280px] mx-auto px-6 sm:px-8">
+        <div className="bg-[#1A1A1A] text-white rounded-2xl border border-[#B58D20]/25 p-8 text-center max-w-3xl mx-auto shadow-xl relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-32 h-32 bg-[#B58D20]/5 rounded-full blur-2xl pointer-events-none" />
           <h3 className="font-serif text-[16px] sm:text-[18px] text-white font-bold leading-tight">Ada Pertanyaan Berkenaan Dokumen?</h3>
-          <p className="font-sans text-[12.5px] sm:text-[13.5px] text-white/90 max-w-xl mx-auto font-normal leading-[1.7]">
+          <p className="font-sans text-[12.5px] sm:text-[13.5px] text-white/90 max-w-xl mx-auto font-normal leading-relaxed mt-1 mb-4">
             Jika anda usahawan korporat, ahli profesional atau perunding bertauliah yang mahu mengakses salinan siri fail kualiti rasmi kami, sila hubungi pentadbiran perhubungan awam.
           </p>
 
           <a
-            href="https://wa.me/601139900920?text=Hi%20Aquiva%20Gold%2C%20saya%20ingin%20bertanya%20mengenai%20dokumen%20pensijilan%20syarikat."
+            href="https://wa.me/601139900920?text=Hi%20AQUIVA%20GOLD%2C%20saya%20ingin%20bertanya%20mengenai%20dokumen%20pensijilan%20syarikat."
             target="_blank"
             rel="noopener noreferrer"
-            className="cursor-pointer inline-flex h-[48px] sm:h-[52px] px-8 bg-[#C8A75B] hover:bg-white hover:text-[#1F1F1F] text-[#1F1F1F] text-[14px] sm:text-[15px] uppercase tracking-wider font-bold transition-all duration-300 rounded-lg items-center justify-center shadow-lg"
+            className="cursor-pointer inline-flex h-[48px] sm:h-[52px] px-8 bg-[#B58D20] hover:bg-white hover:text-[#1A1A1A] text-white hover:border-[#B58D20] text-[14px] sm:text-[15px] uppercase tracking-wider font-bold transition-all duration-300 rounded-lg items-center justify-center shadow-lg"
           >
             Hubungi Kami Sekarang
           </a>
@@ -264,7 +264,7 @@ export default function CertificationsView() {
               animate={{ scale: 1, y: 0 }}
               exit={{ scale: 0.95, y: 15 }}
               transition={{ type: "spring", damping: 28 }}
-              className="bg-[#FAF8F1] border border-[#C8A75B]/40 rounded-2xl p-5 sm:p-8 max-w-2xl w-full shadow-2xl relative text-left my-8"
+              className="bg-[#FAF8F5] border border-[#B58D20]/40 rounded-2xl p-5 sm:p-8 max-w-2xl w-full shadow-2xl relative text-left my-8"
             >
               <button 
                 type="button"
@@ -277,20 +277,20 @@ export default function CertificationsView() {
 
               <div className="space-y-6">
                 <div className="space-y-2">
-                  <span className="text-[11px] uppercase tracking-widest font-extrabold text-[#C8A75B] block">
+                  <span className="text-[11px] uppercase tracking-widest font-extrabold text-[#B58D20] block">
                     {selectedDoc.badge}
                   </span>
-                  <h3 className="font-serif text-[24px] sm:text-[28px] text-[#1F1F1F] font-bold leading-tight pr-8">
+                  <h3 className="font-serif text-[24px] sm:text-[28px] text-[#1A1A1A] font-bold leading-tight pr-8">
                     {selectedDoc.title}
                   </h3>
-                  <div className="font-mono text-[11px] sm:text-[12px] text-[#1F1F1F]/80 bg-white border border-[#C8A75B]/20 px-3.5 py-1.5 rounded-lg inline-block font-semibold">
+                  <div className="font-mono text-[11px] sm:text-[12px] text-[#1A1A1A]/80 bg-white border border-[#B58D20]/20 px-3.5 py-1.5 rounded-lg inline-block font-semibold">
                     {selectedDoc.refNo}
                   </div>
                 </div>
 
                 {/* Secure certificate image container with zoom effect */}
-                <div className="relative border border-[#C8A75B]/25 p-1 bg-white rounded-2xl shadow-inner max-h-[480px] overflow-hidden select-none group/modal-img flex justify-center items-center">
-                  <div className="absolute inset-3 border border-dashed border-[#C8A75B]/15 pointer-events-none z-10" />
+                <div className="relative border border-[#B58D20]/25 p-1 bg-white rounded-2xl shadow-inner max-h-[480px] overflow-hidden select-none group/modal-img flex justify-center items-center">
+                  <div className="absolute inset-3 border border-dashed border-[#B58D20]/15 pointer-events-none z-10" />
                   
                   {/* Floating Magnification Tools */}
                   <div className="absolute bottom-5 right-5 z-20 flex gap-2">
@@ -337,12 +337,12 @@ export default function CertificationsView() {
 
                 <div className="space-y-4 pt-2">
                   <div className="space-y-1">
-                    <span className="text-[11px] uppercase tracking-widest font-bold text-[#1F1F1F]/50 block">Maklumat &amp; Butiran Kualiti</span>
-                    <p className="text-[14px] sm:text-[15px] text-[#222222] leading-[1.8] font-normal">{selectedDoc.desc}</p>
+                    <span className="text-[11px] uppercase tracking-widest font-bold text-[#1A1A1A]/50 block">Maklumat &amp; Butiran Kualiti</span>
+                    <p className="font-sans text-[14px] sm:text-[15px] text-[#4A4A4A] leading-relaxed font-normal">{selectedDoc.desc}</p>
                   </div>
                   <div className="space-y-1 pt-3.5 border-t border-[#EFEAE2]">
-                    <span className="text-[11px] uppercase tracking-widest font-bold text-[#C8A75B] block">Kepentingan Bagi Penilaian Pengguna</span>
-                    <p className="text-[14px] sm:text-[15px] text-[#222222] font-normal leading-[1.8]">{selectedDoc.importance}</p>
+                    <span className="text-[11px] uppercase tracking-widest font-bold text-[#B58D20] block">Kepentingan Bagi Penilaian Pengguna</span>
+                    <p className="font-sans text-[14px] sm:text-[15px] text-[#4A4A4A] font-normal leading-relaxed">{selectedDoc.importance}</p>
                   </div>
                 </div>
 
@@ -350,10 +350,10 @@ export default function CertificationsView() {
                   <button 
                     type="button"
                     onClick={() => {
-                      const msg = `Hi AquivaGold, boleh saya mohon rujukan dokumen penuh *${selectedDoc.title}* (${selectedDoc.refNo}) untuk semakan lanjut?`;
+                      const msg = `Hi AQUIVA GOLD, boleh saya mohon rujukan dokumen penuh *${selectedDoc.title}* (${selectedDoc.refNo}) untuk semakan lanjut?`;
                       window.open(`https://wa.me/601139900920?text=${encodeURIComponent(msg)}`, "_blank", "noopener,noreferrer");
                     }}
-                    className="cursor-pointer w-full h-[48px] bg-black hover:bg-stone-800 text-white text-[13px] sm:text-[14px] uppercase tracking-wider font-bold transition-all rounded-lg text-center flex items-center justify-center gap-2 shadow-xs border-0"
+                    className="cursor-pointer w-full h-[48px] bg-[#1A1A1A] hover:bg-stone-800 text-white text-[13px] sm:text-[14px] uppercase tracking-wider font-bold transition-all rounded-lg text-center flex items-center justify-center gap-2 shadow-xs border-0"
                   >
                     <span>MOHON SALINAN PDF</span>
                   </button>

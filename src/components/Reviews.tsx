@@ -15,7 +15,7 @@ export default function Reviews() {
             Kata Penghargaan
           </h2>
           <p className="text-xs md:text-sm text-charcoal-light font-light max-w-md mx-auto">
-            Pecinta kemewahan dan pengamal gaya hidup eksklusif berkongsi maklum balas ikhlas mereka tentang Koleksi Black Millenia kami.
+            Pecinta kemewahan dan pengamal gaya hidup eksklusif berkongsi maklum balas ikhlas mereka tentang Koleksi Black Millenia Water (BMW) kami.
           </p>
           <div className="w-12 h-[1px] bg-gold mx-auto mt-4" />
         </div>
@@ -35,9 +35,8 @@ export default function Reviews() {
                   ))}
                 </div>
                 
-                <div className="flex items-center space-x-1 text-[9px] text-[#C9A227] font-display font-medium uppercase tracking-wider">
-                  <ShieldCheck size={10} />
-                  <span>Pelanggan Sah</span>
+                <div className="flex items-center space-x-1 text-[9px] text-[#C9A227]/70 font-display font-medium uppercase tracking-wider">
+                  <span>Maklum Balas</span>
                 </div>
               </div>
 

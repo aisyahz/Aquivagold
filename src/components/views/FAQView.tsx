@@ -28,20 +28,20 @@ export default function FAQView() {
     {
       id: "p1",
       category: "produk",
-      question: "Apakah sebenarnya kebaikan Black Millenia Water?",
-      answer: "Black Millenia Water diformulasikan daripada ekstrak botani semulajadi tulen untuk menyokong rutin penjagaan diri harian anda. Ia melengkapkan hidrasi serta merta secara semulajadi tanpa kimia tambahan tegar."
+      question: "Apakah sebenarnya kebaikan Black Millenia Water (BMW)?",
+      answer: "Black Millenia Water (BMW) diformulasikan daripada ekstrak botani semulajadi tulen untuk menyokong rutin penjagaan diri harian anda. Ia melengkapkan hidrasi serta merta secara semulajadi tanpa kimia tambahan tegar."
     },
     {
       id: "p2",
       category: "produk",
       question: "Adakah terdapat sebarang kesan sampingan berbahaya?",
-      answer: "Tidak. Rangkaian produk Aquiva Gold melepasi ujian analisis analitis makmal bebas bertauliah (COA) bagi mengesahkan ia sifar kandungan merkuri, paraben, sebatian steroid, atau logam pencemaran berat."
+      answer: "Tidak. Rangkaian produk AQUIVA GOLD melepasi ujian analisis analitis makmal bebas bertauliah (COA) bagi mengesahkan ia sifar kandungan merkuri, paraben, sebatian steroid, atau logam pencemaran berat."
     },
     {
       id: "p3",
       category: "produk",
-      question: "Siapa yang paling sesuai mengamalkan BMW Drop?",
-      answer: "BMW Drop sesuai untuk individu dewasa aktif yang mengutamakan kelengkapan sokongan kesihatan dalaman berasaskan herba herba premium semula jadi terpelihara."
+      question: "Siapa yang paling sesuai mengamalkan Black Millenia Water (BMW) Drop?",
+      answer: "Black Millenia Water (BMW) Drop sesuai untuk individu dewasa aktif yang mengutamakan kelengkapan sokongan kesihatan dalaman berasaskan herba herba premium semula jadi terpelihara."
     },
     // Pembelian & Penghantaran
     {
@@ -60,7 +60,7 @@ export default function FAQView() {
       id: "d3",
       category: "pembelian",
       question: "Adakah kurier disertakan perlindungan insurans premium?",
-      answer: "Ya, setiap kotak hadiah bertali satin Aquiva Gold Black Millenia dibungkus rapi dalam lapisan pelindung sekunder tebal, lengkap dengan pengesahan digital insurans melingkari nilai kargo."
+      answer: "Ya, setiap kotak hadiah bertali satin AQUIVA GOLD Black Millenia Water (BMW) dibungkus rapi dalam lapisan pelindung sekunder tebal, lengkap dengan pengesahan digital insurans melingkari nilai kargo."
     },
     // Program Rakan Niaga
     {
@@ -99,32 +99,32 @@ export default function FAQView() {
     <div className="space-y-12 pb-12">
       
       {/* HERO BANNER */}
-      <section className="bg-[#FAF8F1] py-16 border-b border-[#C8A75B]/15 text-center max-w-full">
-        <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-12 lg:px-16 space-y-3">
-          <span className="text-[11px] sm:text-[12px] uppercase tracking-[0.3em] text-[#C8A75B] font-bold block">PUSAT BANTUAN LAYANAN</span>
-          <h1 className="font-serif text-[26px] sm:text-[30px] md:text-[34px] lg:text-[40px] text-[#1F1F1F] font-bold tracking-tight leading-tight">
+      <section className="bg-[#FAF8F5] py-16 border-b border-[#B58D20]/15 text-center max-w-full">
+        <div className="max-w-[1280px] mx-auto px-6 sm:px-8 space-y-3">
+          <span className="text-[11px] sm:text-[12px] uppercase tracking-[0.3em] text-[#B58D20] font-bold block">PUSAT BANTUAN LAYANAN</span>
+          <h1 className="text-h1 text-[#1A1A1A]">
             Soalan Lazim (FAQ)
           </h1>
-          <p className="font-sans text-xs sm:text-xs text-[#1F1F1F]/60 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-body text-[#4A4A4A] max-w-2xl mx-auto">
             Mencari maklum balas pantas? Kami telah mengumpulkan soalan ringkas yang sering dikongsikan oleh ejen dan pelanggan butik kami yang bernilai tinggi.
           </p>
-          <div className="w-16 h-[1px] bg-[#C8A75B] mx-auto pt-0.5" />
+          <div className="w-16 h-[1.5px] bg-[#B58D20] mx-auto mt-3" />
         </div>
       </section>
 
       {/* FILTER SEARCH CRITERIA */}
-      <section className="max-w-4xl mx-auto px-6 sm:px-8">
-        <div className="bg-white border-2 border-[#C8A75B]/15 p-6 rounded-2xl space-y-6">
+      <section className="max-w-[1280px] mx-auto px-6 sm:px-8">
+        <div className="bg-white border border-[#B58D20]/20 p-6 rounded-2xl space-y-6 max-w-4xl mx-auto">
           
           {/* Real-time search filter bar */}
           <div className="relative">
-            <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-[#1F1F1F]/40" size={18} />
+            <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-[#1A1A1A]/40" size={18} />
             <input
               type="text"
               placeholder="Cari soalan anda di sini..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-11 pr-4 py-3.5 bg-[#FAF8F1] border border-[#C8A75B]/20 focus:border-[#C8A75B] focus:outline-none rounded-xl text-xs sm:text-sm text-[#1F1F1F] placeholder-[#1F1F1F]/40 font-medium"
+              className="w-full pl-11 pr-4 py-3.5 bg-[#FAF8F5] border border-[#B58D20]/20 focus:border-[#B58D20] focus:outline-none rounded-xl text-xs sm:text-sm text-[#1A1A1A] placeholder-[#1A1A1A]/40 font-medium"
             />
           </div>
 
@@ -144,8 +144,8 @@ export default function FAQView() {
                 }}
                 className={`cursor-pointer px-4 py-2 rounded-full border text-[10px] uppercase tracking-wider font-bold transition-all duration-300 flex items-center gap-1.5 ${
                   activeCategory === tab.id
-                    ? "bg-[#1F1F1F] text-white border-transparent"
-                    : "bg-white text-[#1F1F1F]/60 border-[#C8A75B]/20 hover:border-[#C8A75B] hover:text-[#1F1F1F]"
+                    ? "bg-[#1A1A1A] text-white border-transparent"
+                    : "bg-white text-[#1A1A1A]/60 border-[#B58D20]/20 hover:border-[#B58D20] hover:text-[#1A1A1A]"
                 }`}
               >
                 <tab.icon size={11} />
@@ -165,7 +165,7 @@ export default function FAQView() {
             return (
               <div 
                 key={faq.id}
-                className="bg-white border-2 border-[#C8A75B]/15 rounded-2xl overflow-hidden transition-all duration-300"
+                className="bg-white border border-[#B58D20]/15 rounded-2xl overflow-hidden transition-all duration-300 shadow-xs hover:border-[#B58D20]/45"
               >
                 {/* Accordion header line */}
                 <button
@@ -173,14 +173,14 @@ export default function FAQView() {
                   className="cursor-pointer w-full p-5 text-left flex items-start justify-between gap-4"
                 >
                   <div className="flex gap-3">
-                    <HelpCircle className="text-[#C8A75B] shrink-0 mt-0.5" size={18} />
-                    <span className="font-serif text-sm sm:text-base font-bold text-[#1F1F1F]">
+                    <HelpCircle className="text-[#B58D20] shrink-0 mt-0.5" size={18} />
+                    <span className="font-serif text-sm sm:text-base font-bold text-[#1A1A1A]">
                       {faq.question}
                     </span>
                   </div>
                   <ChevronDown 
                     size={16} 
-                    className={`text-[#C8A75B] transition-transform duration-300 shrink-0 mt-1 ${isOpen ? "rotate-180" : ""}`} 
+                    className={`text-[#B58D20] transition-transform duration-300 shrink-0 mt-1 ${isOpen ? "rotate-180" : ""}`} 
                   />
                 </button>
 
@@ -193,7 +193,7 @@ export default function FAQView() {
                       exit={{ height: 0, opacity: 0 }}
                       transition={{ duration: 0.3 }}
                     >
-                      <div className="px-5 pb-5 pt-1 border-t border-[#EFEAE2] text-xs sm:text-sm text-[#1F1F1F]/70 leading-relaxed font-light pl-11 bg-[#FAF8F1]/45">
+                      <div className="px-5 pb-5 pt-1 border-t border-[#EFEAE2] text-xs sm:text-sm text-[#4A4A4A] leading-relaxed font-normal pl-11 bg-[#FAF8F5]/45">
                         {faq.answer}
                       </div>
                     </motion.div>
@@ -204,25 +204,25 @@ export default function FAQView() {
           })
         ) : (
           <div className="text-center py-12 space-y-2">
-            <p className="font-serif text-base text-[#1F1F1F]/50 font-bold">Tiada Soalan Menepati Carian Anda</p>
-            <p className="text-xs text-[#1F1F1F]/40 max-w-xs mx-auto">Cuba gunakan kata kunci ringkas alternatif seperti &lsquo;bateri&rsquo; atau &lsquo;penghantaran&rsquo;.</p>
+            <p className="font-serif text-base text-[#1A1A1A]/50 font-bold">Tiada Soalan Menepati Carian Anda</p>
+            <p className="text-xs text-[#1A1A1A]/40 max-w-xs mx-auto">Cuba gunakan kata kunci ringkas alternatif seperti &lsquo;bateri&rsquo; atau &lsquo;penghantaran&rsquo;.</p>
           </div>
         )}
       </section>
 
       {/* FOOTER CALL FOR SUPPORT */}
-      <section className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-12 lg:px-16">
-        <div className="bg-[#1F1F1F] text-white rounded-2xl p-6 sm:p-10 text-center max-w-2xl mx-auto space-y-6">
+      <section className="max-w-[1280px] mx-auto px-6 sm:px-8">
+        <div className="bg-[#1A1A1A] text-white border border-[#B58D20]/25 rounded-2xl p-8 text-center max-w-2xl mx-auto space-y-6 shadow-xl">
           <h3 className="font-serif text-lg sm:text-2xl text-white font-medium">Masih Mempunyai Sebarang Musykil?</h3>
-          <p className="font-sans text-xs sm:text-xs text-white/70 max-w-md mx-auto font-light leading-relaxed">
+          <p className="font-sans text-xs sm:text-sm text-neutral-300 max-w-md mx-auto font-normal leading-relaxed">
             Jika panduan ringkas di atas masih tidak menjawab pertanyaan tersendiri anda, hubungi perunding butik utama kami secara peribadi harian talian.
           </p>
 
           <a
-            href="https://wa.me/601139900920?text=Hi%20AquivaGold%2C%20saya%20mempunyai%20soalan%20berkenaan%20Koleksi%20Black%20Millenia."
+            href="https://wa.me/601139900920?text=Hi%20AQUIVA%20GOLD%2C%20saya%20mempunyai%20soalan%20berkenaan%20Koleksi%20Black%20Millenia."
             target="_blank"
             rel="noopener noreferrer"
-            className="cursor-pointer inline-block px-8 py-3.5 bg-[#C8A75B] hover:bg-white hover:text-[#1F1F1F] text-[#1F1F1F] text-xs uppercase tracking-widest font-bold transition-all duration-300 rounded"
+            className="cursor-pointer inline-flex h-[48px] px-8 bg-[#B58D20] hover:bg-white hover:text-[#1A1A1A] text-white hover:border-[#B58D20] text-xs uppercase tracking-widest font-bold transition-all duration-300 rounded-lg items-center justify-center shadow-lg"
           >
             HUBUNGI SAYA DI WHATSAPP
           </a>

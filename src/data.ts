@@ -7,43 +7,43 @@ import heroBanner from "./assets/images/hero-banner.png";
 export const PRODUCTS: Product[] = [
   {
     id: "millenia-spray",
-    title: "BLACK MILLENIA SPRAY",
+    title: "Black Millenia Water (BMW) Spray",
     category: "Semburan Penyegar Wajah & Badan",
-    description: "Semburan wajah dan badan yang memberikan kesegaran serta keselesaan sepanjang hari.",
+    description: "Semburan penyegar wajah dan badan yang membekalkan kelembapan seketika, mengembalikan kesegaran kulit serta-merta, sesuai sepanjang hari.",
     benefits: [
-      "Menyegarkan semula kulit",
-      "Formula ultra-ringan",
-      "Selesa dan tidak melekit",
-      "Sesuai untuk penggunaan harian",
-      "Mudah dibawa ke mana-mana",
-      "Sesuai sebelum dan selepas solekan"
+      "Menyegarkan kulit wajah & badan seketika",
+      "Formula ultra-ringan memelihara kelembapan semulajadi",
+      "Selesa, cepat meresap dan tidak melekit di kulit",
+      "Amat sesuai untuk penggunaan sepanjang hari",
+      "Reka bentuk botol yang praktikal dan mudah dibawa",
+      "Sesuai disembur sebelum atau selepas solekan"
     ],
     price: "RM 59.90",
     images: [
       sprayImage,
       heroBanner
     ],
-    directions: "Sembur pada wajah & badan sepanjang hari untuk mengembalikan kesegaran dan mengunci kelembapan harian.",
+    directions: "Sembur secara lembut pada kulit wajah atau badan pada jarak yang bersesuaian pada bila-bila masa sepanjang hari apabila memerlukan kesegaran.",
     faqs: [
       {
-        question: "Bolehkah saya menggunakan Black Millenia Spray pada kulit sensitif?",
-        answer: "Ya, semburan jernih kami dirumus khas dengan formula tanpa alkohol yang sangat lembut dan bebas haruman sintetik, amat mesra untuk memelihara lapisan perlindungan kulit tanpa menyebabkan iritasi."
+        question: "Bolehkah saya menggunakan Black Millenia Water (BMW) Spray pada kulit sensitif?",
+        answer: "Ya. Formula lembut tanpa alkohol ini dihasilkan khas untuk memberikan ketenangan kulit terbaik, mesra bagi semua jenis kulit termasuk yang kering atau memerlukan keselesaan ekstra harian."
       },
       {
-        question: "Adakah ia membantu mengekalkan solekan?",
-        answer: "Benar. Ia berfungsi sebagai semburan penyegar zarah mikro yang mengekalkan kelembapan solekan agar kelihatan segar dan berseri, serta melindunginya daripada kekeringan akibat persekitaran berhawa dingin."
+        question: "Adakah ia membantu mengekalkan kelembapan solekan?",
+        answer: "Benar. Semburan ini menghasilkan zarah mikros halus yang mengunci seri dan memastikan solekan anda kelihatan segar, terutama dalam persekitaran kering atau berhawa dingin."
       }
     ],
     reviews: [
       {
         rating: 5,
-        text: "Zarah semburannya sangat halus dan lembut seperti sutera apabila menyentuh kulit. Saya sentiasa membawa satu di dalam beg tangan dan meletakkan satu lagi di meja kerja.",
+        text: "Semburan yang sangat halus dan begitu nyaman di wajah. Saya sentiasa simpan satu botol di dalam beg tangan dan satu lagi di sebelah katil untuk memulakan hari.",
         author: "Datin Sophia L.",
         date: "24 Mei 2026"
       },
       {
         rating: 5,
-        text: "Persembahan produk yang sangat indah dan penghantaran pantas. Sangat sesuai dengan cuaca di Malaysia untuk keseimbangan kulit yang optimum. Amat mengesyorkan semburan eksklusif ini.",
+        text: "Kotak hantaran yang sungguh memukau. Sangat sesuai untuk iklim tropika di Malaysia demi kebaikan kelembapan kulit wajah harian.",
         author: "Sarah Tan",
         date: "02 Jun 2026"
       }
@@ -52,41 +52,41 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: "millenia-essence",
-    title: "BLACK MILLENIA ESSENCE",
+    title: "Black Millenia Water (BMW) Essence",
     category: "Terapi Mandian Essence Premium",
-    description: "Essence terapi mandian premium untuk pengalaman relaksasi yang lebih menenangkan.",
+    description: "Essence mandian premium murni bertaraf spa untuk ritual relaksasi menyeluruh di kediaman peribadi anda.",
     benefits: [
-      "Ritual mandian yang menenangkan",
-      "Pengalaman spa eksklusif di rumah",
-      "Sesuai untuk rutin kesejahteraan diri",
-      "Pengalaman aromaterapi yang mewah"
+      "Mencipta suasana ritual rehat yang sangat tenang",
+      "Membawakan suasana spa lima bintang di rumah anda",
+      "Sesuai sebagai sebahagian daripada rutin pemulihan diri",
+      "Haruman botani aromaterapi yang menenangkan minda"
     ],
     price: "RM 69.90",
     images: [
       essenceImage,
       heroBanner
     ],
-    directions: "Gunakan ketika mandian harian atau terapi ritual spa anda.",
+    directions: "Titiskan terus ke dalam air suam mandian, atau gunakan semasa mandi biasa untuk wap aromaterapi murni.",
     faqs: [
       {
-        question: "Apakah profil aroma utama bagi produk ini?",
-        answer: "Aromanya merupakan gabungan sofistikated bukan sintetik daripada kehangatan kayu-kayuan lembut, sentuhan amber manis amber-vanila, dan botani spa yang menenangkan."
+        question: "Apakah profil aroma yang membina ketenangan minda bagi produk ini?",
+        answer: "Haruman indah ini menggabungkan kelunakan aroma botani spa, amber-vanila yang mesra, serta sentuhan kayu-kayuan lembut murni yang melegakan."
       },
       {
-        question: "Bolehkah saya menggunakannya semasa mandi biasa jika tiada tab mandi?",
-        answer: "Sudah tentu. Anda boleh menitiskan beberapa titis pada tuala mandi suam yang lembap atau pada lantai bilik mandi yang jauh dari aliran terus air bagi menghasilkan ruang wap aromaterapi yang menenangkan."
+        question: "Bagaimanakah cara menggunakannya sekiranya rumah saya tiada tab mandi?",
+        answer: "Sangat mudah. Anda boleh menitiskan beberapa titis pada bucu lantai bilik mandi yang basah ketika menggunakan air pancuran suam untuk mencipta wap mandian aromaterapi semulajadi yang penuh relaksasi."
       }
     ],
     reviews: [
       {
         rating: 5,
-        text: "Sangat menyukai pengalaman yang menyegarkan dan menenangkan minda ini. Bilik mandi rumah saya kini berbau harum bagaikan berada di resort kesejahteraan bertaraf 6 bintang di Langkawi.",
+        text: "Mengubah bilik mandi biasa menjadi ruang terapi rehat yang luar biasa. Haruman botaninya sangat mewah seperti di resort eksklusif.",
         author: "Dr. Adrian Wong",
         date: "18 Mei 2026"
       },
       {
         rating: 5,
-        text: "Pembungkusan yang sangat eksklusif dan servis yang luar biasa. Produk ini telah meningkatkan kualiti ritual rehat hujung minggu saya dengan ketara.",
+        text: "Kotak beriben sutera yang sangat indah, khidmat yang cemerlang. Sangat membantu menenangkan diri selepas seharian sibuk bekerja.",
         author: "Amira J.",
         date: "29 Mei 2026"
       }
@@ -95,40 +95,40 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: "millenia-drop",
-    title: "BLACK MILLENIA DROP",
+    title: "Black Millenia Water (BMW) Drop",
     category: "Suplemen Kesejahteraan Premium",
-    description: "Formula premium yang direka untuk melengkapkan rutin kesejahteraan harian anda.",
+    description: "Pilihan titisan kesejahteraan berkualiti tinggi yang dirumus untuk menyokong keharmonian tubuh dan kecergasan gaya hidup moden secara praktikal.",
     benefits: [
-      "Format titisan yang praktikal",
-      "Rutin harian yang mudah",
-      "Formulasi gred premium"
+      "Titisan botani yang praktikal dan ringkas diamalkan",
+      "Membantu membina rutin penjagaan diri yang bersistematik",
+      "Formulasi berkualiti tinggi demi gaya hidup aktif harian"
     ],
     price: "RM 139.90",
     images: [
       dropImage,
       heroBanner
     ],
-    directions: "Titiskan 10-15 titis ke dalam 500ml air mineral setiap pagi.",
+    directions: "Campurkan 10 hingga 15 titis ke dalam gelas air kosong (kira-kira 500ml) setiap pagi sebelum memulakan aktiviti.",
     faqs: [
       {
-        question: "Apakah perbezaan produk ini berbanding suplemen kesihatan biasa?",
-        answer: "Kami menggunakan teknologi ekstraksi premium yang bersih untuk menghasilkan kestabilan molekul yang terpelihara. Setiap ramuan ditapis dengan teliti bagi memenuhi piawaian kualiti tinggi yang eksklusif."
+        question: "Apakah yang membezakan kualiti formula titisan ini?",
+        answer: "Ia dihasilkan menerusi kaedah ekstraksi bersih berpiawaian tinggi bagi mengekalkan ketulenan formulasi botaninya, tanpa pewarna tiruan atau bahan pengawet keras."
       },
       {
-        question: "Adakah pembelian sekotak sahaja disediakan?",
-        answer: "Ya, walaupun sebahagian besar pelanggan kami lebih gemar memilih langganan eksklusif 3 kotak untuk memastikan rutin penjagaan diri harian yang konsisten."
+        question: "Bolehkah saya membeli sebotol sahaja untuk permulaan?",
+        answer: "Ya, kami menawarkan pembelian sebotol individu, namun ramai pelanggan setia lebih menyukai set trio lengkap untuk bimbingan rutin berkala yang lebih jimat."
       }
     ],
     reviews: [
       {
         rating: 5,
-        text: "Sentuhan kemewahan yang ringkas namun eksklusif. Sangat mudah diamalkan dalam rutin pagi saya. Terasa begitu suci, berkualiti tinggi, dan benar-benar memulihkan tenaga harian saya.",
+        text: "Rutin pagi terbaik yang sangat mudah diamalkan. Kualiti titisan botani yang murni memberikan rasa yang segar dan bersih sepanjang hari.",
         author: "Michelle Teh",
         date: "15 April 2026"
       },
       {
         rating: 5,
-        text: "Kotak hantaran yang sangat memukau. Ia membuktikan kualiti sains penjagaan diri elit yang sangat bernilai tinggi.",
+        text: "Kemasan bungkusan yang anggun menunjukkan tahap profesionalisme AQUIVA GOLD yang amat dipercayai.",
         author: "Khairul Amin",
         date: "05 Jun 2026"
       }
@@ -163,14 +163,14 @@ export const WHY_CHOOSE_US: WhyChoose[] = [
 export const REVIEWS: Review[] = [
   {
     rating: 5,
-    text: "Pembungkusan premium dan layanan yang sangat memuaskan. Dari pertanyaan awal hinggalah penghantaran kotak beriben yang elegan, AquivaGold memahami erti kemewahan sebenar.",
+    text: "Pembungkusan premium dan layanan yang sangat memuaskan. Dari pertanyaan awal hinggalah penghantaran kotak beriben yang elegan, AQUIVA GOLD memahami erti kemewahan sebenar.",
     author: "Zarina Abdullah",
     location: "Kuala Lumpur",
     date: "01 Jun 2026"
   },
   {
     rating: 5,
-    text: "Sangat menyukai pengalaman menyegarkan ini. Black Millenia Spray benar-benar memikat; zarah semburannya sangat ringan dan berbau sangat harum.",
+    text: "Sangat menyukai pengalaman menyegarkan ini. Black Millenia Water (BMW) Spray benar-benar memikat; zarah semburannya sangat ringan dan berbau sangat harum.",
     author: "Elena Petrova",
     location: "Mont Kiara",
     date: "28 Mei 2026"
@@ -187,23 +187,23 @@ export const REVIEWS: Review[] = [
 export const GENERAL_FAQS: FAQItem[] = [
   {
     id: "faq-1",
-    question: "Apakah Black Millenia Spray?",
-    answer: "Black Millenia Spray ialah semburan penyegar wajah dan badan yang dirumus khas untuk menghidrat dan menyegarkan kulit. Ditampilkan dalam botol kaca hitam matte yang eksklusif, ia menggunakan teknologi titisan mikro yang membolehkan air botani diserap secara serta-merta ke dalam kulit untuk sensasi semula jadi."
+    question: "Apakah Black Millenia Water (BMW) Spray?",
+    answer: "Ia merupakan semburan penyegar zarah halus untuk wajah dan kulit tubuh, dirumus untuk mengekalkan kelembapan kulit di samping melegakan kulit letih sepanjang hari. Hadir dalam botol kaca gelap premium yang melindungi khasiat bahan botani semula jadinya."
   },
   {
     id: "faq-2",
-    question: "Bagaimanakah cara menggunakan Black Millenia Essence?",
-    answer: "Essence mandian terapi kami boleh dititiskan terus (8 hingga 12 titis) ke dalam air mandian suam, atau digunakan sebagai terapi wap semasa mandi biasa. Ia menghasilkan suasana aromaterapi menenangkan yang menyerupai pengalaman rehat di pusat spa mewah bertaraf dunia."
+    question: "Bagaimanakah cara menggunakan Black Millenia Water (BMW) Essence?",
+    answer: "Cuma titiskan sebanyak 8 hingga 12 titis terus ke dalam besen air pancuran suam, atau titiskan di sudut lantai bilik mandi suam untuk mewujudkan wap spa beraroma segar murni, meredakan ketegangan fizikal dan mental."
   },
   {
     id: "faq-3",
     question: "Bagaimanakah cara untuk membuat pesanan?",
-    answer: "Bagi memastikan khidat nasihat yang diperibadikan mengikut standard butik premium, semua pesanan dilakukan melalui sistem rundingan WhatsApp kami yang selamat dan eksklusif. Hanya hantar butiran anda, dan perunding peribadi kami akan membantu anda dengan pilihan produk, panduan penggunaan, serta urusan penghantaran kurier ekspres yang diyakini."
+    answer: "AQUIVA GOLD menolak amalan robot layan diri yang dingin. Semua khidmat tempahan dikendalikan secara peribadi dan selamat oleh pasukan perunding manusia kami menerusi pesanan WhatsApp, demi memastikan bimbingan tersuai yang telus dan mesra."
   },
   {
     id: "faq-4",
-    question: "Berapa lamakah tempoh penghantaran?",
-    answer: "Penghantaran adalah sangat pantas demi keselesaan anda. Kami bekerjasama dengan perkhidmatan kurier ekspres terpilih. Penghantaran di sekitar Kuala Lumpur dan Selangor mengambil masa kurang 24 jam selepas pengesahan, manakala negeri-negeri lain di seluruh Semenanjung dan Sabah/Sarawak mengambil masa 2 hingga 3 hari bekerja."
+    question: "Berapa lamakah tempoh penghantaran kurier?",
+    answer: "Penghantaran adalah sangat pantas menerusi khidmat kurier ekspres terpilih. Bagi kawasan Kuala Lumpur & Selangor, barangan tiba dalam tempoh singkat (kurang 24 jam), manakala negeri-negeri lain diselesaikan dengan segera dalam 2 hingga 3 hari bekerja."
   }
 ];
 

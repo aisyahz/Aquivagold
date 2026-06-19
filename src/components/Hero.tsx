@@ -85,7 +85,7 @@ export default function Hero({ onOpenConsultation }: HeroProps) {
             variants={itemVariants}
             className="text-[16px] sm:text-[18px] md:text-[18px] font-normal text-neutral-800 max-w-lg leading-relaxed"
           >
-            Koleksi premium AquivaGold untuk melengkapkan rutin penjagaan diri dan kesejahteraan harian secara selamat dan telus.
+            Koleksi premium AQUIVA GOLD untuk melengkapkan rutin penjagaan diri dan kesejahteraan harian secara selamat dan telus.
           </motion.p>
 
           {/* Action CTAs */}

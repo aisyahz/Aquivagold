@@ -30,7 +30,7 @@ export default function ProductDetailModal({ product, onClose, onOpenConsultatio
     const totalText = quantity > 1 ? ` (Jumlah keseluruhan: RM${total})` : "";
     
     return `https://wa.me/60172887123?text=${encodeURIComponent(
-      `Hi Aquiva Gold, saya mahu membuat tempahan segera untuk ${qtyText}${product.title} (${priceStr}${quantity > 1 ? '/unit' : ''})${totalText}. Boleh bantu saya dengan butiran pembayaran dan penghantaran?`
+      `Hi AQUIVA GOLD, saya mahu membuat tempahan segera untuk ${qtyText}${product.title} (${priceStr}${quantity > 1 ? '/unit' : ''})${totalText}. Boleh bantu saya dengan butiran pembayaran dan penghantaran?`
     )}`;
   };
 
@@ -84,7 +84,7 @@ export default function ProductDetailModal({ product, onClose, onOpenConsultatio
             <div className="flex-1 flex flex-col items-center justify-center">
               {/* Subtle visual branding text header */}
               <span className="font-display text-[9px] uppercase tracking-[0.3em] text-gold font-semibold mb-4 text-center">
-                AQUIVAGOLD LABS / BLACK MILLENIA
+                AQUIVA GOLD LABS / BLACK MILLENIA
               </span>
 
               {/* Large Product Image Preview Container with Zoom effect */}
@@ -261,7 +261,7 @@ export default function ProductDetailModal({ product, onClose, onOpenConsultatio
                                 <Star key={i} size={10} fill="currentColor" />
                               ))}
                             </div>
-                            <span className="text-[9px] text-charcoal-light/50 font-mono">Pelanggan Sah</span>
+                            <span className="text-[9px] text-charcoal-light/50 font-mono">Ulasan</span>
                           </div>
                           <p className="text-xs text-charcoal-light font-light italic mb-1.5 leading-relaxed">
                             "{r.text}"
@@ -282,7 +282,7 @@ export default function ProductDetailModal({ product, onClose, onOpenConsultatio
                 <ShieldCheck size={16} className="text-gold mt-0.5 shrink-0" />
                 <div className="text-left">
                   <span className="text-[10px] uppercase tracking-widest text-charcoal font-semibold block">
-                    Jaminan Premium AquivaGold
+                    Jaminan Premium AQUIVA GOLD
                   </span>
                   <span className="text-[11px] text-charcoal-light font-light block leading-tight">
                     Setiap tempahan didatangkan dalam kotak baldu sutera eksklusif kami bersama penjejakan selamat diinsuranskan oleh rakan logistik kurier.

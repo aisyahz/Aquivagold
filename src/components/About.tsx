@@ -25,7 +25,7 @@ export default function About() {
       {/* Decorative background watermark / leaf frame */}
       <div className="absolute right-0 bottom-0 top-0 w-1/3 opacity-5 pointer-events-none z-0 overflow-hidden">
         <span className="font-serif text-[18vw] text-gold font-light absolute right-[-5vw] bottom-[-5vw] select-none">
-          AQUIVAGOLD
+          AQUIVA GOLD
         </span>
       </div>
 
@@ -42,13 +42,13 @@ export default function About() {
             </div>
 
             <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight text-charcoal">
-              Mengenai AquivaGold
+              Mengenai AQUIVA GOLD
             </h2>
 
             {/* Core Message Paragraph with High-End Styling */}
             <div className="space-y-4 text-charcoal-light font-light leading-relaxed text-sm md:text-base">
               <p className="first-letter:text-4xl first-letter:font-serif first-letter:float-left first-letter:mr-3 first-letter:mt-1 first-letter:text-[#C9A227] first-letter:font-medium">
-                AquivaGold komited untuk membawakan produk penjagaan diri dan kesejahteraan diri premium yang direka khas untuk gaya hidup moden. Koleksi Black Millenia kami menggabungkan formulasi eksklusif dengan pengalaman mewah, bagi membantu anda menikmati detik kesegaran, ketenangan, dan ritual penjagaan diri tersuai yang sebenar.
+                AQUIVA GOLD komited untuk membawakan produk penjagaan diri dan kesejahteraan diri premium yang direka khas untuk gaya hidup moden. Koleksi Black Millenia Water (BMW) kami menggabungkan formulasi eksklusif dengan pengalaman mewah, bagi membantu anda menikmati detik kesegaran, ketenangan, dan ritual penjagaan diri tersuai yang sebenar.
               </p>
               <p>
                 Kami percaya bahawa penjagaan harian tidak seharusnya kelihatan seperti preskripsi perubatan atau suplemen klinikal yang membosankan. Sebaliknya, kami mengangkat ritual penjagaan diri anda agar setaraf dengan ketenangan mendalam di pusat spa mewah kegemaran anda.

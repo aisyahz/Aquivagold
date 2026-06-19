@@ -43,7 +43,7 @@ export default function ProductsView({ onOpenConsultation }: ProductsViewProps) 
     const totalText = qty > 1 ? ` (Jumlah keseluruhan: RM${total})` : "";
     
     return `https://wa.me/60172887123?text=${encodeURIComponent(
-      `Hi Aquiva Gold, saya mahu membuat tempahan segera untuk ${qtyText}${title} (${priceStr}${qty > 1 ? '/unit' : ''})${totalText}. Boleh bantu saya dengan butiran pembayaran dan penghantaran?`
+      `Hi AQUIVA GOLD, saya mahu membuat tempahan segera untuk ${qtyText}${title} (${priceStr}${qty > 1 ? '/unit' : ''})${totalText}. Boleh bantu saya dengan butiran pembayaran dan penghantaran?`
     )}`;
   };
   
@@ -53,7 +53,7 @@ export default function ProductsView({ onOpenConsultation }: ProductsViewProps) 
   };
 
   const handleWhatsAppProduct = (product: string) => {
-    const message = `Hi AquivaGold, saya ingin membuat pesanan atau mendapatkan konsultasi lanjut berkaitan produk *${product}*.`;
+    const message = `Hi AQUIVA GOLD, saya ingin membuat pesanan atau mendapatkan konsultasi lanjut berkaitan produk *${product}*.`;
     window.open(`https://wa.me/601139900920?text=${encodeURIComponent(message)}`, "_blank", "noopener,noreferrer");
   };
 
@@ -68,19 +68,23 @@ export default function ProductsView({ onOpenConsultation }: ProductsViewProps) 
             Koleksi Produk Black Millenia
           </h1>
           <p className="font-sans text-[13.5px] sm:text-[14.5px] text-[#1F1F1F]/70 max-w-2xl mx-auto leading-[1.7]">
-            Terokai rangkaian produk premium Aquiva Gold Black Millenia yang direka untuk melengkapkan keperluan penjagaan diri secara optimum dan melahirkan ketenangan harian anda.
+            Terokai rangkaian produk premium AQUIVA GOLD Black Millenia yang direka untuk melengkapkan keperluan penjagaan diri secara optimum dan melahirkan ketenangan harian anda.
           </p>
           <div className="w-16 h-[1.5px] bg-[#C8A75B] mx-auto mt-3" />
  
           {/* Quick jump navigation tag pills */}
           <div className="flex flex-wrap items-center justify-center gap-3 pt-4">
-            {["BMW Essence", "BMW Spray", "BMW Drop"].map((name, i) => (
+            {[
+              { label: "Black Millenia Water (BMW) Essence", id: "bmw-essence" },
+              { label: "Black Millenia Water (BMW) Spray", id: "bmw-spray" },
+              { label: "Black Millenia Water (BMW) Drop", id: "bmw-drop" }
+            ].map((item, i) => (
               <button
                 key={i}
-                onClick={() => scrollToProduct(name.toLowerCase().replace(" ", "-"))}
+                onClick={() => scrollToProduct(item.id)}
                 className="cursor-pointer px-5 py-2.5 bg-white hover:bg-[#F6F3EE] hover:border-[#C8A75B] border border-[#1F1F1F]/15 text-[#1F1F1F] text-[12px] sm:text-[13px] uppercase tracking-wider font-bold rounded-full transition-all duration-300 shadow-sm"
               >
-                {name}
+                {item.label}
               </button>
             ))}
           </div>
@@ -99,14 +103,14 @@ export default function ProductsView({ onOpenConsultation }: ProductsViewProps) 
               <div className="relative w-full aspect-square rounded-2xl border-2 border-[#C8A75B]/30 overflow-hidden shadow-2xl bg-white p-1.5 group/img-view">
                 <img 
                   src={essenceImage} 
-                  alt="BMW Essence" 
+                  alt="Black Millenia Water (BMW) Essence" 
                   className="w-full h-full object-cover rounded-xl transition-transform duration-700 group-hover/img-view:scale-105"
                   referrerPolicy="no-referrer"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none rounded-xl" />
                 <div className="absolute bottom-6 left-8 text-left z-10">
                   <span className="text-[10px] uppercase tracking-widest text-[#C8A75B] font-bold block mb-1">EKSKLUSIF & HALAL</span>
-                  <h4 className="font-serif text-white text-[16px] font-semibold leading-tight">BMW Essence Terapi Mandian</h4>
+                  <h4 className="font-serif text-white text-[16px] font-semibold leading-tight">Black Millenia Water (BMW) Essence</h4>
                 </div>
               </div>
             </div>
@@ -116,12 +120,12 @@ export default function ProductsView({ onOpenConsultation }: ProductsViewProps) 
           <div className="lg:col-span-7 text-left space-y-6">
             <div className="space-y-2">
               <span className="text-[11px] sm:text-[12px] uppercase tracking-widest text-[#C8A75B] font-bold block">MEMULIHKAN KETENANGAN MINDA</span>
-              <h2 className="font-serif text-[24px] sm:text-[28px] md:text-[32px] lg:text-[36px] xl:text-[42px] text-[#1F1F1F] font-bold tracking-tight leading-tight">BMW Essence</h2>
+              <h2 className="font-serif text-[24px] sm:text-[28px] md:text-[32px] lg:text-[36px] xl:text-[42px] text-[#1F1F1F] font-bold tracking-tight leading-tight">Black Millenia Water (BMW) Essence</h2>
               <p className="font-sans text-[13.5px] sm:text-[15px] uppercase tracking-wider text-[#1F1F1F]/60 font-semibold">Terapi Mandian Premium &bull; RM 69.90</p>
             </div>
 
             <p className="font-sans text-[13px] sm:text-[14px] text-[#1F1F1F]/80 leading-[1.7] font-light">
-              BMW Essence merangkumi pati pati botani gred terkawal yang ditala khusus untuk ritual spa harian bertaraf tinggi. Ia membangkitkan aromaterapi tulen yang menenangkan ketegangan fizikal murni anda.
+              Black Millenia Water (BMW) Essence merangkumi pati pati botani gred terkawal yang ditala khusus untuk ritual spa harian bertaraf tinggi. Ia membangkitkan aromaterapi tulen yang menenangkan ketegangan fizikal murni anda.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-2">
@@ -189,7 +193,7 @@ export default function ProductsView({ onOpenConsultation }: ProductsViewProps) 
 
             <div className="pt-4 flex flex-col sm:flex-row gap-4">
               <a
-                href={getWhatsAppBuyLink("Black Millenia Essence", "RM 69.90", getQuantity("essence"))}
+                href={getWhatsAppBuyLink("Black Millenia Water (BMW) Essence", "RM 69.90", getQuantity("essence"))}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="cursor-pointer flex-1 h-[48px] sm:h-[52px] bg-[#1F1F1F] hover:bg-[#C8A75B] hover:text-black text-white text-[14px] sm:text-[15px] uppercase tracking-wider font-bold transition-all rounded-lg shadow-md flex items-center justify-center text-center"
@@ -198,7 +202,7 @@ export default function ProductsView({ onOpenConsultation }: ProductsViewProps) 
                 BELI SEGERA (RM {(69.90 * getQuantity("essence")).toFixed(2).replace(/\.00$/, "")})
               </a>
               <button
-                onClick={() => onOpenConsultation("consult", "Black Millenia Essence")}
+                onClick={() => onOpenConsultation("consult", "Black Millenia Water (BMW) Essence")}
                 className="cursor-pointer h-[48px] sm:h-[52px] px-6 bg-white border-2 border-[#C8A75B]/40 hover:border-[#C8A75B] text-[#C8A75B] hover:text-[#1F1F1F] text-[13px] sm:text-[14px] uppercase tracking-wider font-extrabold transition-all rounded-lg flex items-center justify-center text-center"
                 id="consult-essence-btn"
               >
@@ -214,12 +218,12 @@ export default function ProductsView({ onOpenConsultation }: ProductsViewProps) 
           <div className="lg:col-span-7 text-left space-y-6 order-2 lg:order-1">
             <div className="space-y-2">
               <span className="text-[11px] sm:text-[12px] uppercase tracking-widest text-[#C8A75B] font-bold block">PERLINDUNGAN KELENGKAPAN WAJAH</span>
-              <h2 className="font-serif text-[24px] sm:text-[28px] md:text-[32px] lg:text-[36px] xl:text-[42px] text-[#1F1F1F] font-bold tracking-tight leading-tight">BMW Spray</h2>
+              <h2 className="font-serif text-[24px] sm:text-[28px] md:text-[32px] lg:text-[36px] xl:text-[42px] text-[#1F1F1F] font-bold tracking-tight leading-tight">Black Millenia Water (BMW) Spray</h2>
               <p className="font-sans text-[13.5px] sm:text-[15px] uppercase tracking-wider text-[#1F1F1F]/60 font-semibold">Penyegar Kulit Premium &bull; RM 59.90</p>
             </div>
 
             <p className="font-sans text-[13px] sm:text-[14px] text-[#1F1F1F]/80 leading-[1.7] font-light">
-              Formula ultra-ringan BMW Spray memberikan semburan partikel halus menembusi lapisan kulit luar untuk memulihkan sensasi penghidratan berterusan. Sesuai digunakan sepanjang hari.
+              Black Millenia Water (BMW) Spray memberikan semburan partikel halus menembusi lapisan kulit luar untuk memulihkan sensasi penghidratan berterusan. Sesuai digunakan sepanjang hari.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-2">
@@ -287,7 +291,7 @@ export default function ProductsView({ onOpenConsultation }: ProductsViewProps) 
 
             <div className="pt-4 flex flex-col sm:flex-row gap-4">
               <a
-                href={getWhatsAppBuyLink("Black Millenia Spray", "RM 59.90", getQuantity("spray"))}
+                href={getWhatsAppBuyLink("Black Millenia Water (BMW) Spray", "RM 59.90", getQuantity("spray"))}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="cursor-pointer flex-1 h-[48px] sm:h-[52px] bg-[#1F1F1F] hover:bg-[#C8A75B] hover:text-black text-white text-[14px] sm:text-[15px] uppercase tracking-wider font-bold transition-all rounded-lg shadow-md flex items-center justify-center text-center"
@@ -296,7 +300,7 @@ export default function ProductsView({ onOpenConsultation }: ProductsViewProps) 
                 BELI SEGERA (RM {(59.90 * getQuantity("spray")).toFixed(2).replace(/\.00$/, "")})
               </a>
               <button
-                onClick={() => onOpenConsultation("consult", "Black Millenia Spray")}
+                onClick={() => onOpenConsultation("consult", "Black Millenia Water (BMW) Spray")}
                 className="cursor-pointer h-[48px] sm:h-[52px] px-6 bg-white border-2 border-[#C8A75B]/40 hover:border-[#C8A75B] text-[#C8A75B] hover:text-[#1F1F1F] text-[13px] sm:text-[14px] uppercase tracking-wider font-extrabold transition-all rounded-lg flex items-center justify-center text-center"
                 id="consult-spray-btn"
               >
@@ -312,14 +316,14 @@ export default function ProductsView({ onOpenConsultation }: ProductsViewProps) 
               <div className="relative w-full aspect-square rounded-2xl border-2 border-[#C8A75B]/30 overflow-hidden shadow-2xl bg-white p-1.5 group/img-view">
                 <img 
                   src={sprayImage} 
-                  alt="BMW Spray" 
+                  alt="Black Millenia Water (BMW) Spray" 
                   className="w-full h-full object-cover rounded-xl transition-transform duration-700 group-hover/img-view:scale-105"
                   referrerPolicy="no-referrer"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none rounded-xl" />
                 <div className="absolute bottom-6 left-8 text-left z-10">
                   <span className="text-[10px] uppercase tracking-widest text-[#C8A75B] font-bold block mb-1">PENGALAMAN PREMIUM</span>
-                  <h4 className="font-serif text-white text-[16px] font-semibold leading-tight">BMW Spray Penyegar Wajah</h4>
+                  <h4 className="font-serif text-white text-[16px] font-semibold leading-tight">Black Millenia Water (BMW) Spray</h4>
                 </div>
               </div>
             </div>
@@ -335,14 +339,14 @@ export default function ProductsView({ onOpenConsultation }: ProductsViewProps) 
               <div className="relative w-full aspect-square rounded-2xl border-2 border-[#C8A75B]/30 overflow-hidden shadow-2xl bg-white p-1.5 group/img-view">
                 <img 
                   src={dropImage} 
-                  alt="BMW Drop" 
+                  alt="Black Millenia Water (BMW) Drop" 
                   className="w-full h-full object-cover rounded-xl transition-transform duration-700 group-hover/img-view:scale-105"
                   referrerPolicy="no-referrer"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none rounded-xl" />
                 <div className="absolute bottom-6 left-8 text-left z-10">
                   <span className="text-[10px] uppercase tracking-widest text-[#C8A75B] font-bold block mb-1">FORMULA BOTANI</span>
-                  <h4 className="font-serif text-white text-[16px] font-semibold leading-tight">BMW Drop Titisan Kesejahteraan</h4>
+                  <h4 className="font-serif text-white text-[16px] font-semibold leading-tight">Black Millenia Water (BMW) Drop</h4>
                 </div>
               </div>
             </div>
@@ -352,12 +356,12 @@ export default function ProductsView({ onOpenConsultation }: ProductsViewProps) 
           <div className="lg:col-span-7 text-left space-y-6">
             <div className="space-y-2">
               <span className="text-[11px] sm:text-[12px] uppercase tracking-widest text-[#C8A75B] font-bold block">NUTRISI LUAR BIASA</span>
-              <h2 className="font-serif text-[24px] sm:text-[28px] md:text-[32px] lg:text-[36px] xl:text-[42px] text-[#1F1F1F] font-bold tracking-tight leading-tight">BMW Drop</h2>
+              <h2 className="font-serif text-[24px] sm:text-[28px] md:text-[32px] lg:text-[36px] xl:text-[42px] text-[#1F1F1F] font-bold tracking-tight leading-tight">Black Millenia Water (BMW) Drop</h2>
               <p className="font-sans text-[13.5px] sm:text-[15px] uppercase tracking-wider text-[#1F1F1F]/60 font-semibold">Suplemen Kesejahteraan Premium &bull; RM 139.90</p>
             </div>
 
             <p className="font-sans text-[13px] sm:text-[14px] text-[#1F1F1F]/80 leading-[1.7] font-light">
-              Titisan premium BMW Drop dirumus untuk menyokong metabolisme harian dan kesejahteraan organik seluruh tubuh anda bagi gaya hidup sihat aktif yang cemerlang.
+              Black Millenia Water (BMW) Drop dirumus untuk menyokong metabolisme harian dan kesejahteraan organik seluruh tubuh anda bagi gaya hidup sihat aktif yang cemerlang.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-2">
@@ -425,7 +429,7 @@ export default function ProductsView({ onOpenConsultation }: ProductsViewProps) 
 
             <div className="pt-4 flex flex-col sm:flex-row gap-4">
               <a
-                href={getWhatsAppBuyLink("Black Millenia Drop", "RM 139.90", getQuantity("drop"))}
+                href={getWhatsAppBuyLink("Black Millenia Water (BMW) Drop", "RM 139.90", getQuantity("drop"))}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="cursor-pointer flex-1 h-[48px] sm:h-[52px] bg-[#1F1F1F] hover:bg-[#C8A75B] hover:text-black text-white text-[14px] sm:text-[15px] uppercase tracking-wider font-bold transition-all rounded-lg shadow-md flex items-center justify-center text-center"
@@ -434,7 +438,7 @@ export default function ProductsView({ onOpenConsultation }: ProductsViewProps) 
                 BELI SEGERA (RM {(139.90 * getQuantity("drop")).toFixed(2).replace(/\.00$/, "")})
               </a>
               <button
-                onClick={() => onOpenConsultation("consult", "Black Millenia Drop")}
+                onClick={() => onOpenConsultation("consult", "Black Millenia Water (BMW) Drop")}
                 className="cursor-pointer h-[48px] sm:h-[52px] px-6 bg-white border-2 border-[#C8A75B]/40 hover:border-[#C8A75B] text-[#C8A75B] hover:text-[#1F1F1F] text-[13px] sm:text-[14px] uppercase tracking-wider font-extrabold transition-all rounded-lg flex items-center justify-center text-center"
                 id="consult-drop-btn"
               >
@@ -462,9 +466,9 @@ export default function ProductsView({ onOpenConsultation }: ProductsViewProps) 
                <thead>
                  <tr className="bg-[#FAF8F1] border-b border-[#C8A75B]/20">
                    <th className="p-6 uppercase tracking-wider font-bold text-[#1F1F1F]/70 w-1/4">Ciri Utama</th>
-                   <th className="p-6 uppercase tracking-wider font-bold text-[#C8A75B]">BMW Essence</th>
-                   <th className="p-6 uppercase tracking-wider font-bold text-[#C8A75B]">BMW Spray</th>
-                   <th className="p-6 uppercase tracking-wider font-bold text-[#C8A75B]">BMW Drop</th>
+                   <th className="p-6 uppercase tracking-wider font-bold text-[#C8A75B]">Black Millenia Water (BMW) Essence</th>
+                   <th className="p-6 uppercase tracking-wider font-bold text-[#C8A75B]">Black Millenia Water (BMW) Spray</th>
+                   <th className="p-6 uppercase tracking-wider font-bold text-[#C8A75B]">Black Millenia Water (BMW) Drop</th>
                  </tr>
                </thead>
                <tbody className="divide-y divide-[#EFEAE2]/60 text-[#1F1F1F]/80">
@@ -504,9 +508,9 @@ export default function ProductsView({ onOpenConsultation }: ProductsViewProps) 
           <h3 className="font-serif text-[18px] sm:text-[22px] md:text-[26px] font-bold text-[#1F1F1F]">
             Masih Ragu Tentang Pilihan Terbaik?
           </h3>
-          <p className="font-sans text-[13px] sm:text-[14px] text-[#1F1F1F]/70 leading-[1.7] max-w-2xl mx-auto font-light">
-            Tidak pasti produk mana yang sesuai dengan rutin dan gaya hidup anda? Usah bimbang. Pasukan perunding kesihatan AquivaGold sedia membimbing anda secara peribadi percuma di talian sekarang.
-          </p>
+            <p className="font-sans text-[13px] sm:text-[14px] text-[#1F1F1F]/70 leading-[1.7] max-w-2xl mx-auto font-light">
+              Tidak pasti produk mana yang sesuai dengan rutin dan gaya hidup anda? Usah bimbang. Pasukan perunding kesihatan AQUIVA GOLD sedia membimbing anda secara peribadi percuma di talian sekarang.
+            </p>
 
           <button
             onClick={() => onOpenConsultation("consult")}

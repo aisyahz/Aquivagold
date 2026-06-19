@@ -26,7 +26,7 @@ export default function Collection({ onSelectProduct, onOpenConsultation }: Coll
     const totalText = qty > 1 ? ` (Jumlah keseluruhan: RM${total})` : "";
     
     return `https://wa.me/60172887123?text=${encodeURIComponent(
-      `Hi Aquiva Gold, saya mahu membuat tempahan segera untuk ${qtyText}${productTitle} (${priceStr}${qty > 1 ? '/unit' : ''})${totalText}. Boleh bantu saya dengan butiran pembayaran dan penghantaran?`
+      `Hi AQUIVA GOLD, saya mahu membuat tempahan segera untuk ${qtyText}${productTitle} (${priceStr}${qty > 1 ? '/unit' : ''})${totalText}. Boleh bantu saya dengan butiran pembayaran dan penghantaran?`
     )}`;
   };
 
@@ -39,7 +39,7 @@ export default function Collection({ onSelectProduct, onOpenConsultation }: Coll
             Pameran Apotekari Mewah
           </span>
           <h2 className="font-serif text-3xl md:text-4xl font-medium tracking-tight text-charcoal mb-4">
-            Koleksi Black Millenia
+            Koleksi Black Millenia Water (BMW)
           </h2>
           <p className="text-xs md:text-sm text-charcoal-light font-light leading-relaxed">
             Disimpan dengan rapi di dalam botol kaca hitam ultraungu legap untuk memelihara ketulenan bahan aktifnya. Temui formulasi eksklusif yang dirumus khusus untuk penyegaran botani semula jadi, terapi hidro deria, serta rutin harian yang lengkap.

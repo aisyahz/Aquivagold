@@ -28,7 +28,7 @@ export default function WhyChooseUs() {
             Kenapa Memilih Kami
           </span>
           <h2 className="font-serif text-3xl md:text-4xl font-medium tracking-tight text-charcoal mb-4">
-            Keistimewaan AquivaGold
+            Keistimewaan AQUIVA GOLD
           </h2>
           <div className="w-16 h-[1px] bg-gold mx-auto" />
         </div>

@@ -117,7 +117,7 @@ export default function PlaceholderImage({
             {label}
           </span>
           <span className="font-sans text-[9px] text-[#C8A75B] uppercase tracking-[0.2em] block font-medium">
-            AquivaGold Black Millenia
+            AQUIVA GOLD Black Millenia
           </span>
         </div>
       </div>
