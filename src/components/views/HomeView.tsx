@@ -29,7 +29,8 @@ import dropImage from "../../assets/images/Drop.jpeg";
 import halalMestiImage from "../../assets/images/halal mesti.jpeg";
 import kkmImage from "../../assets/images/kkm.jpeg";
 import labReportImage from "../../assets/images/lab test report.jpeg";
-import spaImage from "../../assets/images/spa_kerusi.png";
+import spaImage from "../../assets/images/spa_kerusi.jpg";
+import spaImage1 from "../../assets/images/spa_kerusi.png";
 
 interface HomeViewProps {
   onNavigate: (view: string) => void;
@@ -795,7 +796,7 @@ export default function HomeView({ onNavigate, onOpenConsultation }: HomeViewPro
               <div className="space-y-3">
                 <div className="relative aspect-[1.35] rounded-xl overflow-hidden border border-[#B58D20]/20 bg-[#161614] shadow-md flex items-center justify-center p-3">
                   <img 
-                    src={spaImage} 
+                    src={spaImage1} 
                     alt="AQUIVA GOLD Home Therapy Premium Bundle" 
                     className="w-full h-full object-cover opacity-85"
                     referrerPolicy="no-referrer"
