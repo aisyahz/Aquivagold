@@ -96,12 +96,12 @@ export default function FAQView() {
   };
 
   return (
-    <div className="space-y-12 pb-12">
+    <div className="space-y-10 pb-12">
       
       {/* HERO BANNER */}
-      <section className="bg-[#FAF8F5] py-16 border-b border-[#B58D20]/15 text-center max-w-full">
-        <div className="max-w-[1280px] mx-auto px-6 sm:px-8 space-y-3">
-          <span className="text-[11px] sm:text-[12px] uppercase tracking-[0.3em] text-[#B58D20] font-bold block">PUSAT BANTUAN LAYANAN</span>
+      <section className="bg-[#FAF8F5] py-12 sm:py-14 border-b border-[#B58D20]/15 text-center max-w-full">
+        <div className="max-w-[1280px] mx-auto px-6 sm:px-8 space-y-2.5">
+          <span className="text-[11px] sm:text-[11.5px] uppercase tracking-[0.3em] text-[#B58D20] font-bold block">PUSAT BANTUAN LAYANAN</span>
           <h1 className="text-h1 text-[#1A1A1A]">
             Soalan Lazim (FAQ)
           </h1>
@@ -114,17 +114,17 @@ export default function FAQView() {
 
       {/* FILTER SEARCH CRITERIA */}
       <section className="max-w-[1280px] mx-auto px-6 sm:px-8">
-        <div className="bg-white border border-[#B58D20]/20 p-6 rounded-2xl space-y-6 max-w-4xl mx-auto">
+        <div className="bg-white border border-[#B58D20]/20 p-5 rounded-xl space-y-5 max-w-4xl mx-auto">
           
           {/* Real-time search filter bar */}
           <div className="relative">
-            <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-[#1A1A1A]/40" size={18} />
+            <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-[#1A1A1A]/40" size={16} />
             <input
               type="text"
               placeholder="Cari soalan anda di sini..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-11 pr-4 py-3.5 bg-[#FAF8F5] border border-[#B58D20]/20 focus:border-[#B58D20] focus:outline-none rounded-xl text-xs sm:text-sm text-[#1A1A1A] placeholder-[#1A1A1A]/40 font-medium"
+              className="w-full pl-10 pr-4 py-3 bg-[#FAF8F5] border border-[#B58D20]/20 focus:border-[#B58D20] focus:outline-none rounded-lg text-xs sm:text-sm text-[#1A1A1A] placeholder-[#1A1A1A]/40 font-medium"
             />
           </div>
 
@@ -142,13 +142,13 @@ export default function FAQView() {
                   setActiveCategory(tab.id as any);
                   setOpenId(null);
                 }}
-                className={`cursor-pointer px-4 py-2 rounded-full border text-[10px] uppercase tracking-wider font-bold transition-all duration-300 flex items-center gap-1.5 ${
+                className={`cursor-pointer px-4 py-1.5 rounded-full border text-[10px] uppercase tracking-wider font-bold transition-all duration-300 flex items-center gap-1.5 ${
                   activeCategory === tab.id
                     ? "bg-[#1A1A1A] text-white border-transparent"
                     : "bg-white text-[#1A1A1A]/60 border-[#B58D20]/20 hover:border-[#B58D20] hover:text-[#1A1A1A]"
                 }`}
               >
-                <tab.icon size={11} />
+                <tab.icon size={10} />
                 <span>{tab.label}</span>
               </button>
             ))}
@@ -158,28 +158,28 @@ export default function FAQView() {
       </section>
 
       {/* ACCORDION INTERFACE ZONE */}
-      <section className="max-w-3xl mx-auto px-6 sm:px-8 space-y-4">
+      <section className="max-w-3xl mx-auto px-6 sm:px-8 space-y-3.5">
         {filteredFaqs.length > 0 ? (
           filteredFaqs.map((faq) => {
             const isOpen = openId === faq.id;
             return (
               <div 
                 key={faq.id}
-                className="bg-white border border-[#B58D20]/15 rounded-2xl overflow-hidden transition-all duration-300 shadow-xs hover:border-[#B58D20]/45"
+                className="bg-white border border-[#B58D20]/15 rounded-xl overflow-hidden transition-all duration-300 shadow-xs hover:border-[#B58D20]/45"
               >
                 {/* Accordion header line */}
                 <button
                   onClick={() => toggleOpen(faq.id)}
-                  className="cursor-pointer w-full p-5 text-left flex items-start justify-between gap-4"
+                  className="cursor-pointer w-full p-4 text-left flex items-start justify-between gap-4.5"
                 >
-                  <div className="flex gap-3">
-                    <HelpCircle className="text-[#B58D20] shrink-0 mt-0.5" size={18} />
-                    <span className="font-serif text-sm sm:text-base font-bold text-[#1A1A1A]">
+                  <div className="flex gap-2.5">
+                    <HelpCircle className="text-[#B58D20] shrink-0 mt-0.5" size={16} />
+                    <span className="font-serif text-sm sm:text-[15px] font-bold text-[#1A1A1A]">
                       {faq.question}
                     </span>
                   </div>
                   <ChevronDown 
-                    size={16} 
+                    size={15} 
                     className={`text-[#B58D20] transition-transform duration-300 shrink-0 mt-1 ${isOpen ? "rotate-180" : ""}`} 
                   />
                 </button>
@@ -191,9 +191,9 @@ export default function FAQView() {
                       initial={{ height: 0, opacity: 0 }}
                       animate={{ height: "auto", opacity: 1 }}
                       exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.3 }}
+                      transition={{ duration: 0.25 }}
                     >
-                      <div className="px-5 pb-5 pt-1 border-t border-[#EFEAE2] text-xs sm:text-sm text-[#4A4A4A] leading-relaxed font-normal pl-11 bg-[#FAF8F5]/45">
+                      <div className="px-4 pb-4 pt-0.5 border-t border-[#EFEAE2] text-xs sm:text-[13px] text-[#4A4A4A] leading-relaxed font-normal pl-9 bg-[#FAF8F5]/45">
                         {faq.answer}
                       </div>
                     </motion.div>
@@ -203,7 +203,7 @@ export default function FAQView() {
             );
           })
         ) : (
-          <div className="text-center py-12 space-y-2">
+          <div className="text-center py-10 space-y-1.5">
             <p className="font-serif text-base text-[#1A1A1A]/50 font-bold">Tiada Soalan Menepati Carian Anda</p>
             <p className="text-xs text-[#1A1A1A]/40 max-w-xs mx-auto">Cuba gunakan kata kunci ringkas alternatif seperti &lsquo;bateri&rsquo; atau &lsquo;penghantaran&rsquo;.</p>
           </div>
@@ -212,9 +212,9 @@ export default function FAQView() {
 
       {/* FOOTER CALL FOR SUPPORT */}
       <section className="max-w-[1280px] mx-auto px-6 sm:px-8">
-        <div className="bg-[#1A1A1A] text-white border border-[#B58D20]/25 rounded-2xl p-8 text-center max-w-2xl mx-auto space-y-6 shadow-xl">
-          <h3 className="font-serif text-lg sm:text-2xl text-white font-medium">Masih Mempunyai Sebarang Musykil?</h3>
-          <p className="font-sans text-xs sm:text-sm text-neutral-300 max-w-md mx-auto font-normal leading-relaxed">
+        <div className="bg-[#1A1A1A] text-white border border-[#B58D20]/25 rounded-xl p-6 text-center max-w-2xl mx-auto space-y-5 shadow-xl">
+          <h3 className="font-serif text-base sm:text-xl text-white font-medium">Masih Mempunyai Sebarang Musykil?</h3>
+          <p className="font-sans text-[12.5px] sm:text-[13px] text-neutral-300 max-w-md mx-auto font-normal leading-relaxed">
             Jika panduan ringkas di atas masih tidak menjawab pertanyaan tersendiri anda, hubungi perunding butik utama kami secara peribadi harian talian.
           </p>
 
@@ -222,7 +222,7 @@ export default function FAQView() {
             href="https://wa.me/601139900920?text=Hi%20AQUIVA%20GOLD%2C%20saya%20mempunyai%20soalan%20berkenaan%20Koleksi%20Black%20Millenia."
             target="_blank"
             rel="noopener noreferrer"
-            className="cursor-pointer inline-flex h-[48px] px-8 bg-[#B58D20] hover:bg-white hover:text-[#1A1A1A] text-white hover:border-[#B58D20] text-xs uppercase tracking-widest font-bold transition-all duration-300 rounded-lg items-center justify-center shadow-lg"
+            className="cursor-pointer inline-flex h-[44px] px-6 bg-[#B58D20] hover:bg-white hover:text-[#1A1A1A] text-white hover:border-[#B58D20] text-xs uppercase tracking-widest font-bold transition-all duration-300 rounded-lg items-center justify-center shadow-lg pb-0.5"
           >
             HUBUNGI SAYA DI WHATSAPP
           </a>

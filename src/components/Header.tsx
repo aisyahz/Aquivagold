@@ -48,6 +48,13 @@ export default function Header({ onOpenConsultation, currentView, onNavigate }: 
     { label: "FAQ", view: "faq" },
   ];
 
+  const desktopLinks = [
+    { label: "Utama", view: "home" },
+    { label: "Koleksi", view: "koleksi" },
+    { label: "Kelebihan", view: "kelebihan" },
+    { label: "Usahawan", view: "usahawan" },
+  ];
+
   const handleLinkClick = (view: string, e: React.MouseEvent) => {
     e.preventDefault();
     setIsMenuDrawerOpen(false);
@@ -103,7 +110,7 @@ export default function Header({ onOpenConsultation, currentView, onNavigate }: 
 
           {/* CENTER: Desktop Menu Links (Yelp style: Logo | Menu | CTA) */}
           <nav className="hidden lg:flex items-center space-x-6 shrink-0" id="desktop-nav-menu" aria-label="Desktop Navigation">
-            {navLinks.map((link) => (
+            {desktopLinks.map((link) => (
               <button
                 key={link.view}
                 onClick={(e) => handleLinkClick(link.view, e)}
@@ -165,7 +172,7 @@ export default function Header({ onOpenConsultation, currentView, onNavigate }: 
             
             <button
               onClick={() => setIsMenuDrawerOpen(true)}
-              className="lg:hidden p-2 sm:p-2.5 text-[#1F1F1F] hover:text-[#B58D20] hover:bg-[#B58D20]/10 transition-all cursor-pointer rounded-full min-h-[44px] min-w-[44px] flex items-center justify-center border border-[#B58D20]/20"
+              className="p-2 sm:p-2.5 text-[#1F1F1F] hover:text-[#B58D20] hover:bg-[#B58D20]/10 transition-all cursor-pointer rounded-full min-h-[44px] min-w-[44px] flex items-center justify-center border border-[#B58D20]/20"
               aria-label="Open navigation menu"
               id="menu-toggle"
             >

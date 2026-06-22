@@ -27,77 +27,77 @@ html {
   color: #FAF8F5;
 }
 
-/* Yelp-inspired typography helper classes for older demographic legibility */
+/* Yelp-inspired typography helper classes for older demographic legibility - Scaled down for high-end luxury feel */
 .text-h1 {
   font-family: var(--font-display);
-  font-size: 40px;
+  font-size: 34px;
   line-height: 1.25;
   font-weight: 700;
   letter-spacing: -0.02em;
 }
 @media (min-width: 1024px) {
   .text-h1 {
-    font-size: 56px;
+    font-size: 48px;
     line-height: 1.15;
   }
 }
 
 .text-h2 {
   font-family: var(--font-display);
-  font-size: 32px;
+  font-size: 26px;
   line-height: 1.3;
   font-weight: 700;
   letter-spacing: -0.015em;
 }
 @media (min-width: 1024px) {
   .text-h2 {
-    font-size: 40px;
+    font-size: 34px;
     line-height: 1.2;
   }
 }
 
 .text-h3 {
   font-family: var(--font-display);
-  font-size: 24px;
+  font-size: 20px;
   line-height: 1.35;
   font-weight: 600;
   letter-spacing: -0.01em;
 }
 @media (min-width: 1024px) {
   .text-h3 {
-    font-size: 28px;
+    font-size: 24px;
     line-height: 1.25;
   }
 }
 
 .text-body {
   font-family: var(--font-sans);
-  font-size: 16px;
+  font-size: 14.5px;
   line-height: 1.65;
   font-weight: 400;
 }
 @media (min-width: 1024px) {
   .text-body {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1.65;
   }
 }
 
 .text-small {
   font-family: var(--font-sans);
-  font-size: 14px;
+  font-size: 13px;
   line-height: 1.6;
 }
 
 /* Strict spacing modifiers based on multiples of 4 and 8 */
 .spacing-p-section {
-  padding-top: 64px;
-  padding-bottom: 64px;
+  padding-top: 52px;
+  padding-bottom: 52px;
 }
 @media (min-width: 1024px) {
   .spacing-p-section {
-    padding-top: 96px;
-    padding-bottom: 96px;
+    padding-top: 76px;
+    padding-bottom: 76px;
   }
 }
 
@@ -150,4 +150,23 @@ html {
   animation: slow-pulse 3s infinite ease-in-out;
 }
 
-
+/* HIGH-END MOBILE SCROLL FOCUS SOP STANDARDS */
+@media (max-width: 767px) {
+  html {
+    scroll-snap-type: y mandatory;
+    scroll-padding-top: 76px; /* Offset to prevent floating header from overlapping section top headers */
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  /* Make every section in view focus on complete block */
+  section, footer {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
+  
+  /* Smooth scrolling across snaps */
+  html, body {
+    scroll-behavior: smooth;
+  }
+}
