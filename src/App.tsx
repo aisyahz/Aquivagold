@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Product } from "./types";
 
 // Layout & Global Components
+import AnnouncementBar from "./components/AnnouncementBar";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import StickyWhatsApp from "./components/StickyWhatsApp";
@@ -93,6 +94,9 @@ export default function App() {
   return (
     <div className="bg-[#F6F3EE] text-[#1F1F1F] font-sans relative min-h-screen selection:bg-[#C8A75B] selection:text-white" id="main-layout-container">
       
+      {/* Top scrolling announcement banner */}
+      <AnnouncementBar />
+
       {/* Floating Translucent Header with elegant navigation */}
       <Header
         onOpenConsultation={() => handleOpenConsultation("consult", "")}
@@ -100,8 +104,8 @@ export default function App() {
         onNavigate={navigateTo}
       />
 
-      {/* Main content viewport block styled with comfortable top padding */}
-      <main className="pt-[76px] lg:pt-[84px] min-h-[calc(100vh-400px)]">
+      {/* Main content viewport block styled with comfortable top padding, adjusted for the responsive AnnouncementBar height */}
+      <main className="pt-[112px] sm:pt-[116px] lg:pt-[124px] min-h-[calc(100vh-400px)]">
         {renderViewContent()}
       </main>
 

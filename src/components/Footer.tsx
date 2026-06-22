@@ -1,5 +1,5 @@
 import React from "react";
-import { Phone, MapPin, Instagram, Facebook, Award, ArrowUp } from "lucide-react";
+import { Phone, MapPin, Facebook, Award, ArrowUp } from "lucide-react";
 
 interface FooterProps {
   onOpenConsultation: () => void;
@@ -38,10 +38,13 @@ export default function Footer({ onOpenConsultation, onNavigate }: FooterProps) 
           </p>
 
           <div className="pt-2 flex items-center space-x-4">
-            <a href="#" className="p-2.5 border border-[#B58D20]/30 hover:border-[#B58D20] hover:text-[#B58D20] transition-colors rounded-full text-neutral-800" aria-label="Our Instagram">
-              <Instagram size={16} />
-            </a>
-            <a href="#" className="p-2.5 border border-[#B58D20]/30 hover:border-[#B58D20] hover:text-[#B58D20] transition-colors rounded-full text-neutral-800" aria-label="Our Facebook">
+            <a 
+              href="https://www.facebook.com/profile.php?id=61589897260406" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="p-2.5 border border-[#B58D20]/30 hover:border-[#B58D20] hover:text-[#B58D20] transition-colors rounded-full text-neutral-800" 
+              aria-label="Our Facebook"
+            >
               <Facebook size={16} />
             </a>
           </div>

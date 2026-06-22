@@ -81,10 +81,10 @@ export default function Header({ onOpenConsultation, currentView, onNavigate }: 
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-40 transition-all duration-500 ${
+        className={`fixed left-0 right-0 z-40 transition-all duration-500 ${
           isScrolled
-            ? "bg-[#FAF8F5]/95 backdrop-blur-md py-3 border-b border-[#B58D20]/20 shadow-sm"
-            : "bg-[#FAF8F5]/90 backdrop-blur-sm py-4 border-b border-[#B58D20]/10"
+            ? "top-0 bg-[#FAF8F5]/95 backdrop-blur-md py-3 border-b border-[#B58D20]/20 shadow-sm"
+            : "top-[36px] sm:top-[40px] bg-[#FAF8F5]/90 backdrop-blur-sm py-4 border-b border-[#B58D20]/10"
         }`}
         id="main-header"
       >
