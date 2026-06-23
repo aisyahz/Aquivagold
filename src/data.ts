@@ -18,7 +18,8 @@ export const PRODUCTS: Product[] = [
       "Reka bentuk botol yang praktikal dan mudah dibawa",
       "Sesuai disembur sebelum atau selepas solekan"
     ],
-    price: "RM 59.90",
+    price: "RM 59.00",
+    originalPrice: "RM 79.00",
     images: [
       sprayImage,
       heroBanner
@@ -54,14 +55,15 @@ export const PRODUCTS: Product[] = [
     id: "millenia-essence",
     title: "Black Millenia Water (BMW) Essence",
     category: "Terapi Mandian Essence Premium",
-    description: "Essence mandian premium murni bertaraf spa untuk ritual relaksasi menyeluruh di kediaman peribadi anda.",
+    description: "Black Millenia Water (BMW) Essence is intended for Therapy Tangas usage.",
     benefits: [
       "Mencipta suasana ritual rehat yang sangat tenang",
       "Membawakan suasana spa lima bintang di rumah anda",
       "Sesuai sebagai sebahagian daripada rutin pemulihan diri",
       "Haruman botani aromaterapi yang menenangkan minda"
     ],
-    price: "RM 69.90",
+    price: "RM 65.00",
+    originalPrice: "RM 85.00",
     images: [
       essenceImage,
       heroBanner
@@ -103,7 +105,8 @@ export const PRODUCTS: Product[] = [
       "Membantu membina rutin penjagaan diri yang bersistematik",
       "Formulasi berkualiti tinggi demi gaya hidup aktif harian"
     ],
-    price: "RM 139.90",
+    price: "RM 179.00",
+    originalPrice: "RM 199.00",
     images: [
       dropImage,
       heroBanner

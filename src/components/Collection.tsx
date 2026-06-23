@@ -75,7 +75,7 @@ export default function Collection({ onSelectProduct, onOpenConsultation }: Coll
                     >
                       {/* Premium Badge tag */}
                       <span className="absolute top-4 left-4 z-10 bg-charcoal text-white text-[9px] uppercase tracking-widest px-2.5 py-1 font-medium font-display">
-                        Julat Khas: RM 200 - RM 500
+                        Harga Pengenalan
                       </span>
 
                       {/* Main Product image with luxury hover scale */}
@@ -138,9 +138,12 @@ export default function Collection({ onSelectProduct, onOpenConsultation }: Coll
 
                     {/* Active Price Anchor */}
                     <div className="pt-2 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-                      <div className="flex items-center space-x-3">
+                      <div className="flex flex-wrap items-center gap-2.5">
                         <span className="text-xs uppercase tracking-widest text-[#2B2B2B] font-light">Anggaran Nilai Devosi:</span>
-                        <span className="font-serif text-xl font-medium text-charcoal">{product.price}</span>
+                        {product.originalPrice && (
+                          <span className="text-charcoal-light/50 text-[12px] font-semibold line-through">N.P {product.originalPrice}</span>
+                        )}
+                        <span className="font-serif text-xl font-bold text-charcoal">I.P {product.price}</span>
                         <span className="text-[10px] uppercase tracking-wider text-charcoal-light/60"> / Sebotol</span>
                       </div>
 

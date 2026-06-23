@@ -138,8 +138,11 @@ export default function ProductDetailModal({ product, onClose, onOpenConsultatio
                 <h3 className="font-serif text-2xl md:text-3xl font-medium tracking-tight text-charcoal">
                   {product.title}
                 </h3>
-                <div className="flex items-center space-x-4 mt-2">
-                  <span className="font-serif text-2xl font-light text-charcoal">{product.price}</span>
+                <div className="flex flex-wrap items-center gap-3 mt-2">
+                  {product.originalPrice && (
+                    <span className="text-charcoal-light/40 text-base font-semibold line-through">N.P {product.originalPrice}</span>
+                  )}
+                  <span className="font-serif text-2xl font-bold text-charcoal">I.P {product.price}</span>
                   <span className="text-[10px] bg-[#EFEAE2] text-charcoal-light uppercase tracking-wider px-2 py-0.5 font-display">
                     Formulasi Suci &amp; Tulen
                   </span>

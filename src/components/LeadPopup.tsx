@@ -335,9 +335,9 @@ export default function LeadPopup({
                     onChange={handleBuyChange}
                     className="w-full px-4 py-3 bg-white border border-stone text-base text-charcoal focus:outline-none focus:border-gold focus:ring-2 focus:ring-gold/20 transition-all duration-300 rounded-md min-h-[48px]"
                   >
-                    <option value="Black Millenia Water (BMW) Spray">Black Millenia Water (BMW) Spray (RM 59.90)</option>
-                    <option value="Black Millenia Water (BMW) Essence">Black Millenia Water (BMW) Essence (RM 69.90)</option>
-                    <option value="Black Millenia Water (BMW) Drop">Black Millenia Water (BMW) Drop (RM 139.90)</option>
+                    <option value="Black Millenia Water (BMW) Spray">Black Millenia Water (BMW) Spray (I.P: RM 59.00)</option>
+                    <option value="Black Millenia Water (BMW) Essence">Black Millenia Water (BMW) Essence (I.P: RM 65.00)</option>
+                    <option value="Black Millenia Water (BMW) Drop">Black Millenia Water (BMW) Drop (I.P: RM 179.00)</option>
                     <option value="Home Therapy Set">Home Therapy Set (RM 650)</option>
                     <option value="Saya Tidak Pasti">Saya Tidak Pasti</option>
                   </select>

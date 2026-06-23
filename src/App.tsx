@@ -8,6 +8,7 @@ import Footer from "./components/Footer";
 import StickyWhatsApp from "./components/StickyWhatsApp";
 import LeadPopup from "./components/LeadPopup";
 import TrustStrip from "./components/TrustStrip";
+import ComboDealPopup from "./components/ComboDealPopup";
 
 // Sub View Pages (8 Pages)
 import HomeView from "./components/views/HomeView";
@@ -131,6 +132,9 @@ export default function App() {
         preselectedProduct={preselectedProduct}
         initialFlow={leadFormFlow}
       />
+
+      {/* Specialty 230626 Landing Combo Deal Modal */}
+      <ComboDealPopup currentView={currentView} />
 
     </div>
   );

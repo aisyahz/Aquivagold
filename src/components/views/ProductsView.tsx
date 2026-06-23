@@ -121,11 +121,14 @@ export default function ProductsView({ onOpenConsultation }: ProductsViewProps) 
             <div className="space-y-2">
               <span className="text-[11px] sm:text-[12px] uppercase tracking-widest text-[#C8A75B] font-bold block">MEMULIHKAN KETENANGAN MINDA</span>
               <h2 className="font-serif text-[24px] sm:text-[28px] md:text-[32px] lg:text-[36px] xl:text-[42px] text-[#1F1F1F] font-bold tracking-tight leading-tight">Black Millenia Water (BMW) Essence</h2>
-              <p className="font-sans text-[13.5px] sm:text-[15px] uppercase tracking-wider text-[#1F1F1F]/60 font-semibold">Terapi Mandian Premium &bull; RM 69.90</p>
+              <div className="flex flex-wrap items-center gap-3 font-sans">
+                <span className="text-[#1F1F1F]/40 text-[12.5px] sm:text-[13.5px] uppercase tracking-wider font-semibold line-through">N.P RM 85.00</span>
+                <span className="text-[#C8A75B] text-[15px] sm:text-[17px] uppercase tracking-[0.05em] font-extrabold font-serif">I.P RM 65.00</span>
+              </div>
             </div>
 
             <p className="font-sans text-[13px] sm:text-[14px] text-[#1F1F1F]/80 leading-[1.7] font-light">
-              Black Millenia Water (BMW) Essence merangkumi pati pati botani gred terkawal yang ditala khusus untuk ritual spa harian bertaraf tinggi. Ia membangkitkan aromaterapi tulen yang menenangkan ketegangan fizikal murni anda.
+              Black Millenia Water (BMW) Essence is intended for Therapy Tangas usage. This premium formulation of botanical oils is designed to accompany your thermal physical routines and wellness rituals.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-2">
@@ -193,13 +196,13 @@ export default function ProductsView({ onOpenConsultation }: ProductsViewProps) 
 
             <div className="pt-4 flex flex-col sm:flex-row gap-4">
               <a
-                href={getWhatsAppBuyLink("Black Millenia Water (BMW) Essence", "RM 69.90", getQuantity("essence"))}
+                href={getWhatsAppBuyLink("Black Millenia Water (BMW) Essence", "RM 65.00", getQuantity("essence"))}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="cursor-pointer flex-1 h-[48px] sm:h-[52px] bg-[#1F1F1F] hover:bg-[#C8A75B] hover:text-black text-white text-[14px] sm:text-[15px] uppercase tracking-wider font-bold transition-all rounded-lg shadow-md flex items-center justify-center text-center"
                 id="buy-essence-btn"
               >
-                BELI SEGERA (RM {(69.90 * getQuantity("essence")).toFixed(2).replace(/\.00$/, "")})
+                BELI SEGERA (RM {(65.00 * getQuantity("essence")).toFixed(2).replace(/\.00$/, "")})
               </a>
               <button
                 onClick={() => onOpenConsultation("consult", "Black Millenia Water (BMW) Essence")}
@@ -219,7 +222,10 @@ export default function ProductsView({ onOpenConsultation }: ProductsViewProps) 
             <div className="space-y-2">
               <span className="text-[11px] sm:text-[12px] uppercase tracking-widest text-[#C8A75B] font-bold block">PERLINDUNGAN KELENGKAPAN WAJAH</span>
               <h2 className="font-serif text-[24px] sm:text-[28px] md:text-[32px] lg:text-[36px] xl:text-[42px] text-[#1F1F1F] font-bold tracking-tight leading-tight">Black Millenia Water (BMW) Spray</h2>
-              <p className="font-sans text-[13.5px] sm:text-[15px] uppercase tracking-wider text-[#1F1F1F]/60 font-semibold">Penyegar Kulit Premium &bull; RM 59.90</p>
+              <div className="flex flex-wrap items-center gap-3 font-sans">
+                <span className="text-[#1F1F1F]/40 text-[12.5px] sm:text-[13.5px] uppercase tracking-wider font-semibold line-through">N.P RM 79.00</span>
+                <span className="text-[#C8A75B] text-[15px] sm:text-[17px] uppercase tracking-[0.05em] font-extrabold font-serif">I.P RM 59.00</span>
+              </div>
             </div>
 
             <p className="font-sans text-[13px] sm:text-[14px] text-[#1F1F1F]/80 leading-[1.7] font-light">
@@ -291,13 +297,13 @@ export default function ProductsView({ onOpenConsultation }: ProductsViewProps) 
 
             <div className="pt-4 flex flex-col sm:flex-row gap-4">
               <a
-                href={getWhatsAppBuyLink("Black Millenia Water (BMW) Spray", "RM 59.90", getQuantity("spray"))}
+                href={getWhatsAppBuyLink("Black Millenia Water (BMW) Spray", "RM 59.00", getQuantity("spray"))}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="cursor-pointer flex-1 h-[48px] sm:h-[52px] bg-[#1F1F1F] hover:bg-[#C8A75B] hover:text-black text-white text-[14px] sm:text-[15px] uppercase tracking-wider font-bold transition-all rounded-lg shadow-md flex items-center justify-center text-center"
                 id="buy-spray-btn"
               >
-                BELI SEGERA (RM {(59.90 * getQuantity("spray")).toFixed(2).replace(/\.00$/, "")})
+                BELI SEGERA (RM {(59.00 * getQuantity("spray")).toFixed(2).replace(/\.00$/, "")})
               </a>
               <button
                 onClick={() => onOpenConsultation("consult", "Black Millenia Water (BMW) Spray")}
@@ -357,7 +363,10 @@ export default function ProductsView({ onOpenConsultation }: ProductsViewProps) 
             <div className="space-y-2">
               <span className="text-[11px] sm:text-[12px] uppercase tracking-widest text-[#C8A75B] font-bold block">NUTRISI LUAR BIASA</span>
               <h2 className="font-serif text-[24px] sm:text-[28px] md:text-[32px] lg:text-[36px] xl:text-[42px] text-[#1F1F1F] font-bold tracking-tight leading-tight">Black Millenia Water (BMW) Drop</h2>
-              <p className="font-sans text-[13.5px] sm:text-[15px] uppercase tracking-wider text-[#1F1F1F]/60 font-semibold">Suplemen Kesejahteraan Premium &bull; RM 139.90</p>
+              <div className="flex flex-wrap items-center gap-3 font-sans">
+                <span className="text-[#1F1F1F]/40 text-[12.5px] sm:text-[13.5px] uppercase tracking-wider font-semibold line-through">N.P RM 199.00</span>
+                <span className="text-[#C8A75B] text-[15px] sm:text-[17px] uppercase tracking-[0.05em] font-extrabold font-serif">I.P RM 179.00</span>
+              </div>
             </div>
 
             <p className="font-sans text-[13px] sm:text-[14px] text-[#1F1F1F]/80 leading-[1.7] font-light">
@@ -429,13 +438,13 @@ export default function ProductsView({ onOpenConsultation }: ProductsViewProps) 
 
             <div className="pt-4 flex flex-col sm:flex-row gap-4">
               <a
-                href={getWhatsAppBuyLink("Black Millenia Water (BMW) Drop", "RM 139.90", getQuantity("drop"))}
+                href={getWhatsAppBuyLink("Black Millenia Water (BMW) Drop", "RM 179.00", getQuantity("drop"))}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="cursor-pointer flex-1 h-[48px] sm:h-[52px] bg-[#1F1F1F] hover:bg-[#C8A75B] hover:text-black text-white text-[14px] sm:text-[15px] uppercase tracking-wider font-bold transition-all rounded-lg shadow-md flex items-center justify-center text-center"
                 id="buy-drop-btn"
               >
-                BELI SEGERA (RM {(139.90 * getQuantity("drop")).toFixed(2).replace(/\.00$/, "")})
+                BELI SEGERA (RM {(179.00 * getQuantity("drop")).toFixed(2).replace(/\.00$/, "")})
               </a>
               <button
                 onClick={() => onOpenConsultation("consult", "Black Millenia Water (BMW) Drop")}

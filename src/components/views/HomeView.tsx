@@ -25,6 +25,7 @@ import agentBanner from "../../assets/images/agent-banner.png";
 import essenceImage from "../../assets/images/Essence.jpeg";
 import sprayImage from "../../assets/images/spray.jpeg";
 import dropImage from "../../assets/images/Drop.jpeg";
+import heroBanner2 from "../../assets/images/real-product.jpeg";
 
 import halalMestiImage from "../../assets/images/halal mesti.jpeg";
 import kkmImage from "../../assets/images/kkm.jpeg";
@@ -262,7 +263,7 @@ export default function HomeView({ onNavigate, onOpenConsultation }: HomeViewPro
             >
               <div className="relative w-full max-w-[420px] aspect-[4/3] rounded-3xl border border-[#B58D20]/30 overflow-hidden shadow-2xl bg-[#1D1D1C] p-1.5 group/hero-img">
                 <img 
-                  src={heroBanner} 
+                  src={heroBanner2} 
                   alt="AQUIVA GOLD Premium Spa Experience" 
                   className="w-full h-full object-cover rounded-2xl transition-transform duration-700 group-hover/hero-img:scale-105"
                   referrerPolicy="no-referrer"
@@ -562,7 +563,8 @@ export default function HomeView({ onNavigate, onOpenConsultation }: HomeViewPro
             {
               id: "spray",
               title: "Black Millenia Water (BMW) Spray",
-              price: "RM 59.90",
+              price: "RM 59.00",
+              originalPrice: "RM 79.00",
               usage: "Sembur pada wajah & badan sepanjang hari untuk mendinginkan kulit.",
               desc: "Formula ringan tanpa alkohol yang menyegarkan semula kulit kering serta-merta bila-bila masa diperlukan.",
               img: sprayImage,
@@ -570,15 +572,17 @@ export default function HomeView({ onNavigate, onOpenConsultation }: HomeViewPro
             {
               id: "essence",
               title: "Black Millenia Water (BMW) Essence",
-              price: "RM 69.90",
+              price: "RM 65.00",
+              originalPrice: "RM 85.00",
               usage: "Gunakan ketika mandian harian atau terapi ritual spa anda.",
-              desc: "Sesuai dititiskan ke air mandian suam atau terapi wap herba bagi mewujudkan ketenangan spa eksklusif.",
+              desc: "Black Millenia Water (BMW) Essence is intended for Therapy Tangas usage. Neutral and premium botanical oils.",
               img: essenceImage,
             },
             {
               id: "drop",
               title: "Black Millenia Water (BMW) Drop",
-              price: "RM 139.90",
+              price: "RM 179.00",
+              originalPrice: "RM 199.00",
               usage: "Titiskan 10-15 titis ke dalam 500ml air mineral setiap pagi.",
               desc: "Pati botani tulen untuk dicampur bersama minuman kegemaran bagi kelengkapan kesegaran fizikal berpanjangan.",
               img: dropImage,
@@ -598,8 +602,8 @@ export default function HomeView({ onNavigate, onOpenConsultation }: HomeViewPro
                     className="w-full h-full object-cover transition-transform duration-700 group-hover/img:scale-105" 
                   />
                   {/* Price Tag badge */}
-                  <div className="absolute top-2.5 right-2.5 bg-[#1A1A1A]/90 backdrop-blur-xs text-[#B58D20] text-[10.5px] font-bold font-mono py-1 px-3 rounded-full border border-[#B58D20]/30 shadow-md z-10">
-                    Intro: {prod.price}
+                  <div className="absolute top-2.5 right-2.5 bg-[#1A1A1A]/90 backdrop-blur-xs text-[#B58D20] text-[10.5px] font-bold font-sans py-1 px-3 rounded-full border border-[#B58D20]/30 shadow-md z-10">
+                    I.P: {prod.price}
                   </div>
                   
                   {/* Subtle elegant gradient overlay */}
@@ -613,9 +617,9 @@ export default function HomeView({ onNavigate, onOpenConsultation }: HomeViewPro
                   <h3 className="font-serif text-[16px] sm:text-[18px] font-bold text-[#1A1A1A]">{prod.title}</h3>
                   
                   {/* Intro Price row */}
-                  <div className="flex items-center gap-2">
-                    <span className="text-[10px] uppercase text-stone-500 font-bold block">Harga Pengenalan:</span>
-                    <span className="text-base font-serif font-black text-[#B58D20]">{prod.price}</span>
+                  <div className="flex items-baseline gap-2">
+                    <span className="text-[11px] font-semibold text-[#1A1A1A]/40 line-through">N.P {prod.originalPrice}</span>
+                    <span className="text-base font-serif font-black text-[#B58D20]">I.P {prod.price}</span>
                   </div>
 
                   {/* Simple Usage info directly on card */}

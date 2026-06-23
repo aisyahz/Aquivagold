@@ -5,6 +5,7 @@ export interface Product {
   description: string;
   benefits: string[];
   price: string;
+  originalPrice?: string;
   images: string[];
   directions: string;
   faqs: { question: string; answer: string }[];
