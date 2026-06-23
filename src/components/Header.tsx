@@ -39,6 +39,7 @@ export default function Header({ onOpenConsultation, currentView, onNavigate }: 
 
   const navLinks = [
     { label: "Utama", view: "home" },
+    { label: "🎁 Set Kombo", view: "combo-deals" },
     { label: "Koleksi", view: "koleksi" },
     { label: "Kelebihan", view: "kelebihan" },
     { label: "Testimoni", view: "testimoni" },
@@ -50,6 +51,7 @@ export default function Header({ onOpenConsultation, currentView, onNavigate }: 
 
   const desktopLinks = [
     { label: "Utama", view: "home" },
+    { label: "🎁 Set Kombo", view: "combo-deals" },
     { label: "Koleksi", view: "koleksi" },
     { label: "Kelebihan", view: "kelebihan" },
     { label: "Usahawan", view: "usahawan" },
@@ -58,6 +60,10 @@ export default function Header({ onOpenConsultation, currentView, onNavigate }: 
   const handleLinkClick = (view: string, e: React.MouseEvent) => {
     e.preventDefault();
     setIsMenuDrawerOpen(false);
+    if (view === "combo-deals") {
+      window.dispatchEvent(new CustomEvent("open-combo-deal-popup"));
+      return;
+    }
     onNavigate(view);
     window.scrollTo({ top: 0, behavior: "smooth" });
   };

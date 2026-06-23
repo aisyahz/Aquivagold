@@ -62,7 +62,25 @@ export default function ComboDealPopup({ currentView }: ComboDealPopupProps) {
   const modalRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Only trigger on the home view
+    // Custom event listener for manual trigger (bypasses timer/localStorage lockouts)
+    const handleOpenManual = () => {
+      setIsOpen(true);
+    };
+
+    window.addEventListener("open-combo-deal-popup", handleOpenManual);
+
+    // Also check URL hash for explicit developer entry / direct links
+    if (window.location.hash === "#combo" || window.location.hash === "#combo-deals") {
+      setIsOpen(true);
+    }
+
+    return () => {
+      window.removeEventListener("open-combo-deal-popup", handleOpenManual);
+    };
+  }, []);
+
+  useEffect(() => {
+    // Only trigger auto-popup on the home view
     if (currentView !== "home") return;
 
     // Check localStorage (only once every 24 hours)
