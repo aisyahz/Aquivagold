@@ -189,7 +189,7 @@ export default function ComboDealPopup({ currentView }: ComboDealPopupProps) {
                 </p>
                 <div className="pt-3 border-t border-white/10 flex flex-col gap-2">
                   <a
-                    href="/pdf/COMBO SET 230626.pdf"
+                    href="/pdf/combo-set-230626.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center space-x-2 text-xs text-gold hover:text-gold-light transition-colors font-medium"
@@ -300,7 +300,7 @@ export default function ComboDealPopup({ currentView }: ComboDealPopupProps) {
 
                 {/* Secondary CTA - direct link to local static PDF file */}
                 <a
-                  href="/pdf/COMBO SET 230626.pdf"
+                  href="/pdf/combo-set-230626.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="py-3 px-5 bg-white border border-stone hover:bg-beige/30 text-charcoal-light text-sm font-semibold rounded-lg transition-all duration-300 flex items-center justify-center space-x-2"
