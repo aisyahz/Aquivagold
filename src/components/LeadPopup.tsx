@@ -140,7 +140,7 @@ export default function LeadPopup({
     }
 
     const encodedMessage = encodeURIComponent(fullMessage);
-    const whatsappUrl = `https://wa.me/601139900920?text=${encodedMessage}`;
+    const whatsappUrl = `https://wa.me/60176087696?text=${encodedMessage}`;
 
     setIsSubmitting(false);
     onClose();

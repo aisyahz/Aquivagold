@@ -14,7 +14,7 @@ export default function TestimonialsView() {
 
   const handleWhatsAppTesti = () => {
     const text = "Hi AQUIVA GOLD, saya ingin bertanya lebih lanjut mengenai maklum balas kejayaan pelanggan bekenaan amalan Black Millenia Water (BMW).";
-    window.open(`https://wa.me/601139900920?text=${encodeURIComponent(text)}`, "_blank", "noopener,noreferrer");
+    window.open(`https://wa.me/60176087696?text=${encodeURIComponent(text)}`, "_blank", "noopener,noreferrer");
   };
 
   return (

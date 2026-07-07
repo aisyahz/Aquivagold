@@ -25,7 +25,7 @@ export default function Collection({ onSelectProduct, onOpenConsultation }: Coll
     const qtyText = qty > 1 ? `${qty} unit ` : "";
     const totalText = qty > 1 ? ` (Jumlah keseluruhan: RM${total})` : "";
     
-    return `https://wa.me/60172887123?text=${encodeURIComponent(
+    return `https://wa.me/60176087696?text=${encodeURIComponent(
       `Hi AQUIVA GOLD, saya mahu membuat tempahan segera untuk ${qtyText}${productTitle} (${priceStr}${qty > 1 ? '/unit' : ''})${totalText}. Boleh bantu saya dengan butiran pembayaran dan penghantaran?`
     )}`;
   };

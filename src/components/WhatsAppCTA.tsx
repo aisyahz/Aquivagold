@@ -9,7 +9,7 @@ export default function WhatsAppCTA({ onOpenConsult }: WhatsAppCTAProps) {
   const handleOpenGeneralWhatsApp = () => {
     const message = "Hi AQUIVA GOLD, boleh saya tahu lebih lanjut mengenai pilihan produk dan rundingan kesihatan?";
     const encoded = encodeURIComponent(message);
-    const url = `https://wa.me/601139900920?text=${encoded}`;
+    const url = `https://wa.me/60176087696?text=${encoded}`;
     window.open(url, "_blank", "noopener,noreferrer");
   };
 

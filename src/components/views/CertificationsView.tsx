@@ -240,7 +240,7 @@ export default function CertificationsView() {
           </p>
 
           <a
-            href="https://wa.me/601139900920?text=Hi%20AQUIVA%20GOLD%2C%20saya%20ingin%20bertanya%20mengenai%20dokumen%20pensijilan%20syarikat."
+            href="https://wa.me/60176087696?text=Hi%20AQUIVA%20GOLD%2C%20saya%20ingin%20bertanya%20mengenai%20dokumen%20pensijilan%20syarikat."
             target="_blank"
             rel="noopener noreferrer"
             className="cursor-pointer inline-flex h-[48px] sm:h-[52px] px-8 bg-[#B58D20] hover:bg-white hover:text-[#1A1A1A] text-white hover:border-[#B58D20] text-[14px] sm:text-[15px] uppercase tracking-wider font-bold transition-all duration-300 rounded-lg items-center justify-center shadow-lg"
@@ -351,7 +351,7 @@ export default function CertificationsView() {
                     type="button"
                     onClick={() => {
                       const msg = `Hi AQUIVA GOLD, boleh saya mohon rujukan dokumen penuh *${selectedDoc.title}* (${selectedDoc.refNo}) untuk semakan lanjut?`;
-                      window.open(`https://wa.me/601139900920?text=${encodeURIComponent(msg)}`, "_blank", "noopener,noreferrer");
+                      window.open(`https://wa.me/60176087696?text=${encodeURIComponent(msg)}`, "_blank", "noopener,noreferrer");
                     }}
                     className="cursor-pointer w-full h-[48px] bg-[#1A1A1A] hover:bg-stone-800 text-white text-[13px] sm:text-[14px] uppercase tracking-wider font-bold transition-all rounded-lg text-center flex items-center justify-center gap-2 shadow-xs border-0"
                   >

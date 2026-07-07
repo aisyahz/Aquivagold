@@ -219,7 +219,7 @@ export default function FAQView() {
           </p>
 
           <a
-            href="https://wa.me/601139900920?text=Hi%20AQUIVA%20GOLD%2C%20saya%20mempunyai%20soalan%20berkenaan%20Koleksi%20Black%20Millenia."
+            href="https://wa.me/60176087696?text=Hi%20AQUIVA%20GOLD%2C%20saya%20mempunyai%20soalan%20berkenaan%20Koleksi%20Black%20Millenia."
             target="_blank"
             rel="noopener noreferrer"
             className="cursor-pointer inline-flex h-[44px] px-6 bg-[#B58D20] hover:bg-white hover:text-[#1A1A1A] text-white hover:border-[#B58D20] text-xs uppercase tracking-widest font-bold transition-all duration-300 rounded-lg items-center justify-center shadow-lg pb-0.5"

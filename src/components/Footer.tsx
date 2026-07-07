@@ -75,7 +75,7 @@ export default function Footer({ onOpenConsultation, onNavigate }: FooterProps) 
           <div className="space-y-3.5 text-[14px] sm:text-[15px] text-[#4A4A4A]">
             <div className="flex items-center space-x-2">
               <Phone size={14} className="text-[#B58D20] shrink-0" />
-              <span>WhatsApp: 011-39900920</span>
+              <span>WhatsApp: 017-608 7696</span>
             </div>
             <div className="flex items-center space-x-2">
               <MapPin size={14} className="text-[#B58D20] shrink-0" />

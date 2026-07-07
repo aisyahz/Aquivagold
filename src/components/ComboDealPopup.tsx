@@ -136,7 +136,7 @@ export default function ComboDealPopup({ currentView }: ComboDealPopupProps) {
 
   // WhatsApp redirect link construction
   const getWhatsAppLink = () => {
-    const phone = "60172887123";
+    const phone = "60176087696";
     const baseText = "Hi AQUIVA GOLD, saya berminat dengan Combo Deal Black Millenia Water (BMW). Boleh saya dapatkan maklumat lanjut?";
     const specText = `\n\n(Pakej Pilihan: ${activeCombo.name} - ${activeCombo.items} dengan harga promosi ${activeCombo.price})`;
     return `https://wa.me/${phone}?text=${encodeURIComponent(baseText + specText)}`;

@@ -16,7 +16,7 @@ export default function AgentPage({ onBackToHome }: AgentPageProps) {
     const footer = "Terima kasih.";
     const fullMessage = greeting + body + footer;
     const encodedMessage = encodeURIComponent(fullMessage);
-    const whatsappUrl = `https://wa.me/601139900920?text=${encodedMessage}`;
+    const whatsappUrl = `https://wa.me/60176087696?text=${encodedMessage}`;
     window.open(whatsappUrl, "_blank", "noopener,noreferrer");
   };
 

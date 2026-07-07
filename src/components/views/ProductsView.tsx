@@ -42,7 +42,7 @@ export default function ProductsView({ onOpenConsultation }: ProductsViewProps) 
     const qtyText = qty > 1 ? `${qty} unit ` : "";
     const totalText = qty > 1 ? ` (Jumlah keseluruhan: RM${total})` : "";
     
-    return `https://wa.me/60172887123?text=${encodeURIComponent(
+    return `https://wa.me/60176087696?text=${encodeURIComponent(
       `Hi AQUIVA GOLD, saya mahu membuat tempahan segera untuk ${qtyText}${title} (${priceStr}${qty > 1 ? '/unit' : ''})${totalText}. Boleh bantu saya dengan butiran pembayaran dan penghantaran?`
     )}`;
   };
@@ -54,7 +54,7 @@ export default function ProductsView({ onOpenConsultation }: ProductsViewProps) 
 
   const handleWhatsAppProduct = (product: string) => {
     const message = `Hi AQUIVA GOLD, saya ingin membuat pesanan atau mendapatkan konsultasi lanjut berkaitan produk *${product}*.`;
-    window.open(`https://wa.me/601139900920?text=${encodeURIComponent(message)}`, "_blank", "noopener,noreferrer");
+    window.open(`https://wa.me/60176087696?text=${encodeURIComponent(message)}`, "_blank", "noopener,noreferrer");
   };
 
   return (

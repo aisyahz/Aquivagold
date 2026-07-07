@@ -16,7 +16,7 @@ export default function EntrepreneursView() {
 
   const handleWhatsAppJoin = (role: string, desc: string) => {
     const text = `Salam AQUIVA GOLD, saya ingin bertanya dan mendapatkan bimbingan lanjut mengenai peluang sebagai *${role}* (${desc}). Boleh jelaskan syarat dan langkah seterusnya? Terima kasih.`;
-    window.location.href = `https://wa.me/601139900920?text=${encodeURIComponent(text)}`;
+    window.location.href = `https://wa.me/60176087696?text=${encodeURIComponent(text)}`;
   };
 
   return (

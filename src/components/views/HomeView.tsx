@@ -59,7 +59,7 @@ export default function HomeView({ onNavigate, onOpenConsultation }: HomeViewPro
     const qtyText = qty > 1 ? `${qty} unit ` : "";
     const totalText = qty > 1 ? ` (Jumlah keseluruhan: RM${total})` : "";
     
-    return `https://wa.me/60172887123?text=${encodeURIComponent(
+    return `https://wa.me/60176087696?text=${encodeURIComponent(
       `Hi AQUIVA GOLD, saya mahu membuat tempahan segera untuk ${qtyText}${title} (${priceStr}${qty > 1 ? '/unit' : ''})${totalText}. Boleh bantu saya dengan butiran pembayaran dan penghantaran?`
     )}`;
   };
@@ -1048,7 +1048,7 @@ export default function HomeView({ onNavigate, onOpenConsultation }: HomeViewPro
  
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4 max-w-lg mx-auto pt-2">
             <a
-              href="https://wa.me/601139900920?text=Hi%20AQUIVA%20GOLD%2C%20boleh%20saya%20dapatkan%20konsultasi%20mengenai%20Koleksi%20Black%20Millenia%3F"
+              href="https://wa.me/60176087696?text=Hi%20AQUIVA%20GOLD%2C%20boleh%20saya%20dapatkan%20konsultasi%20mengenai%20Koleksi%20Black%20Millenia%3F"
               target="_blank"
               rel="noopener noreferrer"
               className="cursor-pointer w-full sm:w-auto h-[46px] sm:h-[50px] px-8 bg-[#1A1A1A] hover:bg-[#333333] text-white text-[13.5px] sm:text-[14px] uppercase tracking-wider font-bold transition-all text-center rounded-md flex items-center justify-center shadow-md pb-0.5"

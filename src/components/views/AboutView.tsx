@@ -184,7 +184,7 @@ export default function AboutView() {
 
             <div className="lg:col-span-4 flex justify-center lg:justify-end w-full">
               <a
-                href="https://wa.me/601139900920?text=Hi%20AQUIVA%20GOLD%2C%20saya%20ingin%20mengunjungi%20atau%20hubungi%20pejabat%20HQ."
+                href="https://wa.me/60176087696?text=Hi%20AQUIVA%20GOLD%2C%20saya%20ingin%20mengunjungi%20atau%20hubungi%20pejabat%20HQ."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="cursor-pointer w-full sm:w-auto h-[46px] sm:h-[50px] px-6 bg-[#B58D20] hover:bg-white hover:text-[#1A1A1A] text-white hover:border-[#B58D20] text-[13.5px] sm:text-[14px] uppercase tracking-wider font-bold transition-all rounded-md text-center flex items-center justify-center shadow-lg pb-0.5"
