@@ -150,22 +150,8 @@ html {
   animation: slow-pulse 3s infinite ease-in-out;
 }
 
-/* HIGH-END MOBILE SCROLL FOCUS SOP STANDARDS */
+/* HIGH-END MOBILE SCROLL FOCUS SOP STANDARDS - REMOVED SNAP FOR NATURAL SMOOTH SCROLL AND UNINTERRUPTED ANNOUNCEMENT BAR VISIBILITY */
 @media (max-width: 767px) {
-  html {
-    scroll-snap-type: y mandatory;
-    scroll-padding-top: 76px; /* Offset to prevent floating header from overlapping section top headers */
-    overflow-y: scroll;
-    -webkit-overflow-scrolling: touch;
-  }
-  
-  /* Make every section in view focus on complete block */
-  section, footer {
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
-  }
-  
-  /* Smooth scrolling across snaps */
   html, body {
     scroll-behavior: smooth;
   }
